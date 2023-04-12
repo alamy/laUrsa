@@ -1,7 +1,7 @@
 {
   "name": "@alamyneto/emprel-design-system",
   "private": false,
-  "version": "1.0.0",
+  "version": "0.1.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
