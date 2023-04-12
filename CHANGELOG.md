@@ -1,9 +1,7 @@
-# v1.0.1 (Wed Apr 12 2023)
+# v0.1.0 (Tue Mar 09 2021)
 
-#### ⚠️ Pushed to `main`
-
-- start project (alamy.neto@acpgroup.com.br)
+- Created first version of the design system, with `Avatar`, `Badge`, `Button`, `Icon` and `Link` components.
 
 #### Authors: 1
 
-- a.verissimo (alamy.neto@acpgroup.com.br)
+- [alamy](https://github.com/alamy)

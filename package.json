@@ -55,7 +55,7 @@
   "_id": "emprel-design-system@0.0.0",
   "description": "\"Storybook laUrsa\"",
   "main": "dist/index.js",
-  "repository": "http://gitana.recife/cati/emprel-design-system/-/tree/master/codigos/emprel-design-system",
+  "repository": "https://github.com/alamy/laUrsa.git",
   "author": "alamyneto",
   "license": "MIT"
 }
