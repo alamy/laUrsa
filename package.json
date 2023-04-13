@@ -1,7 +1,7 @@
 {
-  "name": "@alamyneto/emprel-design-system",
+  "name": "laUrsa",
   "private": false,
-  "version": "0.1.0",
+  "version": "1.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -52,7 +52,7 @@
     ]
   },
   "readme": "ERROR: No README data found!",
-  "_id": "emprel-design-system@0.0.0",
+  "_id": "emprel-design-system@1.0.0",
   "description": "\"Storybook laUrsa\"",
   "main": "dist/index.js",
   "repository": "https://github.com/alamy/laUrsa.git",
