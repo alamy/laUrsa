@@ -16,6 +16,10 @@ import * as Lgbt from './lib/components/Icon/Trilha/Lgbt';
 import * as Mulher from './lib/components/Icon/Trilha/Mulher';
 import * as Servidor from './lib/components/Icon/Trilha/Servidor';
 import * as Turista from './lib/components/Icon/Trilha/Turista';
+//Menu
+import * as Pcr from './lib/components/Icon/Menu/Pcr';
+import * as Pppe from './lib/components/Icon/Menu/Pppe';
+import * as Sipr from './lib/components/Icon/Menu/Sipr';
 
 //Atomic
 import * as Avatar from './lib/components/Atomic/Avatar/Avatar/';
@@ -30,17 +34,20 @@ import * as Table from './lib/components/Molecules/Table/Table';
 
 //Template
 import * as Header from './lib/components/Templates/Header/Header';
+import * as Menu from './lib/components/Templates/Menu/Menu';
 export { Logo,
 // Icon System
 Eye, EyeNot, Mic, Search, X,
 // Icon Trilha
 Aprender, Defeciencia, Curtir, Empresario, Idoso, Lgbt, Mulher, Servidor, Turista,
+//Menu
+Pcr,Pppe,Sipr,
 //Atomic 
 Avatar, Button, Checkbox, Dropdown, Input, Radio,
 // Molecules    
 Table,
 //Template
-Header };
+Header, Menu };
 export * from './lib/components/Icon/Logo';
 // Icon System
 export * from './lib/components/Icon/System/Eye';
@@ -58,6 +65,10 @@ export * from './lib/components/Icon/Trilha/Lgbt';
 export * from './lib/components/Icon/Trilha/Mulher';
 export * from './lib/components/Icon/Trilha/Servidor';
 export * from './lib/components/Icon/Trilha/Turista';
+//Menu
+export * from './lib/components/Icon/Menu/Pcr';
+export * from './lib/components/Icon/Menu/Pppe';
+export * from './lib/components/Icon/Menu/Sipr';
 //Atomic
 export * from './lib/components/Atomic/Avatar/Avatar';
 export * from './lib/components/Atomic/Button/Button';
@@ -69,3 +80,4 @@ export * from './lib/components/Atomic/Radio/Radio';
 export * from './lib/components/Molecules/Table/Table';
 //Template
 export * from './lib/components/Templates/Header/Header';
+export * from './lib/components/Templates/Menu/Menu';
