@@ -1,7 +1,7 @@
 {
   "name": "emprel-design-system",
   "private": false,
-  "version": "1.1.0",
+  "version": "1.1.2",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -54,7 +54,7 @@
   "main": "dist/index.js",
   "module": "dist/index.js",
   "files": [
-    "src/lib",
+    "src",
     "dist",
     "README.md"
   ],
