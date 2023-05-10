@@ -29,7 +29,7 @@ import * as Radio from './lib/components/Atomic/Radio/Radio';
 import * as Table from './lib/components/Molecules/Table/Table';
 
 //Template
-import * as Header from './lib/components/Templates/Header';
+import * as Header from './lib/components/Templates/Header/Header';
 export { Logo,
 // Icon System
 Eye, EyeNot, Mic, Search, X,
@@ -68,4 +68,4 @@ export * from './lib/components/Atomic/Radio/Radio';
 // Molecules
 export * from './lib/components/Molecules/Table/Table';
 //Template
-export * from './lib/components/Templates/Header';
+export * from './lib/components/Templates/Header/Header';
