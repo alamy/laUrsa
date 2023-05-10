@@ -1,3 +1,4 @@
+import * as React from 'react';
 import { clsx } from 'clsx';
 import './Table.scss'
 import { Button } from '../../Atomic/Button/Button';
