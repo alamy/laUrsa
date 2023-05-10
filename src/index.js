@@ -18,7 +18,7 @@ import * as Servidor from '../src/lib/components/Icon/Trilha/Servidor';
 import * as Turista from '../src/lib/components/Icon/Trilha/Turista';
 
 //Atomic
-import * as Avatar from '../src/lib/components/Atomic/Avatar/Avatar';
+import * as Avatar from '../src/lib/components/Atomic/Avatar/Avatar/';
 import * as Button from '../src/lib/components/Atomic/Button/Button';
 import * as Checkbox from '../src/lib/components/Atomic/Checkbox/Checkbox';
 import * as Dropdown from '../src/lib/components/Atomic/Dropdown/Dropdown';
