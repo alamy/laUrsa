@@ -1,26 +1,34 @@
 {
-  "name": "laUrsa",
+  "name": "emprel-design-system",
   "private": false,
   "version": "1.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "cross-env BABEL_ENV=production babel src -d dist",
+    "build-lib": "cross-env NODE_ENV=production babel src --out-dir dist",
+    "build": "tsc && vite build",
     "preview": "vite preview",
     "host": "vite --host",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "chromatic": "npx chromatic --project-token=95fe7463e39f"
+    "chromatic": "npx chromatic --project-token=95fe7463e39f",
+    "start": "webpack serve --progress --inline --hot --port 8080"
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.0.1",
     "clsx": "^1.2.1",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-redux": "^8.0.5",
+    "react-router-dom": "^6.11.1"
   },
   "devDependencies": {
-    "@babel/cli": "^7.21.0",
-    "@babel/core": "^7.19.3",
+    "@babel/cli": "^7.21.5",
+    "@babel/core": "^7.21.8",
+    "@babel/generator": "^7.21.5",
+    "@rollup/plugin-commonjs": "^24.1.0",
+    "@rollup/plugin-node-resolve": "^15.0.2",
+    "@rollup/plugin-typescript": "^11.1.0",
     "@storybook/addon-actions": "^6.5.12",
     "@storybook/addon-essentials": "^6.5.12",
     "@storybook/addon-interactions": "^6.5.12",
@@ -28,34 +36,35 @@
     "@storybook/builder-vite": "^0.2.4",
     "@storybook/react": "^6.5.12",
     "@storybook/testing-library": "^0.0.13",
-    "@types/react": "^18.0.17",
-    "@types/react-dom": "^18.0.6",
+    "@types/react": "^18.2.6",
+    "@types/react-dom": "^18.2.4",
     "@vitejs/plugin-react": "^2.1.0",
-    "auto": "^10.44.0",
+    "auto": "^10.46.0",
     "autoprefixer": "^10.4.12",
-    "babel-loader": "^8.2.5",
-    "chromatic": "^6.17.3",
+    "chromatic": "^6.17.4",
     "cross-env": "^7.0.3",
-    "postcss": "^8.4.18",
-    "tailwindcss": "^3.1.8",
+    "postcss": "^8.4.23",
+    "rollup": "^3.21.5",
+    "rollup-plugin-dts": "^5.3.0",
+    "sass": "^1.62.1",
+    "tailwindcss": "^3.3.2",
     "typescript": "^4.6.4",
-    "vite": "^3.1.0"
+    "vite": "^3.2.6"
   },
-  "babel": {
-    "presets": [
-      [
-        "emprel-design-system",
-        {
-          "absoluteRuntime": false
-        }
-      ]
-    ]
-  },
-  "readme": "ERROR: No README data found!",
-  "_id": "emprel-design-system@1.0.0",
-  "description": "\"Storybook laUrsa\"",
   "main": "dist/index.js",
-  "repository": "https://github.com/alamy/laUrsa.git",
+  "module": "dist/index.js",
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "repository": {
+    "type": "git"
+  },
   "author": "alamyneto",
-  "license": "MIT"
+  "license": "MIT",
+  "workspaces": [
+    "packages/*"
+  ],
+  "keywords": [],
+  "description": ""
 }

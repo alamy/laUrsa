@@ -1,0 +1,56 @@
+.red {
+    border-color: #DB4437
+}
+.gray {
+    border-color: #DBDBDB
+}
+.color-gray{
+    color: #a3a5a9
+}
+.color-red{
+    color: #DB4437;
+}
+
+.labelInput{
+    display: table-cell;
+    position: absolute;
+    z-index: 999;
+    margin-left: 20px;
+    margin-top: -13px;
+}  
+
+.inputText {
+    border:1px solid #464E5C;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border-radius: 0.25rem;
+    width: 350px;
+    height: 48px; 
+    display: inline-block;
+    position: relative;
+  }
+
+  .inputText:focus{
+    border: 1px solid #cece;
+  }
+
+  .labelInput{
+    display: table-cell;
+    position: absolute;
+    z-index: 999;
+    margin-left: 20px;
+    margin-top: -13px;
+  }
+
+  .label { 
+    margin-left: 22%;
+    margin-top: 0px;
+    position: relative;
+    padding: 0 10px;
+    background-color: #fff;
+    font-family: 'DM Sans', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 0.7em;
+    max-width: 20%;
+}

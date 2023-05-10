@@ -1,0 +1,30 @@
+.avatar {
+  display: inline-block;
+}
+
+.notificationOff {
+  margin-top: -3%;
+  margin-left: -2%;
+}
+
+.notificationOn {
+  margin-top: -23%;
+  margin-left: -2%;
+}
+
+.avatarDefault {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border: none;
+  position: relative;
+}
+
+.orange {
+  background-color: #E84E1B;
+  border: 1.5px solid #fff;
+  position: relative;
+  display: block;
+  margin-left: 70%;
+  z-index: 99
+}

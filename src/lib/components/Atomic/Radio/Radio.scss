@@ -1,0 +1,30 @@
+.container {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    }
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 90%;
+}
+
+.checkmark-false{
+    border:1px solid #DBDBDB;
+    background-color: #DBDBDB;
+}
+.checkmark-true{
+    border:1px solid #464E5C;
+}
+
+.color-gray{
+    color: #a3a5a9
+}
+.color{
+    color: #898B8F;
+}

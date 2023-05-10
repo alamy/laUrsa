@@ -1,0 +1,75 @@
+.header {
+    background-color: #fff;
+    padding: 0px 0% 0% 3% ;
+    height: 10vh;
+    display: block;
+    position: fixed;
+    z-index: 9999;
+    width: 100vw;
+    top: 0;
+}
+.headerTitle {
+    color: #0F57BF;
+    font-size: 1.4em;
+    text-align: center;
+    display: inline-block;  
+    font-weight: 700;
+    position: absolute;
+    width: 93%;
+    margin-top: 3vh;
+}
+.block {
+    display: inline-block;
+}
+.none {
+    display: none;
+}
+.home {
+    width: 36px;
+    height: 36px;
+    color: #000;
+    position: absolute;
+    
+    margin: 3vh 0 0 14%;
+}
+.header p {
+    color:  #0F57BF;
+    font: 0.9em;
+    position: static;
+    margin-left: 15px;
+    position: relative;
+    top:-1vh;
+}
+.persona {
+    display: inline-block;
+    width: 20%;
+    left: 76vw;
+    height: 50px;
+    margin-top: 6px;
+    position: absolute;
+}
+.persona li {
+    display: inline-block;
+}
+.persona li:last-child {
+    position: relative;
+    top: -0.6vh;
+    cursor: pointer;
+}
+.logo {
+    display: inline-block;
+    position: relative;
+}
+.btnHome {
+    cursor: pointer;
+}
+.perfil {
+    width: 160px;
+    height: 90px;
+    background: #fff;
+    position: absolute;
+    left: 80vw;
+    top: 10vh;
+    border-radius: 0px 0px 10px 10px;
+    box-shadow: 3px 3px 5px #cecece;
+}

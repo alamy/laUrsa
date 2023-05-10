@@ -9,6 +9,8 @@
         "label": "off",
         "select-name": "off"
       }
-    ]
+    ],
+    "typescript-config/strict": "off",
+    "typescript-config/consistent-casing": "off"
   }
 }

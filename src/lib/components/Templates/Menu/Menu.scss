@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800');
+
+$browser-context: 16; 
+
+
+[data-component='sidebar'] {
+  .sidebar {
+    position: fixed;
+    z-index: 999;
+     border: 1px solid red;
+
+    font-family: 'Open Sans', sans-serif;
+  }
+
+  .svg {
+    margin-left: 12px;
+    float: left;
+}
+.simple-admin {
+  border:1px solid red
+}
+  .first-menu {
+    padding-top: 18vh;
+    position: fixed;
+    background-color: #fff;
+    height: 100vh;
+    width: 49px;
+    left: 0;
+    top: 0px;
+    overflow: hidden;
+    -webkit-transition-duration: 0.3s;
+    -moz-transition-duration: 0.3s;
+    -o-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    .list-group-item {
+      border-right: 0;
+      float: none;
+      cursor: pointer;
+      padding: 12px 0;
+      height: 43px;
+     
+      &:not(last-child) {
+        border-bottom: 0;
+      }
+      &:hover {
+        background-color: #d6d6d6;
+        transition-duration: 0.8s;
+      }
+    }
+      p {
+        float: left;
+        opacity: 0;
+        visibility: hidden;
+        color: #1474FF;
+        width: 50%;
+        transition: opacity height 2s;
+        margin-left: 13px;
+        margin-left: 40px;
+        font-size: 0.7em;
+        position: absolute;
+      
+    }
+   
+    &:hover p {
+      opacity: 1;
+      visibility: visible;
+
+    }
+  }
+  .first-menu:hover {
+    width: 190px;
+  }
+  
+  .submenu {
+    position: fixed;
+    left: 190px;
+    width: 180px;
+    top: 0px;
+    background-color: #0075BA;
+    height: 100vw;
+    opacity: 0;
+    max-width: 0;
+    overflow: auto;
+    animation-name: slideOut;
+    -webkit-transition-duration: opacity 0.3s;
+    -moz-transition-duration: opacity 0.3s;
+    -o-transition-duration: opacity 0.3s;
+    transition-duration: opacity 0.3s;
+    .list-group-Subitem {
+      cursor: pointer;
+      background-color: #0075BA;
+      border-left: 0;
+      padding: 10px 2px;
+      &:hover {
+        background-color: #004798;
+      }
+    }
+    .text {
+        font-weight: 400;
+        font-size: 0.7em;
+        color: #e0e0de;
+        display: inline-block; 
+        padding-left: 10px;
+    }
+    
+  }
+  .svg-submenu {
+    background-color: #009eff;
+    .list-group-item {
+      background-color: #009eff;
+      padding-top: 17px;
+      padding-bottom: 17px;
+      &:hover {
+        background-color: #0075BA;
+      }
+    }
+    a {
+      line-height: normal;
+    }
+  }
+  .first-menu li:hover .submenu {
+    max-width: 100%;
+    opacity: 1;
+  }
+}
