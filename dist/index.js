@@ -35,19 +35,20 @@ import * as Table from '../src/lib/components/Molecules/Table/Table';
 
 //Template
 import * as Header from '../src/lib/components/Templates/Header/Header';
+import * as Menu from '../src/lib/components/Templates/Menu/Menu';
 export { Logo,
 // Icon System
 Eye, EyeNot, Mic, Search, X,
 // Icon Trilha
 Aprender, Defeciencia, Curtir, Empresario, Idoso, Lgbt, Mulher, Servidor, Turista,
 //Menu
-Pcr,Pppe,Sipr,
+Pcr, Pppe, Sipr,
 //Atomic 
 Avatar, Button, Checkbox, Dropdown, Input, Radio,
 // Molecules    
 Table,
 //Template
-Header };
+Header, Menu };
 export * from '../src/lib/components/Icon/Logo';
 // Icon System
 export * from '../src/lib/components/Icon/System/Eye';

@@ -21,7 +21,7 @@ export interface HeaderProps {
 }
 
 
-export function Header({title = 'Prefeitura do Recife', 
+export default function Header({title = 'Prefeitura do Recife', 
 persona= '', 
 img ='', 
 notification, 
