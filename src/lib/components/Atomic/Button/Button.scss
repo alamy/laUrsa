@@ -1,6 +1,32 @@
 .buttonLaUrsa {
     min-width: 40px;
-    min-width: 40px;
+    height: 40px;
     display: inline-block;
-  margin-left: 10px;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-style: normal;
+    padding: 6px 6% 0 6%;
+    display: flex;
+    border-style: solid;
+  }
+
+  .primary {
+    background-color: #1474FF;
+    color: #FFFFFF;
+  }
+
+  .primary-defalt {
+    background: #DBDBDB;
+    color: #898B8F;
+  }
+  .secondary {
+    background-color: #fff;
+    border: 2px solid #1474FF;
+    color: #1474FF;
+  
+  }
+  .secondary-default {
+    background-color: #F2F5F7;
+    border: 2px solid #a3a3a3;
+    color: #DBDBDB;
   }

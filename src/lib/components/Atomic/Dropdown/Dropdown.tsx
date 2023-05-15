@@ -1,12 +1,15 @@
 import { clsx } from 'clsx';
 import './Dropdown.scss'
 
+interface T {
+}
+
 export interface DropdownProps {
     text: string;
     size?: 'md' | 'lg';
     error?: boolean;
     disable?: boolean;
-    Option: ['1','2'];
+    Option: Array<T>;
 }
 
 export function Dropdown({disable, size = 'md', text, error, Option}: DropdownProps ) {
@@ -14,10 +17,10 @@ export function Dropdown({disable, size = 'md', text, error, Option}: DropdownPr
     let label
    if(error){
     estilo = " red border dropdown"
-    label = " labelDropDown colorRed"
+    label = "colorRed"
    } else {
-    label = "labelDropDown"
     estilo = "border dropdown"
+    label = ""
    }
    console.log(Option)
    let ArrayOpition = Option?.map(function(opt){
@@ -25,11 +28,12 @@ export function Dropdown({disable, size = 'md', text, error, Option}: DropdownPr
    })
     return (
         <>
-       <p className='labelInput'>
+       <p className='labelDropDown'>
         <label className={clsx(label, 'label')} htmlFor={text}>{text}</label>
         </p>
 
         <select disabled={disable} className={clsx(
+            'dropdown',
                 'px-4',
                 'border-solid',
                 'rounded',

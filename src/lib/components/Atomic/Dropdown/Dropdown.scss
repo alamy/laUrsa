@@ -7,14 +7,25 @@
     padding-left: 1rem;
     padding-right: 1rem;
     border-radius: 0.25rem;
-    width: 350px;
+    width: 100%;
+    margin-top: 0px;
     height: 48px; 
     display: inline-block;
     position: relative;
   }
 
   .labelDropDown { 
-    margin-left: 22%;
+    display: table-cell;
+    position: absolute;
+    z-index: 999;
+    margin-left: 20px;
+    width: auto;
+    margin-top: -13px;
+    width: 100%;
+  }
+
+  .label { 
+    margin-left: 0.6%;
     margin-top: 0px;
     position: relative;
     padding: 0 10px;
@@ -23,13 +34,5 @@
     font-style: normal;
     font-weight: 500;
     font-size: 0.7em;
-    max-width: 20%;
+    max-width: 40%;
 }
-
-.labelInput{
-    display: table-cell;
-    position: absolute;
-    z-index: 999;
-    margin-left: 20px;
-    margin-top: -13px;
-  }

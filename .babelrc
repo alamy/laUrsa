@@ -1,0 +1,15 @@
+{
+    "extends": "react-static/.babelrc",
+    "plugins": [
+      [
+        "react-intl-auto", {
+          "removePrefix": true,
+          "filebase": false,
+          "includeExportName": true,
+          "extractComments": true
+        },
+        "react-hot-loader/babel",
+      ]
+    ],
+  }
+

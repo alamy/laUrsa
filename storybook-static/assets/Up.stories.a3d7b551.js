@@ -1,0 +1,2 @@
+import{U as o}from"./Up.a62c65dd.js";import"./jsx-runtime.fcbc07e7.js";import"./iframe.b2746428.js";const s={title:"Icon/System/Up",component:o,args:{},argTypes:{type:{options:["Primary","Second"],control:{type:"radio"}},size:{options:["sm","md","lg","xl"],control:{type:"radio"}}}},p={args:{},argTypes:{}},a=["Default"];export{p as Default,a as __namedExportsOrder,s as default};
+//# sourceMappingURL=Up.stories.a3d7b551.js.map

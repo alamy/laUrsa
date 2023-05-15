@@ -1,7 +1,7 @@
 {
   "name": "emprel-design-system",
-  "private": false,
-  "version": "1.1.10",
+  "private": true,
+  "version": "1.1.11",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -16,11 +16,14 @@
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.0.1",
+    "babelrc": "^0.0.7",
     "clsx": "^1.2.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-redux": "^8.0.5",
-    "react-router-dom": "^6.11.1"
+    "react-router-dom": "^6.11.1",
+    "react-scripts": "^5.0.1",
+    "webpack-cli": "^3.3.10"
   },
   "devDependencies": {
     "@babel/cli": "^7.21.5",

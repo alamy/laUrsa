@@ -1,0 +1,2 @@
+import{P as o}from"./Perfil.9adbc882.js";import"./jsx-runtime.fcbc07e7.js";import"./iframe.b2746428.js";const s={title:"Icon/Social/Perfil",component:o,args:{},argTypes:{type:{options:["Primary","Second"],control:{type:"radio"}},size:{options:["sm","md","lg","lx"],control:{type:"radio"}}}},i={args:{},argTypes:{}},a=["Default"];export{i as Default,a as __namedExportsOrder,s as default};
+//# sourceMappingURL=Perfil.stories.82ad6adf.js.map

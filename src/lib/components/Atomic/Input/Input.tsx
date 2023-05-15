@@ -6,7 +6,7 @@ export interface InputProps {
     size?: 'md' | 'lg';
     error?: boolean;
     disable?: boolean;
-    type: 'text' | 'number';
+    type: 'text' | 'number' | 'date';
     onChange?: Function | any;
     value?: string
 }
@@ -35,9 +35,9 @@ export function Input({disable, size = 'md', text, error, type,value, ...props}:
                 'mt-0',
                'rounded',
                'border',
-                'w-[344px]', {
+               {
                     'h-[48px]': size === 'md',
-                    'h-[56px]': size === 'lg',
+                    'h-[86px]': size === 'lg',
                 },
                 estilo
                

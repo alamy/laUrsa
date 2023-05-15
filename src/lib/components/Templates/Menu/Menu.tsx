@@ -1,4 +1,5 @@
 
+import { Logo } from '../../Icon/Logo'
 import { Pcr } from '../../Icon/Menu/Pcr'
 import { Pppe } from '../../Icon/Menu/Pppe'
 import { Sirp } from '../../Icon/Menu/Sipr'
@@ -11,43 +12,47 @@ export interface MenuProps{
 
 
 export function Menu({title= 'teste', Objeto}: MenuProps) {
-    const itemMenu = Object.values(Objeto).map(function(i){
-        console.log(i)
-        return(
-            <>
-            
-                <li className="list-group-item">
-                    <div className='svg'>
-                        {i[0]}
-                    </div>
-                    <p>{i[1]}</p>
-                </li> 
-                <ul className="list-group flex-column d-inline-block submenu svg-submenu">
-                        <li className="list-group-Subitem">
-                            <div className="text ">
-                       
-                            </div>
-                        </li>
-                </ul>
-        
-            </>
-        )
-    })
-    console.log(itemMenu)
     return(
 <>
 
+<div className="wrapper">
 
-<div className="simple-admin">
-    <div data-component="sidebar">
-        <div className="sidebar">
-        <ul className="list-group flex-column d-inline-block first-menu">
-{itemMenu}
-</ul>
-</div>
-</div>
+    <input type="checkbox" id="navigation" className='navigation' />
+    <label htmlFor="navigation" className="labelNavigation">
+        <Logo />
+    </label>
 
-</div>
+    <div className="nav">
+        <ul>
+            <li>
+            <Pcr
+                size="lg"
+                />
+                <p>Home</p>
+            </li>
+            <li>
+            <Sirp size="lg"/>
+                <p>Latest News</p>
+            </li>
+            <li>
+            <Sirp size="lg"/>
+                <p>What We Do</p>
+            </li>
+            <li>
+            <Sirp size="lg"/>
+                <p>Another Link</p>
+            </li>
+            <li>
+            <Sirp size="lg"/>
+                <p>Contact</p>
+            </li>
+        </ul>
+    </div>
+
+       
+    </div>
+
+
       </>
     )
 }

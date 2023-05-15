@@ -1,0 +1,2 @@
+import{P as o}from"./Pppe.878fe637.js";import"./jsx-runtime.fcbc07e7.js";import"./iframe.b2746428.js";const r={title:"Icon/Menu/Pppe",component:o,args:{},argTypes:{type:{options:["Primary","Second"],control:{type:"radio"}},size:{options:["sm","md","lg","xl"],control:{type:"radio"}}}},s={args:{},argTypes:{}},a=["Default"];export{s as Default,a as __namedExportsOrder,r as default};
+//# sourceMappingURL=Pppe.stories.7c298433.js.map

@@ -1,0 +1,2 @@
+import{A as t}from"./Avatar.48b96d81.js";import"./clsx.m.256e9345.js";import"./Perfil.9adbc882.js";import"./jsx-runtime.fcbc07e7.js";import"./iframe.b2746428.js";const s={title:"Atmomic/Avatar",component:t,args:{text:"Perfil",notification:!1},argTypes:{size:{options:["sm","md","lg","lx"],control:{type:"radio"}},image:{options:"",control:{type:"file"}}}},p={args:{},argTypes:{}},m=["Default"];export{p as Default,m as __namedExportsOrder,s as default};
+//# sourceMappingURL=Avatar.stories.07492260.js.map

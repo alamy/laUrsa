@@ -1,0 +1,2 @@
+import{E as t}from"./Edit.82abac08.js";import"./jsx-runtime.fcbc07e7.js";import"./iframe.b2746428.js";const s={title:"Icon/System/Edit",component:t,args:{},argTypes:{type:{options:["Primary","Second"],control:{type:"radio"}},size:{options:["sm","md","lg","xl"],control:{type:"radio"}}}},i={args:{},argTypes:{}},a=["Default"];export{i as Default,a as __namedExportsOrder,s as default};
+//# sourceMappingURL=Edit.stories.45db071d.js.map

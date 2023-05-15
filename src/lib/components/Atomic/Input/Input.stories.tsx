@@ -12,7 +12,7 @@ export default {
     },
     argTypes: {
         type: {
-          options: ['text', 'number'],
+          options: ['text', 'number', 'date'],
           control: { type: 'radio' }
         }
       }

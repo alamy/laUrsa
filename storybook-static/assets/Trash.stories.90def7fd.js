@@ -1,0 +1,2 @@
+import{T as o}from"./Trash.12912385.js";import"./jsx-runtime.fcbc07e7.js";import"./iframe.b2746428.js";const e={title:"Icon/System/Trash",component:o,args:{},argTypes:{type:{options:["Primary","Second"],control:{type:"radio"}},size:{options:["sm","md","lg","xl"],control:{type:"radio"}}}},a={args:{},argTypes:{}},p=["Default"];export{a as Default,p as __namedExportsOrder,e as default};
+//# sourceMappingURL=Trash.stories.90def7fd.js.map
