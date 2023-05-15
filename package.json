@@ -1,6 +1,6 @@
 {
   "name": "emprel-design-system",
-  "private": true,
+  "private": false,
   "version": "1.1.11",
   "type": "module",
   "scripts": {
