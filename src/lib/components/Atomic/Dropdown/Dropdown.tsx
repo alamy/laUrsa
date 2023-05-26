@@ -12,7 +12,7 @@ export interface DropdownProps {
     onChange?: Function | any;
     onBlur?: Function | any;
     onFocus?: Function | any;
-    onClick?: Function | any;
+    onClick?: Function | any
 
 }
 
