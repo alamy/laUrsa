@@ -12,12 +12,11 @@
 }
 
 .labelInput{
-    display: table-cell;
-    position: absolute;
+    display: block;
+    position: relative;
     z-index: 999;
-    width: auto;
-    margin-top: -13px;
     width: 100%;
+    margin-top: 0
 }  
 
 .inputText {
@@ -29,6 +28,7 @@
     height: 48px; 
     display: inline-block;
     position: relative;
+    margin-top: -20px;
   }
 
   .inputText:focus{

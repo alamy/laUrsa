@@ -9,7 +9,16 @@ export default {
         size: 'md',
         disable: false,
         error: false,
-        Option: ['1', '2'],
+        Option:  [
+            {
+                label: 'teste 1',
+                vallue: '1'
+            },
+            {
+                label: 'teste 2',
+                vallue: '2'
+            }
+        ],
     }
 } as Meta<DropdownProps>
 

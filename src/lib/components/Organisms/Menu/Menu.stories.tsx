@@ -3,10 +3,18 @@ import {MenuProps, Menu} from './Menu'
 import { Pppe } from '../../Icon/Menu/Pppe';
 
 export default {
-    title: 'template/Menu',
+    title: 'organisms/Menu',
     component: Menu,
     args: {
-        Objeto: {1:[<Pppe size="md" type="Primary"/>, 'teste'],2:[<Pppe size="md" type="Primary"/>, 'teste2']},
+        Objeto: {
+            1:
+            [<Pppe size="md" type="Primary"/>, 'teste',
+            {
+               1:['sub menu', 'sub menu 2']
+            }
+        ],
+            2:[<Pppe size="md" type="Primary"/>, 'teste2']
+        },
         title: ''
     }
 } as Meta<MenuProps>

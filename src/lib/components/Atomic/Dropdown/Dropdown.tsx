@@ -1,18 +1,22 @@
 import { clsx } from 'clsx';
 import './Dropdown.scss'
 
-interface T {
-}
+
 
 export interface DropdownProps {
     text: string;
     size?: 'md' | 'lg';
     error?: boolean;
     disable?: boolean;
-    Option: Array<T>;
+    Option:Object;
+    onChange?: Function | any;
+    onBlur?: Function | any;
+    onFocus?: Function | any;
+    onClick?: Function | any;
+
 }
 
-export function Dropdown({disable, size = 'md', text, error, Option}: DropdownProps ) {
+export function Dropdown({disable, size = 'md', text, error, Option, ...props}: DropdownProps ) {
     let estilo
     let label
    if(error){
@@ -22,17 +26,16 @@ export function Dropdown({disable, size = 'md', text, error, Option}: DropdownPr
     estilo = "border dropdown"
     label = ""
    }
-   console.log(Option)
-   let ArrayOpition = Option?.map(function(opt){
-    return <option>{opt}</option>
+   let ArrayOpition = Object.values(Option)?.map(function(opt){
+    return <option value={opt.vallue}>{opt.label}</option>
    })
     return (
         <>
-       <p className='labelDropDown'>
-        <label className={clsx(label, 'label')} htmlFor={text}>{text}</label>
+        <p className='labelDropDown'>
+            <label className={clsx(label, 'label')} htmlFor={text}>{text}</label>
         </p>
 
-        <select disabled={disable} className={clsx(
+        <select disabled={disable} name='text' className={clsx(
             'dropdown',
                 'px-4',
                 'border-solid',
@@ -44,7 +47,7 @@ export function Dropdown({disable, size = 'md', text, error, Option}: DropdownPr
                     'h-[56px]': size === 'lg',
                 },
                 estilo
-            )} id={text}>
+            )} id={text}  { ...props}>
 
             {ArrayOpition}
         </select>

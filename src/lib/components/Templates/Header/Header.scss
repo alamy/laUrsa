@@ -4,9 +4,10 @@
     height: 10vh;
     display: block;
     position: fixed;
-    z-index: 9999;
+    z-index: 99;
     width: 100vw;
     top: 0;
+
 }
 .headerTitle {
     color: #0F57BF;
@@ -45,7 +46,7 @@
     width: 20%;
     left: 76vw;
     height: 50px;
-    margin-top: 6px;
+    margin-top: 3vh;
     position: absolute;
 }
 .persona li {
@@ -59,6 +60,7 @@
 .logo {
     display: inline-block;
     position: relative;
+    margin-top: 10px;
 }
 .btnHome {
     cursor: pointer;

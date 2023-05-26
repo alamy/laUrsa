@@ -39,9 +39,6 @@ export const Table = ({
         let objItem = Object.values(opt).map(function(Item:any){
          return (<td>{Item}</td>)
         })
-        console.log(Object.values(Object.values(objItem)[0].props)[0])
-        console.log("###################")
-        console.log(Object.values(Object.values(objItem)[0]))
         let id:any = Object.values(Object.values(objItem)[0].props)[0]
  
         let name:any = Object.values(Object.values(objItem)[1].props)[0]

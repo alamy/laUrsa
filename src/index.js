@@ -32,10 +32,11 @@ import * as Radio from '../src/lib/components/Atomic/Radio/Radio';
 
 // Molecules
 import * as Table from '../src/lib/components/Molecules/Table/Table';
-
+// Organisms
+import * as Menu from '../src/lib/components/Organisms/Menu/Menu';
 //Template
 import * as Header from '../src/lib/components/Templates/Header/Header';
-import * as Menu from '../src/lib/components/Templates/Menu/Menu';
+
 export { Logo,
 // Icon System
 Eye, EyeNot, Mic, Search, X,
@@ -79,6 +80,7 @@ export * from '../src/lib/components/Atomic/Input/Input';
 export * from '../src/lib/components/Atomic/Radio/Radio';
 // Molecules
 export * from '../src/lib/components/Molecules/Table/Table';
+// Organism
+export * from '../src/lib/components/Organisms/Menu/Menu';
 //Template
 export * from '../src/lib/components/Templates/Header/Header';
-export * from '../src/lib/components/Templates/Menu/Menu';

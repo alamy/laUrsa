@@ -1,19 +1,25 @@
+.body {
+  margin-left:0%;
+  width: 100%;
+}
 .nav{
-  position:fixed;
-  top:0;
+  position:relative;
+  top:-5vh;
+  float: left;
   left:0;
-  width:210px;
-  height:100%;
-  margin:0 0 0 0px;
+  width:12vw;
+  height:100vh;
   -moz-transition:all 200ms ease-in;
   -webkit-transition:all 200ms ease-in;
   -o-transition:all 200ms ease-in;
   transition:all 200ms ease-in;
+  z-index: 9998;
+  margin-right: 1%;
 }
 .nav ul{
   width:100%;
   height:100%;
-  padding:16vh 0 0 0;
+  padding:15% 0 0 0;
   margin:0 0 0 0;
   list-style:none;
   background:#fff;
@@ -26,21 +32,26 @@
   font-family:'helvetica neue', helvetica, arial, sans-serif;
   text-decoration:none;
   display:block;
-  border: 1px solid red;
-  padding:0px 15px;
+  padding:10px 6px 4px 6px;
   font-weight:300;
   letter-spacing:2px;
+  cursor: pointer;
+}
+.nav li:hover {
+  background-color: #F2F5F7;
 }
 .nav li p{
   overflow: hidden;
+  font-size: 0.8em;
   display: inline-block;
-  margin-left: 10px;
-  width: 70%;
-  border: 1px solid black;
-  margin-top: -46px;
+  margin-left: 5px;
+  opacity: 1;
+
 }
 .nav li svg {
-  display: flex;
+  display:  inline-block;
+  margin-left: 5px;
+  margin-top: -10px;
 }
 .labelNavigation{
   display:block;
@@ -51,7 +62,7 @@
   line-height:42px;
   color:#fff;
   text-align:center;
-  font-size:2em;
+  font-size:0.9em;
   line-height:1.1em;
   position:fixed;
   top:10px;
@@ -60,14 +71,22 @@
   -webkit-transition:all 200ms ease-in;
   -o-transition:all 200ms ease-in;
   transition:all 200ms ease-in;
-  z-index:500;
+  z-index:9999;
+  cursor: pointer;
 }
 .navigation{
   display:none;
 }
 .navigation:checked ~ .nav{
-  width:90px;
+  width:4vw;
+}
+.navigation:checked ~ .body{
+  margin-left:0;
+  width: 100%;
 }
 .navigation:checked ~ .nav li p{
   display: none;
+  opacity: 0;
+  transition: opacity 2s;
 }
+

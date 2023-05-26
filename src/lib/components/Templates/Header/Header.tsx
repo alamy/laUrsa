@@ -5,6 +5,7 @@ import { Avatar } from '../../Atomic/Avatar/Avatar';
 import './Header.scss';
 import { Down } from '../../Icon/System/Down';
 import { Up } from '../../Icon/System/Up';
+import { Menu } from '../../Organisms/Menu/Menu';
 
 
 export interface HeaderProps {
@@ -29,6 +30,7 @@ home = true,
 path= '/',
 Logout,
 Home,
+
 ...props}: HeaderProps) 
    
 {
@@ -36,15 +38,17 @@ Home,
 const [boxPerfil, setBoxPerfil] = useState(false)
 const Perfil = () => {
     setBoxPerfil(!boxPerfil)
-    console.log('estou aqui inter')
 }
     return(
     <>
-
+   
         <div className={clsx('header')}>
+       
             <h2 className='headerTitle'>{title}</h2>
+              
                 <div className='logo'>
-                    <Logo/>
+                    {home? '' : <Logo/>}
+                    
                 </div>
 
                 <div className={clsx('home', {'block': home === true, 'none': home === false})} >
@@ -76,8 +80,21 @@ const Perfil = () => {
                 {boxPerfil? <div className='perfil'>
                     <button name='logout' onClick={Logout}>Logout</button>
                 </div> : '' }
-                
+               
         </div>
+        {home? <Menu
+                Objeto={{
+                    '1': [
+                    '',
+                    'teste'
+                    ],
+                    '2': [
+                    '',
+                    'teste2'
+                    ]
+                }}
+                title=""
+                />: ''}
     </>
     );
 }
