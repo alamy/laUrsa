@@ -47,7 +47,7 @@ const Perfil = () => {
             <h2 className='headerTitle'>{title}</h2>
               
                 <div className='logo'>
-                    {home? '' : <Logo/>}
+                    <Logo/>
                     
                 </div>
 
