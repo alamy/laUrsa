@@ -82,19 +82,6 @@ const Perfil = () => {
                 </div> : '' }
                
       
-        {home? <Menu
-                Objeto={{
-                    '1': [
-                    '',
-                    'teste'
-                    ],
-                    '2': [
-                    '',
-                    'teste2'
-                    ]
-                }}
-                title=""
-                />: ''}
 
 </div>
     </>
