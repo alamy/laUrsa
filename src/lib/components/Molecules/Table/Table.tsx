@@ -29,7 +29,6 @@ export const Table = ({
     Obj, 
     typeTable,
     Editar,
-    Excluir,
     
 }: TableProps ) => {
     let ObjHeader = header?.map(function(opt){
@@ -52,7 +51,6 @@ export const Table = ({
         
             <td>
                 <Button text={edit} type='secondary' size='md' id={id} name={name} onClick={Editar}/>
-                <Button text={trash} type='secondary' size='md' id={id} name={name} onClick={Excluir}/>
             </td>
         </tr>)
      })

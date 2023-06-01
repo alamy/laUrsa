@@ -81,7 +81,7 @@ const Perfil = () => {
                     <button name='logout' onClick={Logout}>Logout</button>
                 </div> : '' }
                
-        </div>
+      
         {home? <Menu
                 Objeto={{
                     '1': [
@@ -95,6 +95,8 @@ const Perfil = () => {
                 }}
                 title=""
                 />: ''}
+
+</div>
     </>
     );
 }

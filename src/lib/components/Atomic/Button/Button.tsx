@@ -30,6 +30,7 @@ export function Button({disable = false, text, type = 'primary',name, size = 'md
 
     return (
         <button id={id} name={name}
+            
             className={clsx(
                 'buttonLaUrsa',
                 'relative',

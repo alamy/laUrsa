@@ -1,8 +1,6 @@
 import { clsx } from 'clsx';
 import './Dropdown.scss'
 
-
-
 export interface DropdownProps {
     text: string;
     size?: 'md' | 'lg';
