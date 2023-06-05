@@ -1,6 +1,7 @@
 
 
 import { Alerta } from './lib/components/Molecules/Alerta/Alerta';
+import { Modal } from './lib/components/Molecules/Modal/Modal';
 import { Header } from './lib/components/Templates/Header/Header';
 import './lib/styles/global.css';
 
@@ -12,6 +13,8 @@ function App() {
   return (
     
     <>
+     <Modal onClick={teste}/>
+     
        <Header
                 title="Prefeitura do Recife"
                 home={true}
@@ -25,6 +28,7 @@ function App() {
         tipo="danger"
         titulo="Info notification" onClick={teste}
          />
+        
     </>
 
   )
