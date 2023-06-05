@@ -12,5 +12,6 @@ export default {
 export const Default: StoryObj<BreadcrumbsProps> = {
     args: {
         label: ['teste' , 'teste3']
-    }
+    },
+    argTypes: {}
 }

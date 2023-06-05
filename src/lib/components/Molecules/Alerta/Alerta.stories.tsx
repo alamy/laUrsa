@@ -5,7 +5,8 @@ export default {
     title: 'Molecules/Alerta',
     component: Alerta,
     args: {
-        texto: ''
+        texto: '',
+        titulo: ''
     },
     argTypes: {
         tipo: {
@@ -19,6 +20,8 @@ export default {
 export const Default: StoryObj<AlertaProps> = {
     args: {
         texto: 'Notification message. Lorem ipsum doloro sit amet, consectur adipicing.',
-        tipo: 'notification'
-    }
+        tipo: 'notification',
+        titulo: 'Info notification'
+    },
+    argTypes: {}
 }

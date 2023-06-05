@@ -1,9 +1,8 @@
-
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,700;1,500&display=swap');
 .box-alerta {
-    width: 50vw;
-    height: 18%;
+    width: 524px;
+    height: 96px;
     position: absolute;
-  
     background-color: #F2F5F7;
     border-radius: 4px;
     box-shadow: 3px 4px 4px #cecece;
@@ -12,12 +11,12 @@
     float: right;
     margin-right: 10px;
     cursor: pointer;
+    color: #cecece;
+    margin-top: 10px;
 }
 .avatar {
     width: 30px;
     height: 30px;
-    border-radius: 100%;
-    background-color: #1474FF;
     margin-top: 30px;
     margin-left: 30px;
     display: inline-block;
@@ -26,6 +25,19 @@
     display: inline-block;
     top: -10px;
     margin: 0px 0 0 10px;
+    width: 80%;
+}
+.info h1{
+    font-size: 16px;
+    font-family: 'DM Sans';
+}
+.info p {
+    color: #464E5C;
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 160%;
 }
 .danger{
     border: 1px solid #DB4437;
