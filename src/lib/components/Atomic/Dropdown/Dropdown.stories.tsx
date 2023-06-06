@@ -9,6 +9,7 @@ export default {
         size: 'md',
         disable: false,
         error: false,
+        id: '01',
         Option:  [
             {
                 label: 'teste 1',

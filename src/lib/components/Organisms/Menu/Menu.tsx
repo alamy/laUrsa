@@ -1,5 +1,5 @@
 
-import { Logo } from '../../Icon/Logo'
+
 import './Menu.scss'
 export interface MenuProps{
     title: string
@@ -26,10 +26,7 @@ export function Menu({title= 'teste', Objeto}: MenuProps) {
 
     return(
     <>
-        <input type="checkbox" id="navigation" className='navigation' />
-        <label htmlFor="navigation" className="labelNavigation">
-            <Logo size='sm' />
-        </label>
+        
 
         <div className="nav">
             <ul>
