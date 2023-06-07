@@ -33,7 +33,7 @@ function App() {
           onClick={function noRefCheck() { } }
           onFocus={function noRefCheck() { } }
           size="md"
-          text="Label" id={'2'} value={''}/>
+          text="Label" id={'2'} value={''} />
 
 
 nCras aliquam condimentum arcu non porttitor. Curabitur vehicula augue scelerisque libero rutrum, a scelerisque risus consequat. Sed nunc dolor, ullamcorper id augue et, dictum vestibulum enim. Aenean dignissim enim ut libero faucibus lobortis blandit cursus libero. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Proin imperdiet purus quis fermentum imperdiet. Quisque luctus quam eget arcu auctor molestie.
