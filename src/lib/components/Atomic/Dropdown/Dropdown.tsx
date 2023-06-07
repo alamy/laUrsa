@@ -3,6 +3,7 @@ import './Dropdown.scss'
 
 export interface DropdownProps {
     text: string;
+    value: string;
     id: string;
     size?: 'md' | 'lg';
     error?: boolean;
@@ -15,7 +16,7 @@ export interface DropdownProps {
 
 }
 
-export function Dropdown({disable, size = 'md', text, id, error, Option, ...props}: DropdownProps ) {
+export function Dropdown({disable, size = 'md', value, text, id, error, Option, ...props}: DropdownProps ) {
     let estilo
     let label
    if(error){
@@ -34,7 +35,7 @@ export function Dropdown({disable, size = 'md', text, id, error, Option, ...prop
             <label className={clsx(label, 'label')} htmlFor={text}>{text}</label>
         </p>
 
-        <select id={id} disabled={disable} name='text' className={clsx(
+        <select id={id} disabled={disable} name='text'  className={clsx(
             'dropdown',
                 'px-4',
                 'border-solid',

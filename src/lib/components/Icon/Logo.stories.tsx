@@ -7,6 +7,10 @@ export default {
     args: {
     },
     argTypes: {
+      type: {
+        options: ['Primary', 'Second'],
+        control: { type: 'radio' }
+      },
         size : {
           options: ['sm' , 'md' , 'lg' , 'xl'],
         }
@@ -16,5 +20,13 @@ export default {
 
 export const Default: StoryObj<LogoProps> = {
     args: {},
-   argTypes: {}
+   argTypes: {
+    type: {
+      options: ['Primary', 'Second'],
+      control: { type: 'radio' }
+    },
+      size : {
+        options: ['sm' , 'md' , 'lg' , 'xl'],
+      }
+   }
 }

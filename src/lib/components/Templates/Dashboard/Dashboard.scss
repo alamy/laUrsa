@@ -1,12 +1,100 @@
 .link_externos {
     display: inline-block;
-    border: 1px solid red;
+    margin-left: 20px;
+    position: relative;
+    top:-8px;
+    width: 80%;
+}
+.link_externos li:first-child {
+    margin-left: 0px;
+} 
+.link_externos  li {
+    color: #0F57BF;
+    font-weight: bold;
+    margin-left: 3%;
+}
+
+.hamburguer {
+    margin: 2% 0 0 10px;
+    position: relative;
+    width: 5%;
 }
 .link_externos li {
     display: inline-block;
+    cursor: pointer;
 }
-.header{
+.configuracao {
+    display: inline-block;
+}
+.configuracao li {
+    display: inline-block;
+    margin-right: 14px;
+    cursor: pointer;
+}
+.headers{
+    width:85%;
     height: 69px;
+    margin-left: 15%;
     top: 0px;
     background: #F4F4F4;
+}
+.menu_lateral {
+    background-color: #1474FF;
+    display: inline-block;
+    height: 100vh;
+    position: fixed;
+}
+.conteudo {
+    width: 81%;
+    margin-top: 10px;
+    margin-left: 17%;
+}
+
+.small {
+    width: 8%;
+}
+
+.big {
+    width: 15%;
+}
+
+.conteiner-small{
+    width: 92%;
+    margin-left: 17%;
+}
+
+.conteiner-big{
+    width: 88%;
+    margin-left: 9%;
+}
+
+.header-small{
+    width: 85%;
+    margin-left: 15%;
+}
+
+.header-big{
+    width: 92%;
+    margin-left: 8%;
+}
+.box-menu {
+   //border-bottom:  0.5px solid rgba(255, 255, 255, 0.4);
+   width: 80%;
+   margin: 4px auto;
+   padding: 10px 0;
+}
+.box-menu svg {
+    margin: 0 auto;
+}
+
+.logo {
+    margin: 10% 23%;
+    display: block;
+}
+.back_page {
+    margin: 12px 0 4px 0
+ 
+}
+.back_page svg {
+    margin: 0 auto;
 }
