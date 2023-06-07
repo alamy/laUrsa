@@ -35,7 +35,7 @@ export function Dropdown({disable, size = 'md', value, text, id, error, Option, 
             <label className={clsx(label, 'label')} htmlFor={text}>{text}</label>
         </p>
 
-        <select id={id} disabled={disable} value={''} name='text' className={clsx(
+        <select id={id} disabled={disable} value={value} name='text' className={clsx(
             'dropdown',
                 'px-4',
                 'border-solid',
