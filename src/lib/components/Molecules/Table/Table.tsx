@@ -17,8 +17,6 @@ export interface TableProps {
     },
 }
 
-const trash = <div><Trash size="md" type="Primary" /></div>
-
 const edit = <Edit
 size="md"
 type="Primary"
@@ -39,7 +37,6 @@ export const Table = ({
          return (<td>{Item}</td>)
         })
         let id:any = Object.values(Object.values(objItem)[0].props)[0]
- 
         let name:any = Object.values(Object.values(objItem)[1].props)[0]
         return (
         <tr id={id}  className={clsx(

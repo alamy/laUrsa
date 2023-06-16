@@ -1,0 +1,60 @@
+.headers{
+    width:85%;
+    height: 69px;
+    margin-left: 15%;
+    top: 0px;
+    background: #F4F4F4;
+}
+.header-small{
+    width: 85%;
+    margin-left: 15%;
+}
+
+.header-big{
+    width: 92%;
+    margin-left: 8%;
+}
+.hamburguer {
+    margin: 1% 0 0 10px;
+    position: relative;
+    width: 5%;
+    float: left;
+}
+
+.link_big {
+    width: 55%;
+}
+.link_small {
+    width: 75%;
+}
+.link_externos {
+    display: inline-block;
+    margin-left: 20px;
+    position: relative;
+    top:18px;
+    
+}
+.link_externos li:first-child {
+    margin-left: 0px;
+} 
+
+.link_externos li {
+    display: inline-block;
+    cursor: pointer;
+    color: #0F57BF;
+    font-weight: bold;
+    margin-left: 3%;
+}
+.configuracao {
+    float: right;
+    margin-top: 21px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+.data {
+    float: right;
+    color: #1474FF;
+    margin-right: 20px;
+    margin-top: 24px;
+    
+}

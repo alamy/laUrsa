@@ -1,21 +1,36 @@
 import { Meta, Story, StoryObj } from '@storybook/react';
 import {MenuProps, Menu} from './Menu'
 import { Pppe } from '../../Icon/Menu/Pppe';
+import { Search } from '../../Icon/System/Search';
 
 export default {
     title: 'organisms/Menu',
     component: Menu,
     args: {
-        Objeto: {
-            1:
-            [<Pppe size="md" type="Primary"/>, 'teste',
+        titulo: 'SICM',
+        menu:[
             {
-               1:['sub menu', 'sub menu 2']
-            }
+                imagem: <Search size="lg" type="Second" />,
+                texto: 'Demo',
+                to: '',
+                submenu: [
+                    { 
+                        name: 'teste', 
+                        to: '/demo'
+                    }
+                ]
+            }    
         ],
-            2:[<Pppe size="md" type="Primary"/>, 'teste2']
+    linksExternos: [
+        {
+            label: 'Link 1',
+            to: '/teste'
         },
-        title: ''
+        {
+            label: 'Link 2',
+            to: '/teste'
+        }
+    ],
     }
 } as Meta<MenuProps>
 

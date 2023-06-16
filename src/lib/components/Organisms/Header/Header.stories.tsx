@@ -2,18 +2,21 @@ import { Meta, StoryObj } from '@storybook/react';
 import {HeaderProps, Header} from './Header'
 
 export default {
-    title: 'templates/Header',
+    title: 'organisms/Header',
     component: Header,
     args: {
-        notification: false,
-        home: true,
-        path: '',
+        linksExternos: [
+            {
+                label: 'Link 1',
+                to: '/teste'
+            },
+            {
+                label: 'Link 2',
+                to: '/teste'
+            }
+        ],
     },
     argTypes: {
-        img: {
-            options : "",
-            control : {type: 'file'}
-        },
         onClick: { action: 'clicked' }
     }
 } as Meta<HeaderProps>

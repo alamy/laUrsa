@@ -41,14 +41,10 @@ const Perfil = () => {
 }
     return(
     <>
-   
         <div className={clsx('header')}>
-       
             <h2 className='headerTitle'>{title}</h2>
-              
                 <div className='logo'>
                     <Logo/>
-                    
                 </div>
 
                 <div className={clsx('home', {'inline-block': home === true, 'none': home === false})} >
@@ -80,10 +76,7 @@ const Perfil = () => {
                 {boxPerfil? <div className='perfil'>
                     <button name='logout' onClick={Logout}>Logout</button>
                 </div> : '' }
-               
-      
-
-</div>
+        </div>
     </>
     );
 }

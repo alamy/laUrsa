@@ -36,6 +36,7 @@ import * as Table from '../src/lib/components/Molecules/Table/Table';
 import * as Menu from '../src/lib/components/Organisms/Menu/Menu';
 //Template
 import * as Header from '../src/lib/components/Templates/Header/Header';
+import * as Header from '../src/lib/components/Templates/Dashboard/Dashboard';
 
 export { Logo,
 // Icon System
@@ -49,7 +50,7 @@ Avatar, Button, Checkbox, Dropdown, Input, Radio,
 // Molecules    
 Table,
 //Template
-Header, Menu };
+Header, Menu, Dashboard };
 export * from '../src/lib/components/Icon/Logo';
 // Icon System
 export * from '../src/lib/components/Icon/System/Eye';
@@ -84,3 +85,4 @@ export * from '../src/lib/components/Molecules/Table/Table';
 export * from '../src/lib/components/Organisms/Menu/Menu';
 //Template
 export * from '../src/lib/components/Templates/Header/Header';
+export * from '../src/lib/components/Templates/Dashboard/Dashboard';

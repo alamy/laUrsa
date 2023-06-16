@@ -8,7 +8,7 @@
           "includeExportName": true,
           "extractComments": true
         },
-        "react-hot-loader/babel",
+        "react-hot-loader/babel"
       ]
     ],
   }

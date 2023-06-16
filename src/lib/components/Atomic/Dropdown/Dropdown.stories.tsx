@@ -13,11 +13,11 @@ export default {
         Option:  [
             {
                 label: 'teste 1',
-                vallue: '1'
+                value: '1'
             },
             {
                 label: 'teste 2',
-                vallue: '2'
+                value: '2'
             }
         ],
     }

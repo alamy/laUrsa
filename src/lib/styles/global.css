@@ -2,8 +2,3 @@
 @tailwind utilities;
 @tailwind components;
 
-.teste {
-    height: 3000px;
-    border: 1px solid red;
-    overflow: scroll;
-}
