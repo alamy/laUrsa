@@ -10,30 +10,33 @@
     padding: 10px 0;
 }
 
-.menu-app li {
+.li-menu {
     cursor: pointer;
     display: block;
     font-weight: 800;
     min-height: 50px;
+    color: #fff;
+    margin:  5px auto;
 }
 
-.menu-app li:hover .menu-icon{
+.li-menu:hover .menu-icon{
     border: 1px solid rgba(196, 220, 255, 0.2);
     border-radius: 10px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.08);
     border-radius: 4px;
 }
 
-.nav li {
-    width: 90%;
-    margin:  5px auto;
-    color: #fff;
-}
 .nav li svg {
     margin: 0 10%;
     display: inline-block;
 }
 .nav li p {
+    width: 52%;
+    float: right;
+    vertical-align: middle
+}
+
+.nav-small li p {
     width: 52%;
     float: right;
     vertical-align: middle
@@ -66,46 +69,14 @@
     color: #fff;
     width:60%;
     font-size: 1.1em;
-    margin-top: 4%;
+    margin-top: -10%;
     p {
         width: 80%;
         float: left;
         margin-top: -10px;
     }
 }
-.detail-perfil {
-    width: 370px;
-    height: 270px;
-    border-radius: 10px;
-    background-color: #4F97FF;
-    box-shadow: 1px 1px 4px #000;
-    display: block;
-    position: relative;
-    left: 95%;
-    top: -25%;
-}
-.info-user-datail {
-    width: 80%;
-    margin: 0 auto;
-    padding-top: 30px;
-}
-.info-user-datail{ 
-    article {
 
-    color: #fff;
-    text-align: center;
-    display: inline-block;
-
-    h4 {
-        background-color: #89BAFF;
-        border-radius: 40px;
-    
-        margin-bottom: 10px;
-        font-size: 1.2em;
-        font-weight: 700;
-    }
-}
-}
 
 .title {
     display: none;
@@ -186,28 +157,25 @@
      padding: 4px;
  }
  
- .close-user {
-     cursor: pointer;
-     float: right;
-     margin-top: 10px;
-     margin-right: 10px;
- }
- 
  .sub-menu {
-     width: 300px;
+     min-width: 300px;
      display: block;
      position: absolute;
-     left: 85%;
+     margin-top: 0px;
+     left: 86%;
+     padding: 14px 10px 5px 10px;
      background-color: #1474FF;
      color: #fff;
      border-radius: 10px;
      background-color: #4F97FF;
      box-shadow: 1px 1px 4px #000;
-     
  }
-
-.sub-menu li {
-    margin: 10px 9px;
+ .item-li-submenu{
+    cursor: pointer;
+    margin: 3px 0 10px 0;
+ }
+.item-li-submenu svg {
+    float: right;
 
 }
 
@@ -224,4 +192,19 @@
     display: inline-block;
     height: 100vh;
     position: fixed;
+}
+.nav-item{
+    font-weight: 100;
+    min-height: 10px;
+    display: block;
+    margin: 3px 0 0 14px;
+    width: 80%;
+}
+.nav-item-li {
+    cursor: pointer;
+    opacity: 0.7;
+}
+.nav-item-li:hover{
+    opacity: 1.0;
+    transition: 1s;
 }

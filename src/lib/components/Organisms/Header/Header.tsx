@@ -6,7 +6,6 @@ import { Settings } from '../../Icon/System/Settings';
 
 
 export interface HeaderProps {
-    title: string
     linksExternos: Object
     Configurcao: () => void
     tamanho: boolean
@@ -15,12 +14,14 @@ export interface HeaderProps {
 }
 
 
-export function Header({title = 'SICM', 
-linksExternos,
-Configurcao,
-tamanho,
-Size,
-...props}: HeaderProps) 
+export function Header(
+  {
+    linksExternos,
+    Configurcao,
+    tamanho,
+    Size,
+    ...props
+  }: HeaderProps) 
    
 {
     let data =  Date()

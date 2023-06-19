@@ -19,16 +19,41 @@ export interface DashboardProps {
     linksExternos: Object
     Navegacao?: (i: any) => void
     Configurcao: () => void
-  
+    usuario: String,
+    descricaoUsuario?: String
+    localidadeUsuario?: String
 }
 
-export function Dashboard({menu, titulo, children, Navegacao, Configurcao, linksExternos}: DashboardProps) {
+export function Dashboard(
+    {
+        menu, 
+        titulo, 
+        children, 
+        Navegacao, 
+        Configurcao, 
+        linksExternos,
+        usuario,
+        descricaoUsuario,
+        localidadeUsuario,
+    }: DashboardProps) {
   
     let [tamanho, setTamanho ] = useState(false)
+    let [sub, setSub ] = useState(false)
+
+    const clickSubmenu = () => {
+        setSub(false)
+    }
     return (
     <>
-    <Menu titulo={titulo} menu={menu} size={tamanho} />
-    <Header title={''} 
+    <Menu 
+        titulo={titulo} 
+        menu={menu} 
+        descricaoUsuario={descricaoUsuario} 
+        localidadeUsuario={localidadeUsuario} 
+        size={tamanho} 
+        usuario={usuario}
+        submenu={sub} />
+    <Header
           linksExternos={linksExternos} 
           Configurcao={function (): void {
             Configurcao
@@ -37,7 +62,7 @@ export function Dashboard({menu, titulo, children, Navegacao, Configurcao, links
         Size={function (): void {
          return setTamanho(!tamanho)
         } } />
-    <div className={clsx({
+    <div onClick={clickSubmenu} className={clsx({
       'conteiner-small': tamanho === true,
       'conteiner-big': tamanho === false
       },'conteudo')}>

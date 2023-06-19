@@ -1,29 +1,34 @@
 import { useEffect, useState } from 'react'
-
 import { Right } from '../../Icon/System/Right'
 import { Avatar } from '../../Atomic/Avatar/Avatar'
-import { X } from '../../Icon/System/X'
 import { Logo } from '../../Icon/Logo'
 import clsx from 'clsx'
 import './Menu.scss'
+import { ModalPerfil } from '../../Molecules/ModalPerfil/ModalPerfil'
+import { Down } from '../../Icon/System/Down'
+import { Up } from '../../Icon/System/Up'
 export interface MenuProps{
     titulo: string
     menu: Object
     Navegacao?: (i: any) => void
     size: boolean
-    
+    usuario: String
+    descricaoUsuario?: String
+    localidadeUsuario?: String
+    submenu?: boolean
 }
 
-
-
-export function Menu({titulo= 'teste', menu, size, Navegacao}: MenuProps) {
-    let data =  Date()
-    let dia = new Date(data).getDate()
-    let mes = (new Date(data).getMonth()<10?'0':'') + new Date(data).getMonth()
-    let ano = new Date(data).getFullYear()
-
-    let hora = new Date(data).getHours()
-    let minutos = (new Date(data).getMinutes()<10?'0':'') + new Date(data).getMinutes()
+export function Menu(
+  {
+    titulo, 
+    menu, 
+    size, 
+    Navegacao,
+    usuario,
+    descricaoUsuario,
+    localidadeUsuario,
+    submenu
+  }: MenuProps) {
     let [tamanho, setTamanho ] = useState(false)
     let [detailPerfil, setdetailPerfil ] = useState(false)
 
@@ -35,15 +40,36 @@ export function Menu({titulo= 'teste', menu, size, Navegacao}: MenuProps) {
       }
 
       let menuLateral = Object.values(menu)?.map(function(item){
-        let [submenu, setSubmenu ] = useState(false)
+        let [submenuLi, setSubmenuLi ] = useState(false)
         const btnSub = () => {
-          setSubmenu(!submenu)
+          setSubmenuLi(true)
+        }
+        const btnSubOver = () => {
+          setSubmenuLi(false)
         }
        
         let itemSubMenu = Object.values(item?.submenu)?.map(function(itemsubmenu: any) {
-          return <li onClick={Navegacao} value={itemsubmenu.to}>{itemsubmenu.name}</li>;
+          let [navItem, setNavItem ] = useState(false)
+          const UlSelection = () => {
+            setNavItem(!navItem)
+          }
+           let t = itemsubmenu[0]
+           let itemNav = t.map(function(nav: any){
+            return <div className='nav-item-li' onClick={Navegacao}>{nav.name}</div>
+           
+           })
+
+          return (
+            <>
+              <div className='item-li-submenu' onClick={UlSelection}>
+                {itemsubmenu.titulo} {navItem? <Up type='Second' /> : <Down type='Second'/>}
+                {navItem? <div className='nav-item'>{itemNav}</div>: ''}
+              </div>
+            </>
+            )
         })
-          return  <li onClick={btnSub}> 
+          return  (
+          <><li className='li-menu' onMouseOver={btnSub} onMouseOut={btnSubOver}> 
                   <div className='menu-icon'>{item.imagem}</div>
                   {
                     tamanho ? 
@@ -61,37 +87,16 @@ export function Menu({titulo= 'teste', menu, size, Navegacao}: MenuProps) {
                         {item.texto}
                       </div>
                   } 
-  
-                  {submenu? <ul className='sub-menu'>
-                    
-                      <li>{itemSubMenu}</li>
-                    </ul> : null}
+                   {
+                      submenuLi ? 
+                              
+                        <div className='sub-menu-li sub-menu'>
+                            {itemSubMenu}
+                      </div> : null 
+                  }      
                   </li>
-      })
-
-      let Detalhe = 
-      <div className='detail-perfil'>
-        <div onClick={Perfil} className='close-user'>      
-            <X
-              size="md"
-              type="Second"
-            />
-        </div>
-        <div className='info-user-datail'>
-          <Avatar text={''} size='lg' />
-          <article>
-            <h4>Alamy Neto</h4>
-            <p> {dia}/{mes}/{ano} • {hora}:{minutos}</p>
-            <p>Analiista de Cobrança</p>
-            <p>Secretaria de Finanças</p>
-          </article>
-          <button>Organograma</button>
-          <button>Informações</button>
-          <button>Sair</button>
-        </div>
-         
-      </div>
-  
+                            
+                </> )})
 
     return(
     <>  
@@ -133,7 +138,7 @@ export function Menu({titulo= 'teste', menu, size, Navegacao}: MenuProps) {
             <Avatar text={''} size='sm' />
             {tamanho? 
             <div className='person-description'>
-              <p>Alamy Neto</p>
+              <p>{usuario}</p>
               <Right
                        
                         size="sm"
@@ -142,8 +147,12 @@ export function Menu({titulo= 'teste', menu, size, Navegacao}: MenuProps) {
                    : ''}
         
         </div>
-        {detailPerfil? Detalhe : ''}
-        
+        {detailPerfil? <ModalPerfil 
+                          usuario={usuario} 
+                          descricaoUsuario={descricaoUsuario} 
+                          localidadeUsuario={localidadeUsuario} 
+                          onClick={undefined} 
+                          Perfil={Perfil} /> : ''}
     </div>
     
     </>

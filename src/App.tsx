@@ -18,19 +18,37 @@ function App() {
   return (
     
     <>
-     <Dashboard titulo={'SICM'} menu={[
+     <Dashboard usuario={"Alamy Neto"} descricaoUsuario={"teste"} localidadeUsuario={"teste"}  titulo={'SICM'} menu={[
         {
           imagem: <Search size="lg" type="Second" />,
           texto: 'Demo',
           to: '/demo',
+          id:1,
           submenu: [
-            {
-              name: 'teasdasdste',
-              to: '/demo'
+            { titulo: 'Titulo 1',
+              0: [
+                  {
+                    name: 'teasdasdste',
+                    to: '/demo'
+                  },
+                  {
+                    name: 'teasdasdste',
+                    to: '/demo'
+                  },
+                ],
             },
             {
-              name: 'asdasd12312312312',
-              to: '/demo'
+              titulo: 'Titulo 2',
+              0: [
+                  {
+                    name: 'teasdasdste',
+                    to: '/demo'
+                  },
+                  {
+                    name: 'teasdasdste',
+                    to: '/demo'
+                  },
+                ],
             }
           ]
         },
@@ -38,10 +56,20 @@ function App() {
           imagem: <Search size="lg" type="Second" />,
           texto: 'Controle de Debito',
           to: '/demo',
+          id:2,
           submenu: [
             {
-              name: 'tesasda23123te',
-              to: '/demo'
+              titulo: 'Titulo 2',
+              0: [
+                  {
+                    name: 'teasdasdste',
+                    to: '/demo'
+                  },
+                  {
+                    name: 'teasdasdste',
+                    to: '/demo'
+                  },
+                ],
             }
           ]
         }
@@ -49,11 +77,10 @@ function App() {
         console.log(i.currentTarget.attributes.value.textContent);
       } } Configurcao={function (): void {
         throw new Error('Function not implemented.');
-      } } linksExternos={
-        [{
+      } } linksExternos={[{
         label: 'Link 1',
         to: '/teste'
-    },]} />  
+      },]} />  
    
     </>
 
