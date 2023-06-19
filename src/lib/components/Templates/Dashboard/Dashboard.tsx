@@ -18,8 +18,8 @@ export interface DashboardProps {
     children: any
     linksExternos: Object
     Navegacao?: (i: any) => void
-    Configurcao: () => void
-    usuario: String,
+    Configuracao: () => void
+    usuario: String | undefined,
     descricaoUsuario?: String
     localidadeUsuario?: String
 }
@@ -30,7 +30,7 @@ export function Dashboard(
         titulo, 
         children, 
         Navegacao, 
-        Configurcao, 
+        Configuracao, 
         linksExternos,
         usuario,
         descricaoUsuario,
@@ -55,9 +55,7 @@ export function Dashboard(
         submenu={sub} />
     <Header
           linksExternos={linksExternos} 
-          Configurcao={function (): void {
-            Configurcao
-        } } 
+          Configuracao={Configuracao} 
         tamanho={tamanho} 
         Size={function (): void {
          return setTamanho(!tamanho)

@@ -4,7 +4,7 @@ import { X } from '../../Icon/System/X';
 import { Avatar } from '../../Atomic/Avatar/Avatar';
 
 export interface ModalPerfilProps {
-    usuario: String
+    usuario?: String
     descricaoUsuario?: String
     localidadeUsuario?: String
     onClick: Function | any;

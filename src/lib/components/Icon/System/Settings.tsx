@@ -2,10 +2,9 @@
 export interface SettingsProps {
     type?: 'Primary' | 'Second';
     size?: 'sm' | 'md' | 'lg' | 'xl';
-    onClick?: Function | any;
 }
 
-export function Settings({type = 'Primary', size = 'md' , ...props}: SettingsProps ) {
+export function Settings({type = 'Primary', size = 'md'}: SettingsProps ) {
     let estilo = '';
     let width;
     let height;

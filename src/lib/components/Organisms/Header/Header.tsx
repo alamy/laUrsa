@@ -7,7 +7,7 @@ import { Settings } from '../../Icon/System/Settings';
 
 export interface HeaderProps {
     linksExternos: Object
-    Configurcao: () => void
+    Configuracao: () => void
     tamanho: boolean
     Size: () => void
    
@@ -17,10 +17,9 @@ export interface HeaderProps {
 export function Header(
   {
     linksExternos,
-    Configurcao,
+    Configuracao,
     tamanho,
     Size,
-    ...props
   }: HeaderProps) 
    
 {
@@ -57,8 +56,8 @@ export function Header(
        {LinkExternos}
       </ul>
        
-        <div className='configuracao' onClick={Configurcao}>
-           <Settings type='Primary' size='md' />
+        <div className='configuracao' onClick={Configuracao}>
+           <Settings type='Primary' size='md'  />
         </div>
       <div className='data'>
         {dia}/{mes}/{ano} {hora}:{minutos}

@@ -18,7 +18,11 @@ function App() {
   return (
     
     <>
-     <Dashboard usuario={"Alamy Neto"} descricaoUsuario={"teste"} localidadeUsuario={"teste"}  titulo={'SICM'} menu={[
+     <Dashboard usuario={"Alamy Neto"} 
+     descricaoUsuario={"teste"} 
+     localidadeUsuario={"teste"}  
+     titulo={'SICM'} 
+     menu={[
         {
           imagem: <Search size="lg" type="Second" />,
           texto: 'Demo',

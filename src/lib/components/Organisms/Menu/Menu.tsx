@@ -12,7 +12,7 @@ export interface MenuProps{
     menu: Object
     Navegacao?: (i: any) => void
     size: boolean
-    usuario: String
+    usuario?: String | undefined
     descricaoUsuario?: String
     localidadeUsuario?: String
     submenu?: boolean
@@ -69,7 +69,7 @@ export function Menu(
             )
         })
           return  (
-          <><li className='li-menu' onMouseOver={btnSub} onMouseOut={btnSubOver}> 
+          <><li className='li-menu' onMouseOver={btnSub} onMouseLeave={btnSubOver}> 
                   <div className='menu-icon'>{item.imagem}</div>
                   {
                     tamanho ? 
@@ -89,8 +89,7 @@ export function Menu(
                   } 
                    {
                       submenuLi ? 
-                              
-                        <div className='sub-menu-li sub-menu'>
+                        <div className='sub-menu'>
                             {itemSubMenu}
                       </div> : null 
                   }      
