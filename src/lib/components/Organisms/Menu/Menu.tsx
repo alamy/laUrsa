@@ -16,6 +16,7 @@ export interface MenuProps{
     descricaoUsuario?: String
     localidadeUsuario?: String
     submenu?: boolean
+    Home: () => void
 }
 
 export function Menu(
@@ -27,7 +28,7 @@ export function Menu(
     usuario,
     descricaoUsuario,
     localidadeUsuario,
-    submenu
+    Home
   }: MenuProps) {
     let [tamanho, setTamanho ] = useState(false)
     let [detailPerfil, setdetailPerfil ] = useState(false)
@@ -103,7 +104,7 @@ export function Menu(
       {'big': tamanho === true, 
       'small': tamanho === false,} , 'menu_lateral')}>
         <div className="box-menu">
-          <div className={clsx({'logo': tamanho === true,
+          <div onClick={Home} className={clsx({'logo': tamanho === true,
                                 'logo-small' : tamanho === false})}>
           <Logo
               size="sm"
@@ -137,11 +138,13 @@ export function Menu(
             <Avatar text={''} size='sm' />
             {tamanho? 
             <div className='person-description'>
-              <p>{usuario}</p>
+              <p>{usuario}
               <Right
                        
-                        size="sm"
-                        type="Third" />
+                       size="sm"
+                       type="Third" />
+              </p>
+             
                 </div>
                    : ''}
         

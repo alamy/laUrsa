@@ -21,6 +21,13 @@ import * as Turista from '../src/lib/components/Icon/Trilha/Turista';
 import * as Pcr from '../src/lib/components/Icon/Menu/Pcr';
 import * as Pppe from '../src/lib/components/Icon/Menu/Pppe';
 import * as Sipr from '../src/lib/components/Icon/Menu/Sipr';
+import * as Sipr from '../src/lib/components/Icon/Menu/Cobranca';
+import * as Sipr from '../src/lib/components/Icon/Menu/Contestacao';
+import * as Sipr from '../src/lib/components/Icon/Menu/ControleDebito';
+import * as Sipr from '../src/lib/components/Icon/Menu/DividaAtiva';
+import * as Sipr from '../src/lib/components/Icon/Menu/Lancamento';
+import * as Sipr from '../src/lib/components/Icon/Menu/Parcelamento';
+import * as Sipr from '../src/lib/components/Icon/Menu/Tramitacao';
 
 //Atomic
 import * as Avatar from '../src/lib/components/Atomic/Avatar/Avatar/';
@@ -43,7 +50,7 @@ Eye, EyeNot, Mic, Search, X,
 // Icon Trilha
 Aprender, Defeciencia, Curtir, Empresario, Idoso, Lgbt, Mulher, Servidor, Turista,
 //Menu
-Pcr, Pppe, Sipr,
+Pcr, Pppe, Sipr, Cobranca, Contestacao, ControleDebito, DividaAtiva, Lancamento, Parcelamento, Tramitacao,
 //Atomic 
 Avatar, Button, Checkbox, Dropdown, Input, Radio,
 // Molecules    
@@ -71,6 +78,13 @@ export * from '../src/lib/components/Icon/Trilha/Turista';
 export * from '../src/lib/components/Icon/Menu/Pcr';
 export * from '../src/lib/components/Icon/Menu/Pppe';
 export * from '../src/lib/components/Icon/Menu/Sipr';
+export * from '../src/lib/components/Icon/Menu/Cobranca';
+export * from '../src/lib/components/Icon/Menu/Contestacao';
+export * from '../src/lib/components/Icon/Menu/ControleDebito';
+export * from '../src/lib/components/Icon/Menu/DividaAtiva';
+export * from '../src/lib/components/Icon/Menu/Lancamento';
+export * from '../src/lib/components/Icon/Menu/Parcelamento';
+export * from '../src/lib/components/Icon/Menu/Tramitacao';
 //Atomic
 export * from '../src/lib/components/Atomic/Avatar/Avatar';
 export * from '../src/lib/components/Atomic/Button/Button';

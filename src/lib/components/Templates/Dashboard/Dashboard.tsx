@@ -19,6 +19,7 @@ export interface DashboardProps {
     linksExternos: Object
     Navegacao?: (i: any) => void
     Configuracao: () => void
+    Home: () => void
     usuario: String | undefined,
     descricaoUsuario?: String
     localidadeUsuario?: String
@@ -35,6 +36,7 @@ export function Dashboard(
         usuario,
         descricaoUsuario,
         localidadeUsuario,
+        Home
     }: DashboardProps) {
   
     let [tamanho, setTamanho ] = useState(false)
@@ -46,13 +48,14 @@ export function Dashboard(
     return (
     <>
     <Menu 
-        titulo={titulo} 
-        menu={menu} 
-        descricaoUsuario={descricaoUsuario} 
-        localidadeUsuario={localidadeUsuario} 
-        size={tamanho} 
-        usuario={usuario}
-        submenu={sub} />
+                titulo={titulo}
+                menu={menu}
+                descricaoUsuario={descricaoUsuario}
+                localidadeUsuario={localidadeUsuario}
+                size={tamanho}
+                usuario={usuario}
+                submenu={sub} 
+                Home={Home} />
     <Header
           linksExternos={linksExternos} 
           Configuracao={Configuracao} 
