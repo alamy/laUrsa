@@ -6,7 +6,8 @@
     width: 83%;
     margin-left: 22%;
     padding-top: 4px ;
-    vertical-align: middle
+    vertical-align: middle;
+    
 }
 .menu-app {
     border-top: 1px solid #89BAFF;
@@ -35,9 +36,7 @@
     margin: 0 10%;
     display: inline-block;
 }
-.nav li p {
- 
-}
+
 
 .nav-small li p {
     width: 52%;
@@ -163,21 +162,19 @@
  
  .sub-menu {
      min-width: 300px;
-     display: block;
      position: absolute;
      margin-top: -20%;
      left: 86%;
      padding: 14px 10px 5px 10px;
      background-color: #1474FF;
      color: #fff;
-     border-radius: 10px;
-     background-color: #4F97FF;
+     border-radius: 3px;
      box-shadow: 1px 1px 4px #000;
-     z-index: 9999;
  }
  .item-li-submenu{
     cursor: pointer;
     margin: 3px 0 10px 0;
+    position: relative;
  }
 .item-li-submenu svg {
     float: right;
@@ -202,12 +199,15 @@
     font-weight: 100;
     min-height: 10px;
     display: block;
+    position: relative;
     margin: 3px 0 0 14px;
     width: 80%;
+
 }
 .nav-item-li {
     cursor: pointer;
     opacity: 0.7;
+
 }
 .nav-item-li:hover{
     opacity: 1.0;

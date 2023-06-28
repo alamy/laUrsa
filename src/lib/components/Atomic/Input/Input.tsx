@@ -27,7 +27,7 @@ export function Input({disable, size = 'md', text, error, type,value, ...props}:
     return (
         <>
         <p className='labelInput'>
-            <label className={clsx(label, 'label')} htmlFor={text}>{text}</label>
+            <label className={clsx(label)} htmlFor={text}>{text}</label>
         </p>
         <input type={type}  disabled={disable}  className={clsx(
                 'inputText',

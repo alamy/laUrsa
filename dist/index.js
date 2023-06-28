@@ -39,11 +39,13 @@ import * as Radio from '../src/lib/components/Atomic/Radio/Radio';
 
 // Molecules
 import * as Table from '../src/lib/components/Molecules/Table/Table';
-
+import * as Alerta from '../src/lib/components/Molecules/Alerta/Alerta';
+// Organisms
+import * as Menu from '../src/lib/components/Organisms/Menu/Menu';
 //Template
 import * as Header from '../src/lib/components/Templates/Header/Header';
-import * as Menu from '../src/lib/components/Templates/Menu/Menu';
-import * as Menu from '../src/lib/components/Templates/Dashboard/Dashboard';
+import * as Header from '../src/lib/components/Templates/Dashboard/Dashboard';
+
 export { Logo,
 // Icon System
 Eye, EyeNot, Mic, Search, X,
@@ -54,9 +56,9 @@ Pcr, Pppe, Sipr, Cobranca, Contestacao, ControleDebito, DividaAtiva, Lancamento,
 //Atomic 
 Avatar, Button, Checkbox, Dropdown, Input, Radio,
 // Molecules    
-Table,
+Table,Alerta,
 //Template
-Header, Menu,Dashboard };
+Header, Menu, Dashboard };
 export * from '../src/lib/components/Icon/Logo';
 // Icon System
 export * from '../src/lib/components/Icon/System/Eye';
@@ -94,7 +96,9 @@ export * from '../src/lib/components/Atomic/Input/Input';
 export * from '../src/lib/components/Atomic/Radio/Radio';
 // Molecules
 export * from '../src/lib/components/Molecules/Table/Table';
+export * from '../src/lib/components/Molecules/Alerta/Alerta';
+// Organism
+export * from '../src/lib/components/Organisms/Menu/Menu';
 //Template
 export * from '../src/lib/components/Templates/Header/Header';
-export * from '../src/lib/components/Templates/Menu/Menu';
-export * from '../src/lib/components/Templates/Dashboard/Dashboard  ';
+export * from '../src/lib/components/Templates/Dashboard/Dashboard';

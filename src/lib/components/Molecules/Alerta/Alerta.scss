@@ -5,6 +5,8 @@
     position: absolute;
     background-color: #F2F5F7;
     border-radius: 4px;
+    top: 90px;
+    left: 35Vw;
     box-shadow: 3px 4px 4px #cecece;
 }
 .closer {
@@ -19,13 +21,13 @@
     height: 30px;
     margin-top: 30px;
     margin-left: 30px;
-    display: inline-block;
+    display: block;
+    float: left;
 }
 .info {
-    display: inline-block;
-    top: -10px;
-    margin: 0px 0 0 10px;
-    width: 80%;
+    float: right;
+    margin: 12px 0 0 10px;
+    width: 77%;
 }
 .info h1{
     font-size: 16px;

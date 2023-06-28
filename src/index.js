@@ -39,6 +39,7 @@ import * as Radio from '../src/lib/components/Atomic/Radio/Radio';
 
 // Molecules
 import * as Table from '../src/lib/components/Molecules/Table/Table';
+import * as Alerta from '../src/lib/components/Molecules/Alerta/Alerta';
 // Organisms
 import * as Menu from '../src/lib/components/Organisms/Menu/Menu';
 //Template
@@ -55,7 +56,7 @@ Pcr, Pppe, Sipr, Cobranca, Contestacao, ControleDebito, DividaAtiva, Lancamento,
 //Atomic 
 Avatar, Button, Checkbox, Dropdown, Input, Radio,
 // Molecules    
-Table,
+Table,Alerta,
 //Template
 Header, Menu, Dashboard };
 export * from '../src/lib/components/Icon/Logo';
@@ -95,6 +96,7 @@ export * from '../src/lib/components/Atomic/Input/Input';
 export * from '../src/lib/components/Atomic/Radio/Radio';
 // Molecules
 export * from '../src/lib/components/Molecules/Table/Table';
+export * from '../src/lib/components/Molecules/Alerta/Alerta';
 // Organism
 export * from '../src/lib/components/Organisms/Menu/Menu';
 //Template

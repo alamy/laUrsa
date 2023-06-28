@@ -11,28 +11,20 @@
     margin-top: 0px;
     height: 48px; 
     display: inline-block;
-    position: relative;
-    margin-top: -20px;
   }
 
   .labelDropDown { 
     display: block;
-    position: relative;
     z-index: 999;
-    margin-left: 20px;
     width: 100%;
     margin-top: 0px;
-  }
-
-  .label { 
-    margin-left: 0.6%;
-    margin-top: 0px;
-    position: relative;
-    padding: 0 10px;
     background-color: #fff;
     font-family: 'DM Sans', sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 0.7em;
-    max-width: 40%;
-}
+  }
+
+  .dropdown:focus{
+    border: 1px solid rgba(7, 114, 255, 0.933);
+  }
