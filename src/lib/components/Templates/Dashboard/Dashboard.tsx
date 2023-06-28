@@ -55,7 +55,8 @@ export function Dashboard(
                 size={tamanho}
                 usuario={usuario}
                 submenu={sub} 
-                Home={Home} />
+                Home={Home}
+                Navegacao={Navegacao}/>
     <Header
           linksExternos={linksExternos} 
           Configuracao={Configuracao} 

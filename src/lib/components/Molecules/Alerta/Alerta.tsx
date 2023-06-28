@@ -46,7 +46,7 @@ export function Alerta({texto, tipo, titulo, Close, ...props} :AlertaProps) {
                 <path d="M1 1L13 13" stroke="#898B8F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
             </button>
-            <div className='avatar'>
+            <div className='avatar-alerta'>
                 {avatar}
             </div>
             <div className='info'>

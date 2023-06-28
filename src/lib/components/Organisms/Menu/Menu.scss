@@ -2,11 +2,21 @@
     float: left;
     padding: 5px;
 }
+.menu-icon-small{
+    float: none;
+    display: block;
+    width: 32px;
+    height: 32px;
+    margin: 0 auto;
+    text-align: center;
+    
+}
 .li-menu p {
     width: 83%;
     margin-left: 22%;
     padding-top: 4px ;
     vertical-align: middle;
+   
     
 }
 .menu-app {
@@ -19,10 +29,13 @@
 
 .li-menu {
     cursor: pointer;
-    font-weight: 800;
+    font-weight: 200;
     min-height: 50px;
+    padding: 4px 0;
     color: #fff;
-    margin:  5px auto;
+    display: block;
+    position: relative;
+    margin:  0px auto;
 }
 
 .li-menu:hover .menu-icon{
@@ -45,26 +58,32 @@
 }
 .icon-right {
     float: right;
+    margin-top:3px;
 }
 .nav-small li svg {
-    margin: 0 auto;
+    text-align: center;
+    display: block;
 }
 .nav-small li {
-    width: 50%;
-    margin:  5px auto;
+    width: 100%;
+    margin:  0px auto;
 }
-.avatar {
+.avatar-perfil {
     display: block;
     width: 90%;
     margin: 0 5%;
     cursor: pointer;
+
 }
-.avatar-small {
-    margin: 0 auto;
-    display: block;
-    width: 65px;
+.avatar-perfi-small {
     cursor: pointer;
+        svg{
+            display: block;
+            margin-left: 100%;
+
+        }
 }
+
 .person-description {
     display: block;
     float: right;
@@ -78,7 +97,7 @@
         position: relative;
         display: block;
         align-items: center;
-        margin-top: 0px;
+        margin-top: 15px;
         top: 0;
         padding-left: 59px;
     }
@@ -140,13 +159,13 @@
      cursor: pointer;
  }
  .back_page_small{
-     margin: 12px 0 4px 0
+     margin: 10px 0 0px 0
  }
  .back_page_smalle svg {
      margin: 0 auto;
  }
  .back_page {
- margin: 18px 0 0 0;
+    margin: 10px 0 0 0;
  }
  .back_page svg {
      margin: 0px 10%;
@@ -163,8 +182,9 @@
  .sub-menu {
      min-width: 300px;
      position: absolute;
-     margin-top: -20%;
-     left: 86%;
+     z-index: 9999!important;
+     margin-top: -40px;
+     left: 87%;
      padding: 14px 10px 5px 10px;
      background-color: #1474FF;
      color: #fff;
@@ -175,6 +195,7 @@
     cursor: pointer;
     margin: 3px 0 10px 0;
     position: relative;
+ 
  }
 .item-li-submenu svg {
     float: right;
@@ -193,7 +214,8 @@
     background-color: #1474FF;
     display: inline-block;
     height: 100vh;
-    position: fixed;
+    position: absolute;
+
 }
 .nav-item{
     font-weight: 100;
@@ -213,3 +235,19 @@
     opacity: 1.0;
     transition: 1s;
 }
+
+.menu_lateral::-webkit-scrollbar {
+    width: 12px;               /* width of the entire scrollbar */
+    position: relative;
+  }
+  
+  .menu_lateral::-webkit-scrollbar-track {
+    background: #1474FF;        /* color of the tracking area */
+    position: relative;
+  }
+  
+  .menu_lateral::-webkit-scrollbar-thumb {
+    background-color: #5599f7;    /* color of the scroll thumb */
+    border-radius: 20px;       /* roundness of the scroll thumb */
+    border: 3px solid #1474FF;  /* creates padding around scroll thumb */
+  }
