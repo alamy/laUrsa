@@ -9,6 +9,7 @@ import { Parcelamento } from './lib/components/Icon/Menu/Parcelamento';
 import { Tramitacao } from './lib/components/Icon/Menu/Tramitacao';
 import { Search } from './lib/components/Icon/System/Search';
 import { Alerta } from './lib/components/Molecules/Alerta/Alerta';
+import { Table } from './lib/components/Molecules/Table/Table';
 import { Dashboard } from './lib/components/Templates/Dashboard/Dashboard';
 import './lib/styles/global.css';
 
@@ -27,6 +28,12 @@ function App() {
           <Alerta texto={'Nenhum débito encontrado com a condição: INDICADOR DEVIDO'} tipo={'danger'} titulo={'undefined'} Close={function (): void {
           throw new Error('Function not implemented.')
         } } />
+
+        <Table typeTable={'Default'} header={['id', 'descricao']} Obj={{1:["1", "Mercantil", 'Descricao']}} argTypes={{
+        onClick: {
+          action: 'clicked'
+        }
+      }}  />
           
           </>
 

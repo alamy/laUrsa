@@ -22,11 +22,17 @@ size="md"
 type="Primary"
 />
 
+const trash = <Trash
+size="md"
+type="Primary"
+/>
+
 export const Table = ({
     header, 
     Obj, 
     typeTable,
     Editar,
+    Excluir,
     
 }: TableProps ) => {
     let ObjHeader = header?.map(function(opt){
@@ -48,6 +54,9 @@ export const Table = ({
         
             <td>
                 <Button text={edit} type='secondary' size='md' id={id} name={name} onClick={Editar}/>
+            </td>
+            <td>
+                <Button text={trash} type='secondary' size='md' id={id} name={name} onClick={Excluir}/>
             </td>
         </tr>)
      })

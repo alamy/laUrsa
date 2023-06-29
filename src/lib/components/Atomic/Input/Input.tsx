@@ -1,5 +1,6 @@
 import { clsx } from 'clsx';
 import './input.scss'
+import { useState } from 'react';
 
 export interface InputProps {
     text: string;
@@ -11,7 +12,15 @@ export interface InputProps {
     value?: string
 }
 
-export function Input({disable, size = 'md', text, error, type,value, ...props}: InputProps ) {
+export function Input({disable, size = 'md', text, error, type, ...props}: InputProps ) {
+    let [state, setState] = useState( { value: ""} )
+   function handleChange(event: { target: { value: string; }; }) {
+    setState({ value: event.target.value.replace(/[^\d\s-/]/g, "") });
+      }
+
+     function handleNull(event: { target: { value: string; }; }) {
+        setState({ value: event.target.value });
+     }
     let estilo
     let label
    if(error){
@@ -41,7 +50,7 @@ export function Input({disable, size = 'md', text, error, type,value, ...props}:
                 },
                 estilo
                
-            )} id={text}  {...props} value={value}/>
+            )} id={text}  {...props} value={state.value}  onChange={type === 'number'? handleChange : handleNull }/>
             </>
 
            

@@ -60,16 +60,17 @@ export function Menu(
            let itemNav = null
            if(t){
              itemNav = t.map(function(nav: any){
-              return <div className='nav-item-li' onClick={Navegacao}>{nav.name}</div>
+    
+              return <div className='nav-item-li' id={nav.to} onClick={Navegacao}>{nav.name}</div>
              })
            }
           
 
           return (
             <>
-              <div className='item-li-submenu' onClick={itemNav ? UlSelection : Navegacao}>
+              <div className='item-li-submenu' id={itemsubmenu.to} key={itemsubmenu.to} onClick={itemNav ? UlSelection : Navegacao}>
                 {itemsubmenu.titulo} {itemNav ? navItem ? <Up type='Second' /> : <Down type='Second'/> : ''}
-                {itemNav ? navItem? <div className='nav-item'>{itemNav}</div>: '' : ''}
+                {itemNav ? navItem ? <div className='nav-item' >{itemNav}</div>: '' : ''}
               </div>
             </>
             )
