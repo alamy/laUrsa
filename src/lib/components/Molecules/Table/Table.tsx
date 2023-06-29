@@ -10,7 +10,7 @@ export interface TableProps {
     header: string[];
     Obj:Object;
     value? : string;
-    Editar?: Function;
+    Editar: Function;
     Excluir?:Function;
     argTypes: { 
         onClick: { action: 'clicked' }
@@ -52,7 +52,7 @@ export const Table = ({
         )}>
         {objItem}
         
-            <td>
+            <td className='controle-table'>
                 <Button text={edit} type='secondary' size='md' id={id} name={name} onClick={Editar}/>
                 <Button text={trash} type='secondary' size='md' id={id} name={name} onClick={Excluir}/>
             </td>

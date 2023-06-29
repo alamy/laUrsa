@@ -50,7 +50,7 @@ export function Input({disable, size = 'md', text, error, type, ...props}: Input
                 },
                 estilo
                
-            )} id={text}  {...props} value={state.value}  onChange={type === 'number'? handleChange : handleNull }/>
+            )} id={text}  {...props} value={state.value} />
             </>
 
            

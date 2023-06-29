@@ -1,5 +1,7 @@
 
+import { Button } from './lib/components/Atomic/Button/Button';
 import { Dropdown } from './lib/components/Atomic/Dropdown/Dropdown';
+import { Input } from './lib/components/Atomic/Input/Input';
 import { Cobranca } from './lib/components/Icon/Menu/Cobranca';
 import { Contestacao } from './lib/components/Icon/Menu/Contestacao';
 import { ControleDebito } from './lib/components/Icon/Menu/ControleDebito';
@@ -29,12 +31,18 @@ function App() {
           throw new Error('Function not implemented.')
         } } />
 
-        <Table typeTable={'Default'} header={['id', 'descricao']} Obj={{1:["1", "Mercantil", 'Descricao']}} argTypes={{
+        <Table typeTable={'Default'} header={['id', 'descricao']} Obj={{ 1: ["1", "Mercantil", 'Descricao'] }} argTypes={{
         onClick: {
           action: 'clicked'
         }
-      }}  />
+      }} Editar={(i: any) => {
+        console.log(i)
+      } } />
           
+
+          <Input text={''} type={'number'} />
+
+         <Button onClick={nav} />
           </>
 
 
