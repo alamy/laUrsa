@@ -12,7 +12,7 @@ export interface InputProps {
     value?: string
 }
 
-export function Input({disable, size = 'md', text, error, type, ...props}: InputProps ) {
+export function Input({disable, size = 'md', text, error, value, type, ...props}: InputProps ) {
     let [state, setState] = useState( { value: ""} )
    function handleChange(event: { target: { value: string; }; }) {
     setState({ value: event.target.value.replace(/[^\d\s-/]/g, "") });
@@ -50,7 +50,7 @@ export function Input({disable, size = 'md', text, error, type, ...props}: Input
                 },
                 estilo
                
-            )} id={text}  {...props} value={state.value} />
+            )} id={text}  {...props} value={value} />
             </>
 
            
