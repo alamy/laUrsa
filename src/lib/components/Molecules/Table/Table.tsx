@@ -54,8 +54,6 @@ export const Table = ({
         
             <td>
                 <Button text={edit} type='secondary' size='md' id={id} name={name} onClick={Editar}/>
-            </td>
-            <td>
                 <Button text={trash} type='secondary' size='md' id={id} name={name} onClick={Excluir}/>
             </td>
         </tr>)
