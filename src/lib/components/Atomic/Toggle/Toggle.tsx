@@ -7,7 +7,7 @@ export interface ToggleProps {
     size?:'sm' | 'md' | 'lg'  ; 
 }
 
-export function Toggle({disable, text, size}: ToggleProps ) {
+export function Toggle({disable}: ToggleProps ) {
     let label;
     if(disable){
         label = 'toggle-gray'

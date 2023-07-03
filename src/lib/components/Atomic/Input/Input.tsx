@@ -49,7 +49,6 @@ export function Input({disable, size = 'md', text, error, value, type, ...props}
                     'h-[86px]': size === 'lg',
                 },
                 estilo
-               
             )} id={text}  {...props} value={value} />
             </>
 

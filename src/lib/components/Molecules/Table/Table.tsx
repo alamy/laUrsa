@@ -4,6 +4,8 @@ import './Table.scss'
 import { Button } from '../../Atomic/Button/Button';
 import { Trash } from '../../Icon/System/Trash';
 import { Edit } from '../../Icon/System/Edit';
+import { Toggle } from '../../Atomic/Toggle/Toggle';
+import { Checkbox } from '../../Atomic/Checkbox/Checkbox';
 
 export interface TableProps {
     typeTable: 'Default' | 'HeaderDark' | 'Dark';
@@ -12,6 +14,7 @@ export interface TableProps {
     value? : string;
     Editar: Function;
     Excluir?:Function;
+    visualizacao: boolean;
     argTypes: { 
         onClick: { action: 'clicked' }
     },
@@ -33,8 +36,10 @@ export const Table = ({
     typeTable,
     Editar,
     Excluir,
+    visualizacao,
     
 }: TableProps ) => {
+    
     let ObjHeader = header?.map(function(opt){
         return <th>{opt}</th>
     }) 
@@ -44,6 +49,10 @@ export const Table = ({
         })
         let id:any = Object.values(Object.values(objItem)[0].props)[0]
         let name:any = Object.values(Object.values(objItem)[1].props)[0]
+        let [checkout, setCheckout ]= React.useState(true);
+        const checar = () => {
+            setCheckout(!checkout)
+        }
         return (
         <tr id={id}  className={clsx(
             {
@@ -51,11 +60,18 @@ export const Table = ({
             },
         )}>
         {objItem}
-        
+            {visualizacao?  <td>
+                <label className="switch">
+                        <input type="checkbox" checked={checkout} onClick={checar}/>
+                        <span className="slider round"></span>
+                </label>
+            </td> : ''}
             <td className='controle-table'>
                 <Button text={edit} type='secondary' size='md' id={id} name={name} onClick={Editar}/>
                 <Button text={trash} type='secondary' size='md' id={id} name={name} onClick={Excluir}/>
+               
             </td>
+            
         </tr>)
      })
      

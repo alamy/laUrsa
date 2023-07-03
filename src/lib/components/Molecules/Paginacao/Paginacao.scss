@@ -1,0 +1,21 @@
+.pagination {
+    color: rgb(61, 103, 227);
+    list-style: none;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .pagination li {
+    cursor: pointer;
+    padding: 0.2rem 0.5rem;
+    margin:0 12px;
+    
+  }
+  
+  .pagination li.active {
+    font-weight: bold;
+    background-color: rgb(61, 103, 227);
+    color: #fff;
+    border-radius: 4px;
+  }
+  

@@ -2,6 +2,7 @@
 import { Button } from './lib/components/Atomic/Button/Button';
 import { Dropdown } from './lib/components/Atomic/Dropdown/Dropdown';
 import { Input } from './lib/components/Atomic/Input/Input';
+import { Toggle } from './lib/components/Atomic/Toggle/Toggle';
 import { Cobranca } from './lib/components/Icon/Menu/Cobranca';
 import { Contestacao } from './lib/components/Icon/Menu/Contestacao';
 import { ControleDebito } from './lib/components/Icon/Menu/ControleDebito';
@@ -11,6 +12,8 @@ import { Parcelamento } from './lib/components/Icon/Menu/Parcelamento';
 import { Tramitacao } from './lib/components/Icon/Menu/Tramitacao';
 import { Search } from './lib/components/Icon/System/Search';
 import { Alerta } from './lib/components/Molecules/Alerta/Alerta';
+import { Modal } from './lib/components/Molecules/Modal/Modal';
+import { Paginacao } from './lib/components/Molecules/Paginacao/Paginacao';
 import { Table } from './lib/components/Molecules/Table/Table';
 import { Dashboard } from './lib/components/Templates/Dashboard/Dashboard';
 import './lib/styles/global.css';
@@ -36,13 +39,22 @@ function App() {
           action: 'clicked'
         }
       }} Editar={(i: any) => {
-        console.log(i)
-      } } />
+        console.log(i);
+      } } visualizacao={true} />
           
 
           <Input text={''} type={'number'} />
 
          <Button onClick={nav} />
+
+
+         <br/>
+
+         <Paginacao currentPage={0} totalPages={10} onPageChange={function (page: number): void {
+        throw new Error('Function not implemented.');
+      } } />
+<Toggle text={''} />
+      
           </>
 
 
