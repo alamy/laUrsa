@@ -34,11 +34,7 @@ function App() {
           throw new Error('Function not implemented.')
         } } />
 
-        <Table typeTable={'Default'} header={['id', 'descricao']} Obj={{ 1: ["1", "Mercantil", 'Descricao'] }} argTypes={{
-        onClick: {
-          action: 'clicked'
-        }
-      }} Editar={(i: any) => {
+        <Table typeTable={'Default'} header={['id', 'descricao']} Obj={{ 1: ["1", "Mercantil", 'Descricao'] }}  Editar={(i: any) => {
         console.log(i);
       } } visualizacao={true} />
           

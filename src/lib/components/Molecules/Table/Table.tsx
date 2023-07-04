@@ -15,9 +15,6 @@ export interface TableProps {
     Excluir?:Function;
     Detalhar?:Function;
     visualizacao?: boolean;
-    argTypes: { 
-        onClick: { action: 'clicked' }
-    },
 }
 
 const edit = <Edit
@@ -42,8 +39,7 @@ export const Table = ({
     Editar,
     Excluir,
     visualizacao,
-    Detalhar,
-    
+    Detalhar  
 }: TableProps ) => {
     
     let ObjHeader = header?.map(function(opt){
@@ -70,9 +66,9 @@ export const Table = ({
                 </label>
             </td> : ''}
             <td className='controle-table'>
-                <Button text={edit} type='secondary' size='md' id={id} name={name} onClick={Editar}/>
-                <Button text={trash} type='secondary' size='md' id={id} name={name} onClick={Excluir}/>
-                <Button text={eye} type='secondary' size='md' id={id} name={name} onClick={Detalhar}/>
+                <Button icone={'edite'} type='secondary' size='md' id={id} name={name} onClick={Editar}/>
+                <Button icone={'delete'} type='secondary' size='md' id={id} name={name} onClick={Excluir}/>
+                <Button icone={'look'} type='secondary' size='md' id={id} name={name} onClick={Detalhar}/>
                
             </td>
             

@@ -5,6 +5,7 @@ export interface ButtonProps {
     text?: string | any;
     type?: 'primary' | 'secondary';
     size?: 'md' | 'lg';
+    icone?: 'edite' | 'delete' | 'look';
     disable?: boolean;
     id?: string;
     onClick?: Function | any;
@@ -12,7 +13,7 @@ export interface ButtonProps {
    
 }
 
-export function Button({disable = false, text, type = 'primary',name, size = 'md',id,  ...props}: ButtonProps ) {
+export function Button({disable = false, text, type = 'primary',name, size = 'md',id, icone,  ...props}: ButtonProps ) {
     let estilo = '';
 
     switch(type) {
@@ -28,9 +29,23 @@ export function Button({disable = false, text, type = 'primary',name, size = 'md
             break;
     }
 
+    switch(icone) {
+        case 'edite':
+            icone = 'edite'
+            break;
+        case 'delete' :
+            icone = 'delete'
+            break;
+        case 'look' :
+            icone = 'look'
+            break;    
+        default : ''
+    }
+
+
+
     return (
         <button id={id} name={name}
-            
             className={clsx(
                 'buttonLaUrsa',
                 'relative',
@@ -38,7 +53,8 @@ export function Button({disable = false, text, type = 'primary',name, size = 'md
                     'h-[48px]': size === 'md',
                     'h-[56px]': size === 'lg',
                 },
-                estilo
+                estilo,
+                icone
             )}
             {...props}
         >
