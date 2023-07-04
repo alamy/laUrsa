@@ -36,6 +36,7 @@ import * as Checkbox from '../src/lib/components/Atomic/Checkbox/Checkbox';
 import * as Dropdown from '../src/lib/components/Atomic/Dropdown/Dropdown';
 import * as Input from '../src/lib/components/Atomic/Input/Input';
 import * as Radio from '../src/lib/components/Atomic/Radio/Radio';
+import * as Toogle from '../src/lib/components/Atomic/Toogle/Toogle';
 
 // Molecules
 import * as Table from '../src/lib/components/Molecules/Table/Table';
@@ -54,7 +55,7 @@ Aprender, Defeciencia, Curtir, Empresario, Idoso, Lgbt, Mulher, Servidor, Turist
 //Menu
 Pcr, Pppe, Sipr, Cobranca, Contestacao, ControleDebito, DividaAtiva, Lancamento, Parcelamento, Tramitacao,
 //Atomic 
-Avatar, Button, Checkbox, Dropdown, Input, Radio,
+Avatar, Button, Checkbox, Dropdown, Input, Radio,Toogle,
 // Molecules    
 Table,Alerta,
 //Template
@@ -94,6 +95,7 @@ export * from '../src/lib/components/Atomic/Checkbox/Checkbox';
 export * from '../src/lib/components/Atomic/Dropdown/Dropdown';
 export * from '../src/lib/components/Atomic/Input/Input';
 export * from '../src/lib/components/Atomic/Radio/Radio';
+export * from '../src/lib/components/Atomic/Toogle/Toogle';
 // Molecules
 export * from '../src/lib/components/Molecules/Table/Table';
 export * from '../src/lib/components/Molecules/Alerta/Alerta';

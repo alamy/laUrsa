@@ -4,8 +4,7 @@ import './Table.scss'
 import { Button } from '../../Atomic/Button/Button';
 import { Trash } from '../../Icon/System/Trash';
 import { Edit } from '../../Icon/System/Edit';
-import { Toggle } from '../../Atomic/Toggle/Toggle';
-import { Checkbox } from '../../Atomic/Checkbox/Checkbox';
+import { Eye } from '../../Icon/System/Eye';
 
 export interface TableProps {
     typeTable: 'Default' | 'HeaderDark' | 'Dark';
@@ -14,7 +13,8 @@ export interface TableProps {
     value? : string;
     Editar: Function;
     Excluir?:Function;
-    visualizacao: boolean;
+    Detalhar?:Function;
+    visualizacao?: boolean;
     argTypes: { 
         onClick: { action: 'clicked' }
     },
@@ -30,6 +30,11 @@ size="md"
 type="Primary"
 />
 
+const eye = <Eye
+size="md"
+type="Primary"
+/>
+
 export const Table = ({
     header, 
     Obj, 
@@ -37,6 +42,7 @@ export const Table = ({
     Editar,
     Excluir,
     visualizacao,
+    Detalhar,
     
 }: TableProps ) => {
     
@@ -49,10 +55,7 @@ export const Table = ({
         })
         let id:any = Object.values(Object.values(objItem)[0].props)[0]
         let name:any = Object.values(Object.values(objItem)[1].props)[0]
-        let [checkout, setCheckout ]= React.useState(true);
-        const checar = () => {
-            setCheckout(!checkout)
-        }
+
         return (
         <tr id={id}  className={clsx(
             {
@@ -62,13 +65,14 @@ export const Table = ({
         {objItem}
             {visualizacao?  <td>
                 <label className="switch">
-                        <input type="checkbox" checked={checkout} onClick={checar}/>
+                        <input type="checkbox" defaultChecked/>
                         <span className="slider round"></span>
                 </label>
             </td> : ''}
             <td className='controle-table'>
                 <Button text={edit} type='secondary' size='md' id={id} name={name} onClick={Editar}/>
                 <Button text={trash} type='secondary' size='md' id={id} name={name} onClick={Excluir}/>
+                <Button text={eye} type='secondary' size='md' id={id} name={name} onClick={Detalhar}/>
                
             </td>
             
