@@ -48,7 +48,6 @@ export function Button({disable = false, text, type = 'primary',name, size = 'md
         <button id={id} name={name}
             className={clsx(
                 'buttonLaUrsa',
-                'relative',
                  {
                     'h-[48px]': size === 'md',
                     'h-[56px]': size === 'lg',
