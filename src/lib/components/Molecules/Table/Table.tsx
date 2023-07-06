@@ -15,6 +15,7 @@ export interface TableProps {
     Excluir?:Function;
     Detalhar?:Function;
     visualizacao?: boolean;
+    Status?:(i: any) => void;
 }
 
 const edit = <Edit
@@ -39,7 +40,8 @@ export const Table = ({
     Editar,
     Excluir,
     visualizacao,
-    Detalhar  
+    Detalhar,
+    Status  
 }: TableProps ) => {
     
     let ObjHeader = header?.map(function(opt){
@@ -47,21 +49,24 @@ export const Table = ({
     }) 
     let ObjBody = Object.values(Obj).map(function(opt){
         let objItem = Object.values(opt).map(function(Item:any){
-         return (<td>{Item}</td>)
+           
+         return (Item === 'S' || Item === 'N'? '' :  <td> {Item} </td>)
         })
-        let id:any = Object.values(Object.values(objItem)[0].props)[0]
-        let name:any = Object.values(Object.values(objItem)[1].props)[0]
+        let statusChek: any
+        opt.status === 'S'? statusChek = true : statusChek = false;
+        let id:any = opt.id
+        let name:any = opt.descricao
 
         return (
-        <tr id={id}  className={clsx(
+        <tr id={id} className={clsx(
             {
                 'dark': typeTable === 'Dark'
             },
         )}>
         {objItem}
             {visualizacao?  <td>
-                <label className="switch">
-                        <input type="checkbox" defaultChecked/>
+                <label className="switch" >
+                        <input type="checkbox" id={id} value={opt.status} name={name} defaultChecked={statusChek} onClick={Status}/>
                         <span className="slider round"></span>
                 </label>
             </td> : ''}
