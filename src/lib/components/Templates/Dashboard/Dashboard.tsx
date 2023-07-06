@@ -20,9 +20,13 @@ export interface DashboardProps {
     Navegacao?: (i: any) => void
     Configuracao: () => void
     Home: () => void
-    usuario: String | undefined,
+    usuario: String | undefined
     descricaoUsuario?: String
     localidadeUsuario?: String
+    Logout:Function | any
+    Organograma:Function | any;
+    Informacoes:Function | any;
+    
 }
 
 export function Dashboard(
@@ -36,7 +40,10 @@ export function Dashboard(
         usuario,
         descricaoUsuario,
         localidadeUsuario,
-        Home
+        Home,
+        Logout,
+        Organograma,
+        Informacoes
     }: DashboardProps) {
   
     let [tamanho, setTamanho ] = useState(false)
@@ -54,9 +61,9 @@ export function Dashboard(
                 localidadeUsuario={localidadeUsuario}
                 size={tamanho}
                 usuario={usuario}
-                submenu={sub} 
+                submenu={sub}
                 Home={Home}
-                Navegacao={Navegacao}/>
+                Navegacao={Navegacao} Logout={Logout} Organograma={Organograma} Informacoes={Informacoes}/>
     <Header
           linksExternos={linksExternos} 
           Configuracao={Configuracao} 

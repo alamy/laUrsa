@@ -59,195 +59,195 @@ function App() {
     
     <>
     <Dashboard titulo={'SICM'}
-          menu={[
+      menu={[
+        {
+          imagem: <Lancamento size="lg" type="Second" />,
+          texto: 'Lançamento',
+          to: '/demo',
+          id: 2,
+          submenu: [
             {
-              imagem: <Lancamento size="lg" type="Second" />,
-              texto: 'Lançamento',
-              to: '/demo',
-              id: 2,
-              submenu: [
+              titulo: 'Pacelamento',
+              0: [
                 {
-                  titulo: 'Pacelamento',
-                  0: [
-                    {
-                      name: 'teasdasdste',
-                      to: '/demo'
-                    },
-                    {
-                      name: 'teasdasdste',
-                      to: '/demo'
-                    },
-                  ],
-                }
-              ]
-            },
-            {
-              imagem: <Tramitacao size="lg" type="Second" />,
-              texto: 'Tramitação',
-              to: '/demo',
-              id: 2,
-              submenu: [
-                {
-                  titulo: 'Pacelamento',
-                  0: [
-                    {
-                      name: 'teasdasdste',
-                      to: '/demo'
-                    },
-                    {
-                      name: 'teasdasdste',
-                      to: '/demo'
-                    },
-                  ],
-                }
-              ]
-            },
-            {
-              imagem: <Cobranca size="lg" type="Second" />,
-              texto: 'Cobrança',
-              to: '/demo',
-              id: 1,
-              submenu: [
-                {
-                  titulo: 'Parametrzadas',
-                  0: [
-                    {
-                      name: 'Imobiliária',
-                      to: '/demo'
-                    },
-                    {
-                      name: 'Mercantil',
-                      to: '/demo'
-                    },
-                    {
-                      name: 'Não Tributária',
-                      to: '/demo'
-                    },
-                    {
-                      name: 'Pessoa',
-                      to: '/demo'
-                    },
-                    {
-                      name: 'ITBI',
-                      to: '/demo'
-                    },
-                  ],
+                  name: 'teasdasdste',
+                  to: '/demo'
                 },
                 {
-                  titulo: 'Buss I...BI',
-                  0: [
-                    {
-                      name: 'teasdasdste',
-                      to: '/demo'
-                    },
-                    {
-                      name: 'teasdasdste',
-                      to: '/demo'
-                    },
-                  ],
+                  name: 'teasdasdste',
+                  to: '/demo'
                 },
-                {
-                  titulo: 'Externa',
-                  0: [
-                    {
-                      name: 'teasdasdste',
-                      to: '/demo'
-                    },
-                    {
-                      name: 'teasdasdste',
-                      to: '/demo'
-                    },
-                  ],
-                }
-              ]
-            },
-            {
-              imagem: <Parcelamento size="lg" type="Second" />,
-              texto: 'Pacelamento',
-              to: '/demo',
-              id: 2,
-              submenu: [
-                {
-                  titulo: 'Pacelamento',
-                  to: '/parcelamento',
-                }
-              ]
-            },
-            {
-              imagem: <DividaAtiva size="lg" type="Second" />,
-              texto: 'Dívida Ativa',
-              to: '/demo',
-              id: 2,
-              submenu: [
-                {
-                  titulo: 'Pacelamento',
-                  0: [
-                    {
-                      name: 'teasdasdste',
-                      to: '/demo'
-                    },
-                    {
-                      name: 'teasdasdste',
-                      to: '/demo'
-                    },
-                  ],
-                }
-              ]
-            },
-            {
-              imagem: <ControleDebito size="lg" type="Second" />,
-              texto: 'Controle de Débito',
-              to: '/demo',
-              id: 2,
-              submenu: [
-                {
-                  titulo: 'Pacelamento',
-                  0: [
-                    {
-                      name: 'teasdasdste',
-                      to: '/demo'
-                    },
-                    {
-                      name: 'teasdasdste',
-                      to: '/demo'
-                    },
-                  ],
-                }
-              ]
-            },
-            {
-              imagem: <Contestacao size="lg" type="Second" />,
-              texto: 'Contestação',
-              to: '/demo',
-              id: 2,
-              submenu: [
-                {
-                  titulo: 'Pacelamento',
-                  0: [
-                    {
-                      name: 'teasdasdste',
-                      to: '/demo'
-                    },
-                    {
-                      name: 'teasdasdste',
-                      to: '/demo'
-                    },
-                  ],
-                }
-              ]
+              ],
             }
-          ]} children={conteudo} Navegacao={function () {
-            nav()
-          } }
-          Configuracao={function () {
-            
-          } } linksExternos={[{
-            label: 'Link 1',
-            to: '/teste'
-          },]} usuario={'Alamy Neto'} 
-          Home={function (): void {
-           
-          } } />  
+          ]
+        },
+        {
+          imagem: <Tramitacao size="lg" type="Second" />,
+          texto: 'Tramitação',
+          to: '/demo',
+          id: 2,
+          submenu: [
+            {
+              titulo: 'Pacelamento',
+              0: [
+                {
+                  name: 'teasdasdste',
+                  to: '/demo'
+                },
+                {
+                  name: 'teasdasdste',
+                  to: '/demo'
+                },
+              ],
+            }
+          ]
+        },
+        {
+          imagem: <Cobranca size="lg" type="Second" />,
+          texto: 'Cobrança',
+          to: '/demo',
+          id: 1,
+          submenu: [
+            {
+              titulo: 'Parametrzadas',
+              0: [
+                {
+                  name: 'Imobiliária',
+                  to: '/demo'
+                },
+                {
+                  name: 'Mercantil',
+                  to: '/demo'
+                },
+                {
+                  name: 'Não Tributária',
+                  to: '/demo'
+                },
+                {
+                  name: 'Pessoa',
+                  to: '/demo'
+                },
+                {
+                  name: 'ITBI',
+                  to: '/demo'
+                },
+              ],
+            },
+            {
+              titulo: 'Buss I...BI',
+              0: [
+                {
+                  name: 'teasdasdste',
+                  to: '/demo'
+                },
+                {
+                  name: 'teasdasdste',
+                  to: '/demo'
+                },
+              ],
+            },
+            {
+              titulo: 'Externa',
+              0: [
+                {
+                  name: 'teasdasdste',
+                  to: '/demo'
+                },
+                {
+                  name: 'teasdasdste',
+                  to: '/demo'
+                },
+              ],
+            }
+          ]
+        },
+        {
+          imagem: <Parcelamento size="lg" type="Second" />,
+          texto: 'Pacelamento',
+          to: '/demo',
+          id: 2,
+          submenu: [
+            {
+              titulo: 'Pacelamento',
+              to: '/parcelamento',
+            }
+          ]
+        },
+        {
+          imagem: <DividaAtiva size="lg" type="Second" />,
+          texto: 'Dívida Ativa',
+          to: '/demo',
+          id: 2,
+          submenu: [
+            {
+              titulo: 'Pacelamento',
+              0: [
+                {
+                  name: 'teasdasdste',
+                  to: '/demo'
+                },
+                {
+                  name: 'teasdasdste',
+                  to: '/demo'
+                },
+              ],
+            }
+          ]
+        },
+        {
+          imagem: <ControleDebito size="lg" type="Second" />,
+          texto: 'Controle de Débito',
+          to: '/demo',
+          id: 2,
+          submenu: [
+            {
+              titulo: 'Pacelamento',
+              0: [
+                {
+                  name: 'teasdasdste',
+                  to: '/demo'
+                },
+                {
+                  name: 'teasdasdste',
+                  to: '/demo'
+                },
+              ],
+            }
+          ]
+        },
+        {
+          imagem: <Contestacao size="lg" type="Second" />,
+          texto: 'Contestação',
+          to: '/demo',
+          id: 2,
+          submenu: [
+            {
+              titulo: 'Pacelamento',
+              0: [
+                {
+                  name: 'teasdasdste',
+                  to: '/demo'
+                },
+                {
+                  name: 'teasdasdste',
+                  to: '/demo'
+                },
+              ],
+            }
+          ]
+        }
+      ]} children={conteudo} Navegacao={function () {
+        nav();
+      } }
+      Configuracao={function () {
+      } } linksExternos={[{
+        label: 'Link 1',
+        to: '/teste'
+      },]} usuario={'Alamy Neto'}
+      Home={function (): void {
+      } } Logout={() => {
+        console.log("sair")
+      }} Organograma={undefined} Informacoes={undefined} />  
    
     </>
 

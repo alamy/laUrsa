@@ -18,6 +18,9 @@ export interface MenuProps{
     localidadeUsuario?: String
     submenu?: boolean
     Home: () => void
+    Logout:Function | any;
+    Organograma:Function | any;
+    Informacoes:Function | any;
 }
 
 export function Menu(
@@ -29,7 +32,10 @@ export function Menu(
     usuario,
     descricaoUsuario,
     localidadeUsuario,
-    Home
+    Home,
+    Logout,
+    Organograma,
+    Informacoes
   }: MenuProps) {
     let [tamanho, setTamanho ] = useState(false)
     let [detailPerfil, setdetailPerfil ] = useState(false)
@@ -156,11 +162,11 @@ export function Menu(
         
         </div>
         {detailPerfil? <ModalPerfil 
-                          usuario={usuario} 
-                          descricaoUsuario={descricaoUsuario} 
-                          localidadeUsuario={localidadeUsuario} 
-                          onClick={undefined} 
-                          Perfil={Perfil} /> : ''}
+            usuario={usuario}
+            descricaoUsuario={descricaoUsuario}
+            localidadeUsuario={localidadeUsuario}
+            onClick={undefined}
+            Perfil={Perfil} Logout={Logout} Organograma={Organograma} Informacoes={Informacoes} /> : ''}
     </div>
           
          

@@ -9,6 +9,9 @@ export interface ModalPerfilProps {
     localidadeUsuario?: String
     onClick: Function | any;
     Perfil: Function | any;
+    Logout:Function | any;
+    Organograma:Function | any;
+    Informacoes:Function | any;
 }
 
 export function ModalPerfil(
@@ -17,6 +20,9 @@ export function ModalPerfil(
         usuario, 
         descricaoUsuario, 
         localidadeUsuario, 
+        Logout,
+        Organograma,
+        Informacoes,
         ...props} :ModalPerfilProps) {
 
     let data =  Date()
@@ -45,9 +51,9 @@ export function ModalPerfil(
             <p>{descricaoUsuario}</p>
             <p>{localidadeUsuario}</p>
           </article>
-          <button>Organograma</button>
-          <button>Informações</button>
-          <button>Sair</button>
+          <button onClick={Organograma}>Organograma</button>
+          <button onClick={Informacoes}>Informações</button>
+          <button onClick={Logout}>Sair</button>
         </div>
          
       </div>
