@@ -246,8 +246,14 @@ function App() {
       },]} usuario={'Alamy Neto'}
       Home={function (): void {
       } } Logout={() => {
-        console.log("sair")
-      }} Organograma={undefined} Informacoes={undefined} />  
+        console.log("sair");
+      } } Organograma={undefined} Informacoes={undefined} menuSettings={[
+        {
+            name: 'teste',
+            to: '/teste'
+
+        }
+    ]} />  
    
     </>
 

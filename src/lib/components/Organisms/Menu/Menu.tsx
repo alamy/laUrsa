@@ -124,7 +124,7 @@ export function Menu(
             />
             {tamanho ? <p>{titulo}</p> : ''}
           </div>
-          <div className={clsx(
+          {/* <div className={clsx(
             {'back_page': tamanho === true,
               'back_page_small': tamanho === false})}>
             <svg width="15" height="12" viewBox="0 0 15 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -133,7 +133,7 @@ export function Menu(
             </svg>
 
             {tamanho ? <p>Voltar</p> : ''}
-          </div>
+          </div> */}
         </div>
         <ul className={clsx({
           'nav': tamanho === true,

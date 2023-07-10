@@ -7,10 +7,10 @@ import { Settings } from '../../Icon/System/Settings';
 
 export interface HeaderProps {
     linksExternos: Object
-    Configuracao: () => void
+    Configuracao?: (i: any) => void
     tamanho: boolean
     Size: () => void
-   
+    menuSettings: Object
 }
 
 
@@ -20,9 +20,11 @@ export function Header(
     Configuracao,
     tamanho,
     Size,
+    menuSettings
   }: HeaderProps) 
    
 {
+  const [flag, setFlag] = useState(false)
     let data =  Date()
     let dia = new Date(data).getDate()
     let mes = (new Date(data).getMonth()<10?'0':'') + new Date(data).getMonth()
@@ -30,12 +32,23 @@ export function Header(
 
     let hora = new Date(data).getHours()
     let minutos = (new Date(data).getMinutes()<10?'0':'') + new Date(data).getMinutes()
+    
+    let itemSettings = Object.values(menuSettings).map(function(item){
+      return <p onClick={Configuracao} id={item.to}>{item.name}</p>
+    })
 
     let LinkExternos = Object.values(linksExternos).map(function(link){
         return <li>
                 <button>{link.label}</button>
               </li>
       })
+
+      const actionetiing = () => {
+        setFlag(true)
+      }
+      const actionetiingFalse = () => {
+        setFlag(false)
+      }
     return(
         <>
           <div className={clsx({
@@ -56,11 +69,18 @@ export function Header(
        {LinkExternos}
       </ul>
        
-        <div className='configuracao' onClick={Configuracao}>
+        <div className='configuracao' onMouseOver={actionetiing} onMouseLeave={actionetiingFalse}>
            <Settings type='Primary' size='md'  />
+      
+        {flag ? <div className='menu-box-settings'>
+          {itemSettings}
+        </div> : ''}
         </div>
-      <div className='data'>
-        {dia}/{mes}/{ano} {hora}:{minutos}
+        
+      <div className={clsx({
+        'data' : tamanho === false,
+        'data-small': tamanho === true})}>
+      <b>SICM - {dia} / {mes} / {ano} - {hora} : {minutos}</b>
       </div> 
     </div>
        </>

@@ -15,6 +15,13 @@ export default {
                 to: '/teste'
             }
         ],
+        menuSettings: [
+            {
+                name: 'teste',
+                to: '/teste'
+
+            }
+        ]
     },
     argTypes: {
         onClick: { action: 'clicked' }
