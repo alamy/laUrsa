@@ -56,7 +56,6 @@ export const Table = ({
         opt.status === 'S'? statusChek = "checked" : statusChek = "";
         let id:any = opt.id
         let name:any = opt.descricao
-        console.log(opt.status + ' ' + name)
 
         return (
         <tr id={id} className={clsx(
