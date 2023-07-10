@@ -53,9 +53,10 @@ export const Table = ({
          return (Item === 'S' || Item === 'N'? '' :  <td> {Item} </td>)
         })
         let statusChek: any
-        opt.status === 'S'? statusChek = true : statusChek = false;
+        opt.status === 'S'? statusChek = "checked" : statusChek = "";
         let id:any = opt.id
         let name:any = opt.descricao
+        console.log(opt.status + ' ' + name)
 
         return (
         <tr id={id} className={clsx(
@@ -65,8 +66,8 @@ export const Table = ({
         )}>
         {objItem}
             {visualizacao?  <td>
-                <label className="switch" >
-                        <input type="checkbox" id={id} value={opt.status} name={name} defaultChecked={statusChek} onClick={Status}/>
+                <label className="switch">
+                        <input type="checkbox" id={id} value={opt.status} checked={statusChek} name={name} onClick={Status}/>
                         <span className="slider round"></span>
                 </label>
             </td> : ''}
