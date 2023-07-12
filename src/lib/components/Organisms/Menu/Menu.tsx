@@ -143,7 +143,7 @@ export function Menu(
             {tamanho ? <><p>{titulo}</p></> : ''}
           </div>
         </div>
-        <div onClick={Perfil} className={clsx({
+        <div  className={clsx({
           'avatar-perfil': tamanho === true,
           'avatar-perfi-small' : tamanho === false
           }, 'box-avatar-menu')}>
@@ -151,7 +151,7 @@ export function Menu(
             {tamanho? <>
             <Avatar text={''} size='sm' />
             <div className='person-description'>
-              <p>{usuario}</p>
+              <span>{usuario}</span>
              
                 </div></>
                    : <div className='box-avatar'>
