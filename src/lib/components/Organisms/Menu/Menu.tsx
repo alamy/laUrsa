@@ -7,6 +7,7 @@ import './Menu.scss'
 import { ModalPerfil } from '../../Molecules/ModalPerfil/ModalPerfil'
 import { Down } from '../../Icon/System/Down'
 import { Up } from '../../Icon/System/Up'
+import { Left } from '../../Icon/System/Left'
 
 export interface MenuProps{
     titulo: string
@@ -25,7 +26,7 @@ export interface MenuProps{
 
 export function Menu(
   {
-    titulo, 
+    titulo,
     menu, 
     size, 
     Navegacao,
@@ -40,20 +41,34 @@ export function Menu(
     let [tamanho, setTamanho ] = useState(false)
     let [detailPerfil, setdetailPerfil ] = useState(false)
 
+
     useEffect(() => {
-       setTamanho(size)
-      })
+        setTamanho(size)
+      
+      },[size])
       const Perfil = () => {
         setdetailPerfil(!detailPerfil)
+      }
+      const sizeMenu = () => {
+        setTamanho(true)
+      }
+
+      const sizeMenuFalse = () => {
+        if(size){
+          setTamanho(true)
+        }else{
+          setTamanho(false)
+        }
+       
+       
       }
 
       let menuLateral = Object.values(menu)?.map(function(item){
         let [submenuLi, setSubmenuLi ] = useState(false)
-        const btnSub = () => {
-          setSubmenuLi(true)
-        }
-        const btnSubOver = () => {
-          setSubmenuLi(false)
+        let [left, setLeft ] = useState(false)
+        let btnSub = () => {
+          setSubmenuLi(!submenuLi)
+          setLeft(!left)
         }
         
 
@@ -75,14 +90,14 @@ export function Menu(
           return (
             <>
               <div className='item-li-submenu' id={itemsubmenu.to} key={itemsubmenu.to} onClick={itemNav ? UlSelection : Navegacao}>
-                {itemsubmenu.titulo} {itemNav ? navItem ? <Up type='Second' /> : <Down type='Second'/> : ''}
+                {itemsubmenu.titulo} {itemNav ? navItem ? <Up type='Second' size='sm' /> : <Down type='Second' size='sm'/> : ''}
                 {itemNav ? navItem ? <div className='nav-item' >{itemNav}</div>: '' : ''}
               </div>
             </>
             )
         })
           return  (
-          <><li className='li-menu' onMouseOver={btnSub} onMouseLeave={btnSubOver} title={item.texto}> 
+          <><li className='li-menu' onClick={btnSub} title={item.texto}> 
                   <div className={clsx(
                     {'menu-icon': tamanho === true,
                     'menu-icon-small': tamanho === false})}>{item.imagem}</div>
@@ -90,29 +105,32 @@ export function Menu(
                     tamanho ? 
                       <>
                       <div className='icon-right'>
-                      <Right
-                          size="sm"
-                          type="Third" />
+                      { left ? <Down 
+                                type='Second' 
+                                size='sm'/> : 
+                              <Left
+                                size="sm"
+                                type="Third"/> }
                       </div>
                       <p>{item.texto}</p>
                       
                      </>
                       : 
                     null
-                  } 
+                  }  </li>
                    {
-                      submenuLi ? 
+                      submenuLi && tamanho ? 
                         <div className='sub-menu'>
                             {itemSubMenu}
                         </div> : null 
                   }      
-                  </li>
+                 
                             
                 </> )})
 
     return(
     <>  
-    <div className={clsx(
+    <div onMouseOver={sizeMenu} onMouseLeave={sizeMenuFalse} className={clsx(
       {'big': tamanho === true, 
       'small': tamanho === false,} , 'menu_lateral')}>
         <div className="box-menu">
@@ -122,18 +140,24 @@ export function Menu(
               size="sm"
               type="Second"
             />
-            {tamanho ? <p>{titulo}</p> : ''}
+            {tamanho ? <><p>{titulo}</p></> : ''}
           </div>
-          {/* <div className={clsx(
-            {'back_page': tamanho === true,
-              'back_page_small': tamanho === false})}>
-            <svg width="15" height="12" viewBox="0 0 15 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M6.5 1L1.5 6L6.5 11" stroke="#89BAFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M13.5 1L8.5 6L13.5 11" stroke="#89BAFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-
-            {tamanho ? <p>Voltar</p> : ''}
-          </div> */}
+        </div>
+        <div onClick={Perfil} className={clsx({
+          'avatar-perfil': tamanho === true,
+          'avatar-perfi-small' : tamanho === false
+          }, 'box-avatar-menu')}>
+            
+            {tamanho? <>
+            <Avatar text={''} size='sm' />
+            <div className='person-description'>
+              <p>{usuario}</p>
+             
+                </div></>
+                   : <div className='box-avatar'>
+                      <Avatar text={''} size='sm' /> 
+                    </div>}
+        
         </div>
         <ul className={clsx({
           'nav': tamanho === true,
@@ -143,24 +167,7 @@ export function Menu(
           {menuLateral}
           
         </ul>
-        <div onClick={Perfil} className={clsx({
-          'avatar-perfil': tamanho === true,
-          'avatar-perfi-small' : tamanho === false
-          })}>
-            <Avatar text={''} size='sm' />
-            {tamanho? 
-            <div className='person-description'>
-              <p>{usuario}
-              <Right
-                       
-                       size="sm"
-                       type="Third" />
-              </p>
-             
-                </div>
-                   : ''}
-        
-        </div>
+      
         {detailPerfil? <ModalPerfil 
             usuario={usuario}
             descricaoUsuario={descricaoUsuario}

@@ -14,6 +14,7 @@ import { Header } from '../../Organisms/Header/Header';
 
 export interface DashboardProps {
     titulo: string
+    subTitulo?:string
     menu: Object
     children: any
     linksExternos: Object
@@ -33,7 +34,8 @@ export interface DashboardProps {
 export function Dashboard(
     {
         menu, 
-        titulo, 
+        titulo,
+        subTitulo,
         children, 
         Navegacao, 
         Configuracao, 
@@ -68,6 +70,7 @@ export function Dashboard(
                 Navegacao={Navegacao} Logout={Logout} Organograma={Organograma} Informacoes={Informacoes}/>
     <Header
                 linksExternos={linksExternos}
+                subTitulo={subTitulo}
                 Configuracao={Configuracao}
                 tamanho={tamanho}
                 Size={function (): void {

@@ -58,7 +58,7 @@ function App() {
   return (
     
     <>
-    <Dashboard titulo={'SICM'}
+    <Dashboard titulo={'SICM'} subTitulo={'Sistema de Créditos Municipal da Prefeitura do Recife'}
       menu={[
         {
           imagem: <Lancamento size="lg" type="Second" />,

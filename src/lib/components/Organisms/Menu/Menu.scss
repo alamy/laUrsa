@@ -28,46 +28,53 @@
 }
 
 .li-menu {
+    border: 1px solid #1474FF;
     cursor: pointer;
     font-weight: 200;
-    min-height: 50px;
-    padding: 4px 0;
+    height: 50px;
     color: #fff;
     display: block;
     position: relative;
     margin:  0px auto;
+    p{
+        margin-top: 10px;
+    }
 }
 
-.li-menu:hover .menu-icon{
+.li-menu:hover{
     border: 1px solid rgba(196, 220, 255, 0.2);
     border-radius: 10px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.08);
     border-radius: 4px;
 }
 
-.nav li svg {
-    margin: 0 10%;
+.nav { 
+
+    svg {
+    margin:10px 0 0 0;
     display: inline-block;
+} 
+
 }
 
 
-.nav-small li p {
-    width: 52%;
-    float: right;
-    vertical-align: middle
-}
 .icon-right {
     float: right;
     margin-top:3px;
 }
-.nav-small li svg {
+.nav-small { svg {
     text-align: center;
     display: block;
+    margin-top: 10px;
+
 }
-.nav-small li {
+li {
     width: 100%;
-    margin:  0px auto;
 }
+
+
+}
+
 .avatar-perfil {
     display: block;
     width: 90%;
@@ -76,12 +83,8 @@
 
 }
 .avatar-perfi-small {
+    height: 60px;
     cursor: pointer;
-        svg{
-            display: block;
-            margin-left: 60%;
-
-        }
 }
 
 .person-description {
@@ -93,44 +96,34 @@
     font-size: 1.1em;
     margin-top: -40px;
     p {
-        width: 100%;
+        width: 90%;
         position: relative;
-        display: block;
-        align-items: center;
-        top: 0;
-        padding-left: 59px;
-    }
-    svg{
-        margin-top: 0px;
         display: inline-block;
-        margin-left: 4px;
+        align-items: center;
+        top: 12px;
+        padding-left: 66px;
     }
 }
 
-
-.title {
-    display: none;
-}
-.menu-app li:hover{
-     .title{
-        display: block;
-        z-index: 999;
-        background: #1B2029;
-        border-radius: 4px;
-        color: #fff;
-        position: absolute;
-        padding: 2px 5px;
-        left: 99%;
-        margin-top: -20px;
-    }
+.box-avatar-menu {
+    height: 70px;
+    padding: 10px 0px;
 }
 
+.box-avatar {
+    width: 45px;
+    margin:  0 auto;
+}
 
 .box-menu {
-    //border-bottom:  0.5px solid rgba(255, 255, 255, 0.4);
-    width: 80%;
+    border-bottom:  0.5px solid rgba(255, 255, 255, 0.4);
+    width: 90%;
     margin: 4px auto;
     padding: 10px 0;
+    i {
+        color: #fff;
+        font-size: 0.4em;
+    }
  }
  .box-menu svg {
      margin: 0 auto;
@@ -179,16 +172,9 @@
  
  
  .sub-menu {
-     min-width: 300px;
-     position: absolute;
      z-index: 9999!important;
-     margin-top: -40px;
-     left: 87%;
      padding: 14px 10px 5px 10px;
-     background-color: #1474FF;
      color: #fff;
-     border-radius: 3px;
-     box-shadow: 1px 1px 4px #000;
  }
  .item-li-submenu{
     cursor: pointer;
@@ -203,18 +189,24 @@
 
  .small {
     width: 8%;
+
 }
 
 .big {
-    width: 15%;
+    width: 17%;
+    box-shadow: 1px 0px 10px #595959;
 }
 
 .menu_lateral {
     background-color: #1474FF;
     display: inline-block;
-    height: 100vh;
-    position: absolute;
-
+    min-height: 100vh;
+    height: 100%;
+    position: fixed;
+    overflow-x: auto;
+    padding-bottom: 10vh;
+    z-index: 9999;    
+    transition: 0.3s;
 }
 .nav-item{
     font-weight: 100;
@@ -236,17 +228,17 @@
 }
 
 .menu_lateral::-webkit-scrollbar {
-    width: 12px;               /* width of the entire scrollbar */
+    width: 12px;            
     position: relative;
   }
   
   .menu_lateral::-webkit-scrollbar-track {
-    background: #1474FF;        /* color of the tracking area */
+    background: #1474FF;       
     position: relative;
   }
   
   .menu_lateral::-webkit-scrollbar-thumb {
-    background-color: #5599f7;    /* color of the scroll thumb */
-    border-radius: 20px;       /* roundness of the scroll thumb */
-    border: 3px solid #1474FF;  /* creates padding around scroll thumb */
+    background-color: #5599f7;    
+    border-radius: 20px;       
+    border: 3px solid #1474FF;  
   }

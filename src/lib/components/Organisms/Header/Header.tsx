@@ -6,7 +6,8 @@ import { Settings } from '../../Icon/System/Settings';
 
 
 export interface HeaderProps {
-    linksExternos: Object
+    linksExternos: Object,
+    subTitulo?: string
     Configuracao?: (i: any) => void
     tamanho: boolean
     Size: () => void
@@ -19,6 +20,7 @@ export function Header(
     linksExternos,
     Configuracao,
     tamanho,
+    subTitulo,
     Size,
     menuSettings
   }: HeaderProps) 
@@ -80,7 +82,7 @@ export function Header(
       <div className={clsx({
         'data' : tamanho === false,
         'data-small': tamanho === true})}>
-      <b>SICM - {dia} / {mes} / {ano} - {hora} : {minutos}</b>
+      <i>{subTitulo}</i> - <b>  {dia} / {mes} / {ano} - {hora} : {minutos}</b>
       </div> 
     </div>
        </>
