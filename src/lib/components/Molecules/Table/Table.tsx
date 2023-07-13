@@ -70,7 +70,7 @@ export const Table = ({
                         <span className="slider round"></span>
                 </label>
             </td> : ''}
-            <td className='controle-table'>
+            <td className='controle-table' key={opt.status}>
                 <Button icone={'edite'} type='secondary' size='md' id={id} name={name} onClick={Editar}/>
                 <Button icone={'delete'} type='secondary' size='md' id={id} name={name} onClick={Excluir}/>
                 <Button icone={'look'} type='secondary' size='md' id={id} name={name} onClick={Detalhar}/>
