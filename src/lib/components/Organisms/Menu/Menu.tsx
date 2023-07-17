@@ -62,8 +62,9 @@ export function Menu(
        
        
       }
-
-      let menuLateral = Object.values(menu)?.map(function(item){
+      let menuLateral
+      menu ? 
+      menuLateral = Object.values(menu)?.map(function(item){
         let [submenuLi, setSubmenuLi ] = useState(false)
         let [left, setLeft ] = useState(false)
         let btnSub = () => {
@@ -126,7 +127,7 @@ export function Menu(
                   }      
                  
                             
-                </> )})
+                </> )}) : null
 
     return(
     <>  

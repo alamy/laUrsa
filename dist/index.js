@@ -41,6 +41,8 @@ import * as Toogle from '../src/lib/components/Atomic/Toogle/Toogle';
 // Molecules
 import * as Table from '../src/lib/components/Molecules/Table/Table';
 import * as Alerta from '../src/lib/components/Molecules/Alerta/Alerta';
+import * as HeaderInter from '../src/lib/components/Molecules/HeaderInter/HeaderInter';
+import * as Paginacao from '../src/lib/components/Molecules/Paginacao/Paginacao';
 // Organisms
 import * as Menu from '../src/lib/components/Organisms/Menu/Menu';
 //Template
@@ -57,7 +59,7 @@ Pcr, Pppe, Sipr, Cobranca, Contestacao, ControleDebito, DividaAtiva, Lancamento,
 //Atomic 
 Avatar, Button, Checkbox, Dropdown, Input, Radio,Toogle,
 // Molecules    
-Table,Alerta,
+Table,Alerta,HeaderInter,Paginacao,
 //Template
 Header, Menu, Dashboard };
 export * from '../src/lib/components/Icon/Logo';
@@ -99,6 +101,8 @@ export * from '../src/lib/components/Atomic/Toogle/Toogle';
 // Molecules
 export * from '../src/lib/components/Molecules/Table/Table';
 export * from '../src/lib/components/Molecules/Alerta/Alerta';
+export * from '../src/lib/components/Molecules/HeaderInter/HeaderInter';
+export * from '../src/lib/components/Molecules/Paginacao/Paginacao';
 // Organism
 export * from '../src/lib/components/Organisms/Menu/Menu';
 //Template

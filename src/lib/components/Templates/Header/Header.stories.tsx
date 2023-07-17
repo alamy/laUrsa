@@ -2,13 +2,14 @@ import { Meta, StoryObj } from '@storybook/react';
 import {HeaderProps, Header} from './Header'
 
 export default {
-    title: 'templates/Header',
+    title: 'template/Header',
     component: Header,
     args: {
         notification: false,
         home: true,
         path: '',
     },
+    
     argTypes: {
         img: {
             options : "",

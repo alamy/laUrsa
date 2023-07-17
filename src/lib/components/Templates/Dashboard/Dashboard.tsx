@@ -1,14 +1,7 @@
 
-import { Logo } from '../../Icon/Logo'
 import { clsx } from 'clsx';
 import './Dashboard.scss'
 import { useState } from "react";
-import { Search } from "../../Icon/System/Search";
-import { Pcr } from "../../Icon/Menu/Pcr";
-import { Avatar } from '../../Atomic/Avatar/Avatar';
-import { Right } from '../../Icon/System/Right';
-import { X } from '../../Icon/System/X';
-import { Settings } from '../../Icon/System/Settings';
 import { Menu } from '../../Organisms/Menu/Menu';
 import { Header } from '../../Organisms/Header/Header';
 
@@ -27,7 +20,7 @@ export interface DashboardProps {
     Logout:Function | any
     Organograma:Function | any;
     Informacoes:Function | any;
-    menuSettings:Object
+    menuSettings?:Object
     
 }
 

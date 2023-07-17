@@ -3,17 +3,14 @@ import { clsx } from 'clsx';
 import './Header.scss';
 import { Settings } from '../../Icon/System/Settings';
 
-
-
 export interface HeaderProps {
-    linksExternos: Object,
+    linksExternos?: Object,
     subTitulo?: string
     Configuracao?: (i: any) => void
     tamanho: boolean
     Size: () => void
-    menuSettings: Object
+    menuSettings?: Object 
 }
-
 
 export function Header(
   {
@@ -34,16 +31,18 @@ export function Header(
 
     let hora = new Date(data).getHours()
     let minutos = (new Date(data).getMinutes()<10?'0':'') + new Date(data).getMinutes()
-    
-    let itemSettings = Object.values(menuSettings).map(function(item){
+    let itemSettings
+    menuSettings ?
+    itemSettings = Object.values(menuSettings).map(function(item){
       return <p onClick={Configuracao} id={item.to}>{item.name}</p>
-    })
-
-    let LinkExternos = Object.values(linksExternos).map(function(link){
+    }) : null 
+    let LinkExternos
+    linksExternos? 
+     LinkExternos = Object.values(linksExternos).map(function(link){
         return <li>
                 <button>{link.label}</button>
               </li>
-      })
+      }) : null
 
       const actionetiing = () => {
         setFlag(true)
