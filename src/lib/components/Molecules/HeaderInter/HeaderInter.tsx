@@ -6,6 +6,8 @@ export interface HeaderInterProps {
     texto?: String
     titulo: String
     onChange?: Function | any;
+    onBlur?: Function | any;
+    onFocus?: Function | any;
     value?: string
 }
 
