@@ -7,6 +7,7 @@ export default {
     args: {
         currentPage: 1,
         totalPages: 10,
+       
     }
 
 }as Meta<PaginacaoProps>

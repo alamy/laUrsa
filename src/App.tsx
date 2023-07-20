@@ -48,7 +48,7 @@ function App() {
 
          <Paginacao currentPage={0} totalPages={10} onPageChange={function (page: number): void {
         throw new Error('Function not implemented.');
-      } } />
+      } }/>
 <Toggle text={''} />
       
           </>

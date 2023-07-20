@@ -1,9 +1,9 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { Cobranca, CobrancaProps } from './Cobranca';
+import { Anchor, AnchorProps } from './Anchor';
 
 export default {
-    title: 'Icon/Menu/Cobranca',
-    component: Cobranca,
+    title: 'Icon/Menu/Anchor',
+    component: Anchor,
     args: {
     },
     argTypes: {
@@ -17,10 +17,9 @@ export default {
         }
       }
     
-} as Meta<CobrancaProps>
+} as Meta<AnchorProps>
 
-export const Default: StoryObj<CobrancaProps> = {
+export const Default: StoryObj<AnchorProps> = {
     args: {},
    argTypes: {}
 }
-

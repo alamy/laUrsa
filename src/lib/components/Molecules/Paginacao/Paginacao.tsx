@@ -4,10 +4,11 @@ import './Paginacao.scss'
 export interface PaginacaoProps {
     currentPage: number;
     totalPages: number;
+  
     onPageChange: (page: number) => void;
 }
 
-export function Paginacao({currentPage, totalPages, onPageChange} :PaginacaoProps) {
+export function Paginacao({currentPage, totalPages, onPageChange,} :PaginacaoProps) {
     
 
     const handlePageChange = (page: number) => {
