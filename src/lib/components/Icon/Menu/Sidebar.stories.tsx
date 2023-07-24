@@ -1,10 +1,9 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { Anchor } from './Anchor';
-import { IconProps } from "../../../assets/InterfacePropsIcon";
+import { Sidebar, SidebarProps } from './Sidebar';
 
 export default {
-    title: 'Icon/Menu/Anchor',
-    component: Anchor,
+    title: 'Icon/Menu/Sidebar',
+    component: Sidebar,
     args: {
     },
     argTypes: {
@@ -18,9 +17,9 @@ export default {
         }
       }
     
-} as Meta<IconProps>
+} as Meta<SidebarProps>
 
-export const Default: StoryObj<IconProps> = {
+export const Default: StoryObj<SidebarProps> = {
     args: {},
    argTypes: {}
 }

@@ -1,10 +1,9 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { Anchor } from './Anchor';
-import { IconProps } from "../../../assets/InterfacePropsIcon";
+import { Calendar, CalendarProps } from './Calendar';
 
 export default {
-    title: 'Icon/Menu/Anchor',
-    component: Anchor,
+    title: 'Icon/Menu/Calendar',
+    component: Calendar,
     args: {
     },
     argTypes: {
@@ -18,9 +17,9 @@ export default {
         }
       }
     
-} as Meta<IconProps>
+} as Meta<CalendarProps>
 
-export const Default: StoryObj<IconProps> = {
+export const Default: StoryObj<CalendarProps> = {
     args: {},
    argTypes: {}
 }

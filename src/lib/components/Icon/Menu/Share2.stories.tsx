@@ -1,10 +1,9 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { Anchor } from './Anchor';
-import { IconProps } from "../../../assets/InterfacePropsIcon";
+import { Share2, Share2Props } from './Share2';
 
 export default {
-    title: 'Icon/Menu/Anchor',
-    component: Anchor,
+    title: 'Icon/Menu/Share2',
+    component: Share2,
     args: {
     },
     argTypes: {
@@ -18,9 +17,9 @@ export default {
         }
       }
     
-} as Meta<IconProps>
+} as Meta<Share2Props>
 
-export const Default: StoryObj<IconProps> = {
+export const Default: StoryObj<Share2Props> = {
     args: {},
    argTypes: {}
 }

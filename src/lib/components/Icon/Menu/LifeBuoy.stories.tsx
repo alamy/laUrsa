@@ -1,10 +1,9 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { Anchor } from './Anchor';
-import { IconProps } from "../../../assets/InterfacePropsIcon";
+import { LifeBuoy, LifeBuoyProps } from './LifeBuoy';
 
 export default {
-    title: 'Icon/Menu/Anchor',
-    component: Anchor,
+    title: 'Icon/Menu/LifeBuoy',
+    component: LifeBuoy,
     args: {
     },
     argTypes: {
@@ -18,9 +17,9 @@ export default {
         }
       }
     
-} as Meta<IconProps>
+} as Meta<LifeBuoyProps>
 
-export const Default: StoryObj<IconProps> = {
+export const Default: StoryObj<LifeBuoyProps> = {
     args: {},
    argTypes: {}
 }

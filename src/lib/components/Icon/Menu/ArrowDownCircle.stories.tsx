@@ -1,10 +1,9 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { Anchor } from './Anchor';
-import { IconProps } from "../../../assets/InterfacePropsIcon";
+import { ArrowDownCircle, ArrowDownCircleProps } from './ArrowDownCircle';
 
 export default {
-    title: 'Icon/Menu/Anchor',
-    component: Anchor,
+    title: 'Icon/Menu/ArrowDownCircle',
+    component: ArrowDownCircle,
     args: {
     },
     argTypes: {
@@ -18,9 +17,9 @@ export default {
         }
       }
     
-} as Meta<IconProps>
+} as Meta<ArrowDownCircleProps>
 
-export const Default: StoryObj<IconProps> = {
+export const Default: StoryObj<ArrowDownCircleProps> = {
     args: {},
    argTypes: {}
 }

@@ -1,10 +1,9 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { Anchor } from './Anchor';
-import { IconProps } from "../../../assets/InterfacePropsIcon";
+import { SkipBack, SkipBackProps } from './SkipBack';
 
 export default {
-    title: 'Icon/Menu/Anchor',
-    component: Anchor,
+    title: 'Icon/Menu/SkipBack',
+    component: SkipBack,
     args: {
     },
     argTypes: {
@@ -18,9 +17,9 @@ export default {
         }
       }
     
-} as Meta<IconProps>
+} as Meta<SkipBackProps>
 
-export const Default: StoryObj<IconProps> = {
+export const Default: StoryObj<SkipBackProps> = {
     args: {},
    argTypes: {}
 }

@@ -1,10 +1,9 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { Anchor } from './Anchor';
-import { IconProps } from "../../../assets/InterfacePropsIcon";
+import { SkipForward, SkipForwardProps } from './SkipForward';
 
 export default {
-    title: 'Icon/Menu/Anchor',
-    component: Anchor,
+    title: 'Icon/Menu/SkipForward',
+    component: SkipForward,
     args: {
     },
     argTypes: {
@@ -18,9 +17,9 @@ export default {
         }
       }
     
-} as Meta<IconProps>
+} as Meta<SkipForwardProps>
 
-export const Default: StoryObj<IconProps> = {
+export const Default: StoryObj<SkipForwardProps> = {
     args: {},
    argTypes: {}
 }
