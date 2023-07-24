@@ -1,10 +1,11 @@
+import React from "react";
 
-export interface TramitacaoProps {
+export interface Maximize2Props {
     type?: 'Primary' | 'Second';
     size?: 'sm' | 'md' | 'lg' | 'xl';
 }
 
-export function Tramitacao({type = 'Primary', size = 'md'}: TramitacaoProps ) {
+export function Maximize2({type = 'Primary', size = 'md'}: Maximize2Props ) {
     let estilo = '';
     let width;
     let height;

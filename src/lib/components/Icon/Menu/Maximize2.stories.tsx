@@ -1,9 +1,9 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { Tramitacao, TramitacaoProps } from './Tramitacao';
+import { Maximize2, Maximize2Props } from './Maximize2';
 
 export default {
-    title: 'Icon/Menu/Tramitacao',
-    component: Tramitacao,
+    title: 'Icon/Menu/Maximize2',
+    component: Maximize2,
     args: {
     },
     argTypes: {
@@ -17,9 +17,9 @@ export default {
         }
       }
     
-} as Meta<TramitacaoProps>
+} as Meta<Maximize2Props>
 
-export const Default: StoryObj<TramitacaoProps> = {
+export const Default: StoryObj<Maximize2Props> = {
     args: {},
    argTypes: {}
 }

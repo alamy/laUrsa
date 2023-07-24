@@ -1,3 +1,4 @@
+import React from "react";
 
 export interface TramitacaoProps {
     type?: 'Primary' | 'Second';
