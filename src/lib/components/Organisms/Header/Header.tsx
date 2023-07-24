@@ -70,19 +70,22 @@ export function Header(
        {LinkExternos}
       </ul>
        
-        <div className='configuracao' onMouseOver={actionetiing} onMouseLeave={actionetiingFalse}>
+       
+        
+      <div className={clsx({
+        'data' : tamanho === false,
+        'data-small': tamanho === true},
+        'box-data')}>
+      <i>{subTitulo}</i> - <b>  {dia} / {mes} / {ano} - {hora} : {minutos}</b>
+      </div> 
+
+      <div className='configuracao' onMouseOver={actionetiing} onMouseLeave={actionetiingFalse}>
            <Settings type='Primary' size='md'  />
       
         {flag ? <div className='menu-box-settings'>
           {itemSettings}
         </div> : ''}
         </div>
-        
-      <div className={clsx({
-        'data' : tamanho === false,
-        'data-small': tamanho === true})}>
-      <i>{subTitulo}</i> - <b>  {dia} / {mes} / {ano} - {hora} : {minutos}</b>
-      </div> 
     </div>
        </>
     );

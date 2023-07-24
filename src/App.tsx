@@ -30,13 +30,20 @@ function App() {
         Cras aliquam condimentum arcu non porttitor. Curabitur vehicula augue scelerisque libero rutrum, a scelerisque risus consequat. Sed nunc dolor, ullamcorper id augue et, dictum vestibulum enim. Aenean dignissim enim ut libero faucibus lobortis blandit cursus libero. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Proin imperdiet purus quis fermentum imperdiet. Quisque luctus quam eget arcu auctor molestie.
 
           Duis gravida urna sed est viverra egestas. Sed placerat fermentum dui. Sed aliquet convallis gravida. Suspendisse potenti. Nunc eu tincidunt ante, id ultrices lectus. In hac habitasse platea dictumst. Sed ornare nisi libero, id blandit massa consequat eleifend.
-          <Alerta texto={'Nenhum débito encontrado com a condição: INDICADOR DEVIDO'} tipo={'danger'} titulo={'undefined'} Close={function (): void {
-          throw new Error('Function not implemented.')
-        } } />
+         
 
-        <Table typeTable={'Default'} header={['id', 'descricao']} Obj={{ 1: ["1", "Mercantil", 'Descricao'] }}  Editar={(i: any) => {
+        <Table typeTable={'Default'} header={['id', 'descricao']} Obj={{
+        1: ["1",
+          "Mercantil",
+          'Descricao',
+           [
+             'teste', 
+             'teste 2'
+           ]
+        ]
+      }} Editar={(i: any) => {
         console.log(i);
-      } } visualizacao={true} />
+      } } visualizacao={true} QtdSub={0} />
           
 
           <Input text={''} type={'number'} />

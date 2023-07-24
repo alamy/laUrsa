@@ -16,6 +16,7 @@ export interface TableProps {
     Detalhar?:Function;
     visualizacao?: boolean;
     Status?:(i: any) => void;
+    QtdSub: number;
 }
 
 const edit = <Edit
@@ -49,6 +50,7 @@ export const Table = ({
     }) 
     let ObjBody = Object.values(Obj).map(function(opt){
         let objItem = Object.values(opt).map(function(Item:any){
+            console.log(Item.indexOf())
            
          return (Item === 'S' || Item === 'N'? '' :  <td> {Item} </td>)
         })

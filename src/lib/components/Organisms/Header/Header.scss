@@ -48,10 +48,13 @@
     margin-left: 3%;
 }
 .configuracao {
-    float: right;
-    margin-top: 2.2%;
     margin-right: 20px;
     cursor: pointer;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    left: 90%;
 }
 .data {
     float: right;
@@ -84,4 +87,9 @@
     p:hover {
         border-bottom: 1px solid #fff
     }
+}
+
+.box-data {
+    border: 1px solid red;
+    display: inline-block;
 }
