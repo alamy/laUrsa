@@ -50,9 +50,21 @@ export const Table = ({
     }) 
     let ObjBody = Object.values(Obj).map(function(opt){
         let objItem = Object.values(opt).map(function(Item:any){
-            console.log(Item.indexOf())
-           
-         return (Item === 'S' || Item === 'N'? '' :  <td> {Item} </td>)
+            let Result
+            if(typeof Item === 'object'){
+                console.log('aqui')
+                   var Resultado = Object.values(Item).map(function(T:any){
+                    Result= T
+                    return (<td> {Result} </td>)
+               })
+            }else {
+                Result = Item
+                console.log('fora')
+                return (Result === 'S' || Result === 'N'? '' :  <td> {Result} </td>)
+         
+            }
+            return Resultado
+            
         })
         let statusChek: any
         opt.status === 'S'? statusChek = "checked" : statusChek = "";
@@ -68,7 +80,7 @@ export const Table = ({
         {objItem}
             {visualizacao?  <td>
                 <label className="switch">
-                        <input type="checkbox" id={id} value={opt.status} checked={statusChek} name={name} onClick={Status}/>
+                        <input type="checkbox" id={id} value={opt.status} checked={statusChek} defaultChecked={statusChek} name={name} onClick={Status}/>
                         <span className="slider round"></span>
                 </label>
             </td> : ''}

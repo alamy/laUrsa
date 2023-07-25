@@ -32,7 +32,7 @@ function App() {
           Duis gravida urna sed est viverra egestas. Sed placerat fermentum dui. Sed aliquet convallis gravida. Suspendisse potenti. Nunc eu tincidunt ante, id ultrices lectus. In hac habitasse platea dictumst. Sed ornare nisi libero, id blandit massa consequat eleifend.
          
 
-        <Table typeTable={'Default'} header={['id', 'descricao']} Obj={{
+        <Table typeTable={'Default'} header={['id', 'descricao', 'Teste', 'algum' , 'teste' , 'status', 'ação']} Obj={{
         1: ["1",
           "Mercantil",
           'Descricao',
