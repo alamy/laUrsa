@@ -1,5 +1,6 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { Aperture, ApertureProps } from './Aperture';
+import { Aperture } from './Aperture';
+import { IconProps } from "../../../assets/InterfacePropsIcon";
 
 export default {
     title: 'Icon/Menu/Aperture',
@@ -17,9 +18,9 @@ export default {
         }
       }
     
-} as Meta<ApertureProps>
+} as Meta<IconProps>
 
-export const Default: StoryObj<ApertureProps> = {
+export const Default: StoryObj<IconProps> = {
     args: {},
    argTypes: {}
 }

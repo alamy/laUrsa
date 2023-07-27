@@ -1,5 +1,6 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { Bookmark, BookmarkProps } from './Bookmark';
+import { Bookmark } from './Bookmark';
+import { IconProps } from "../../../assets/InterfacePropsIcon";
 
 export default {
     title: 'Icon/Menu/Bookmark',
@@ -17,9 +18,9 @@ export default {
         }
       }
     
-} as Meta<BookmarkProps>
+} as Meta<IconProps>
 
-export const Default: StoryObj<BookmarkProps> = {
+export const Default: StoryObj<IconProps> = {
     args: {},
    argTypes: {}
 }

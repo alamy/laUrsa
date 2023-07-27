@@ -1,5 +1,6 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { ArrowUp, ArrowUpProps } from './ArrowUp';
+import { ArrowUp } from './ArrowUp';
+import { IconProps } from "../../../assets/InterfacePropsIcon";
 
 export default {
     title: 'Icon/Menu/ArrowUp',
@@ -17,9 +18,9 @@ export default {
         }
       }
     
-} as Meta<ArrowUpProps>
+} as Meta<IconProps>
 
-export const Default: StoryObj<ArrowUpProps> = {
+export const Default: StoryObj<IconProps> = {
     args: {},
    argTypes: {}
 }

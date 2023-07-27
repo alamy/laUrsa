@@ -1,42 +1,15 @@
+import { IconProps } from "../../../assets/InterfacePropsIcon";
+import {SizeComponent, TypeComponent} from "../../../assets/TypeSizeComponent";
 
-export interface ImageProps {
-    type?: 'Primary' | 'Second';
-    size?: 'sm' | 'md' | 'lg' | 'xl';
-}
 
-export function Image({type = 'Primary', size = 'md'}: ImageProps ) {
+export function Image({size = 'md', type= "Primary"}: IconProps ) {
     let estilo = '';
-    let width;
-    let height;
+    let width:number | undefined;
+    let height:number | undefined;
 
-    switch(type) {
-        case 'Primary':
-            estilo = "#1474FF"
-            break;
-        case 'Second':
-            estilo = "#FFF"
-            break;
-    }
-
-    switch(size){
-        case 'sm':
-            width = '14';
-            height = '14';
-            break;
-        case 'md':
-            width = '19';
-            height = '19';
-            break;
-        case 'lg':
-            width = '24';
-            height = '24';
-            break;
-        case 'xl' :
-            width = '32';
-            height = '32';
-            break;    
-    }   
-
+    width = SizeComponent(size)
+    height = SizeComponent(size)
+    estilo = TypeComponent(type)
     return (
         <svg width={width} height={height} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M19 3H5C3.89543 3 3 3.89543 3 5V19C3 20.1046 3.89543 21 5 21H19C20.1046 21 21 20.1046 21 19V5C21 3.89543 20.1046 3 19 3Z" stroke={estilo} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>

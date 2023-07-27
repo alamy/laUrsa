@@ -1,5 +1,6 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { Bluetooth, BluetoothProps } from './Bluetooth';
+import { Bluetooth } from './Bluetooth';
+import { IconProps } from "../../../assets/InterfacePropsIcon";
 
 export default {
     title: 'Icon/Menu/Bluetooth',
@@ -17,9 +18,9 @@ export default {
         }
       }
     
-} as Meta<BluetoothProps>
+} as Meta<IconProps>
 
-export const Default: StoryObj<BluetoothProps> = {
+export const Default: StoryObj<IconProps> = {
     args: {},
    argTypes: {}
 }

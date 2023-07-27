@@ -1,5 +1,6 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { Arroba, ArrobaProps } from './Arroba';
+import { Arroba } from './Arroba';
+import { IconProps } from "../../../assets/InterfacePropsIcon";
 
 export default {
     title: 'Icon/Menu/Arroba',
@@ -17,9 +18,9 @@ export default {
         }
       }
     
-} as Meta<ArrobaProps>
+} as Meta<IconProps>
 
-export const Default: StoryObj<ArrobaProps> = {
+export const Default: StoryObj<IconProps> = {
     args: {},
    argTypes: {}
 }
