@@ -51,6 +51,7 @@ export function Dashboard(
     }
     return (
     <>
+   
     <Menu 
                 titulo={titulo}
                 menu={menu}
@@ -60,7 +61,11 @@ export function Dashboard(
                 usuario={usuario}
                 submenu={sub}
                 Home={Home}
-                Navegacao={Navegacao} Logout={Logout} Organograma={Organograma} Informacoes={Informacoes}/>
+                Navegacao={Navegacao} 
+                Logout={Logout} 
+                Organograma={Organograma} 
+                Informacoes={Informacoes}/>
+
     <Header
                 linksExternos={linksExternos}
                 subTitulo={subTitulo}
@@ -68,7 +73,8 @@ export function Dashboard(
                 tamanho={tamanho}
                 Size={function (): void {
                     return setTamanho(!tamanho);
-                } } menuSettings={menuSettings} />
+                } } menuSettings={menuSettings} />  
+    
     <div onClick={clickSubmenu} className={clsx({
       'conteiner-small': tamanho === true,
       'conteiner-big': tamanho === false

@@ -198,14 +198,20 @@ li {
 
 .menu_lateral {
     background-color: #1474FF;
-    display: inline-block;
-    min-height: 100vh;
+    max-height: 100vh;
     height: 100%;
-    position: fixed;
+    position: absolute;
     overflow-x: auto;
     padding-bottom: 10vh;
     z-index: 9999;    
     transition: 0.3s;
+    display: inline-block;
+}
+
+@media (max-width: 600px) {
+    .menu_lateral{
+    position: relative;
+    }
 }
 .nav-item{
     font-weight: 100;
