@@ -1,42 +1,15 @@
+import { IconProps } from "../../../assets/InterfacePropsIcon";
+import {SizeComponent, TypeComponent} from "../../../assets/TypeSizeComponent";
 
-export interface LifeBuoyProps {
-    type?: 'Primary' | 'Second';
-    size?: 'sm' | 'md' | 'lg' | 'xl';
-}
 
-export function LifeBuoy({type = 'Primary', size = 'md'}: LifeBuoyProps ) {
+export function LifeBuoy({size = 'md', type= "Primary"}: IconProps ) {
     let estilo = '';
-    let width;
-    let height;
+    let width:number | undefined;
+    let height:number | undefined;
 
-    switch(type) {
-        case 'Primary':
-            estilo = "#1474FF"
-            break;
-        case 'Second':
-            estilo = "#FFF"
-            break;
-    }
-
-    switch(size){
-        case 'sm':
-            width = '14';
-            height = '14';
-            break;
-        case 'md':
-            width = '19';
-            height = '19';
-            break;
-        case 'lg':
-            width = '24';
-            height = '24';
-            break;
-        case 'xl' :
-            width = '32';
-            height = '32';
-            break;    
-    }   
-
+    width = SizeComponent(size)
+    height = SizeComponent(size)
+    estilo = TypeComponent(type)
     return (
         <svg width={width} height={height} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke={estilo} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>

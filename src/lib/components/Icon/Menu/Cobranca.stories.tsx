@@ -1,5 +1,6 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { Cobranca, CobrancaProps } from './Cobranca';
+import { Cobranca } from './Cobranca';
+import { IconProps } from "../../../assets/InterfacePropsIcon";
 
 export default {
     title: 'Icon/Menu/Cobranca',
@@ -17,10 +18,9 @@ export default {
         }
       }
     
-} as Meta<CobrancaProps>
+} as Meta<IconProps>
 
-export const Default: StoryObj<CobrancaProps> = {
+export const Default: StoryObj<IconProps> = {
     args: {},
    argTypes: {}
 }
-

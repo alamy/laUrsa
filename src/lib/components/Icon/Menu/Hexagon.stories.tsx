@@ -1,5 +1,6 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { Hexagon, HexagonProps } from './Hexagon';
+import { Hexagon } from './Hexagon';
+import { IconProps } from "../../../assets/InterfacePropsIcon";
 
 export default {
     title: 'Icon/Menu/Hexagon',
@@ -17,9 +18,9 @@ export default {
         }
       }
     
-} as Meta<HexagonProps>
+} as Meta<IconProps>
 
-export const Default: StoryObj<HexagonProps> = {
+export const Default: StoryObj<IconProps> = {
     args: {},
    argTypes: {}
 }

@@ -1,5 +1,6 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { Layers, LayersProps } from './Layers';
+import { Layers } from './Layers';
+import { IconProps } from "../../../assets/InterfacePropsIcon";
 
 export default {
     title: 'Icon/Menu/Layers',
@@ -17,9 +18,9 @@ export default {
         }
       }
     
-} as Meta<LayersProps>
+} as Meta<IconProps>
 
-export const Default: StoryObj<LayersProps> = {
+export const Default: StoryObj<IconProps> = {
     args: {},
    argTypes: {}
 }

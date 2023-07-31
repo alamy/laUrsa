@@ -1,42 +1,15 @@
+import { IconProps } from "../../../assets/InterfacePropsIcon";
+import {SizeComponent, TypeComponent} from "../../../assets/TypeSizeComponent";
 
-export interface ContestacaoProps {
-    type?: 'Primary' | 'Second';
-    size?: 'sm' | 'md' | 'lg' | 'xl';
-}
 
-export function Contestacao({type = 'Primary', size = 'md'}: ContestacaoProps ) {
+export function Contestacao({size = 'md', type= "Primary"}: IconProps ) {
     let estilo = '';
-    let width;
-    let height;
+    let width:number | undefined;
+    let height:number | undefined;
 
-    switch(type) {
-        case 'Primary':
-            estilo = "#1474FF"
-            break;
-        case 'Second':
-            estilo = "#FFF"
-            break;
-    }
-
-    switch(size){
-        case 'sm':
-            width = '14';
-            height = '4';
-            break;
-        case 'md':
-            width = '19';
-            height = '9';
-            break;
-        case 'lg':
-            width = '24';
-            height = '14';
-            break;
-        case 'xl' :
-            width = '32';
-            height = '22';
-            break;    
-    }   
-
+    width = SizeComponent(size)
+    height = SizeComponent(size)
+    estilo = TypeComponent(type)
     return (
         <svg width={width} height={height} viewBox="0 0 34 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M5.90179 16.4141H4.59725C2.61068 16.4141 1 14.8051 1 12.8185V9.67368C1 7.68712 2.61068 6.07643 4.59725 6.07643H5.90179V16.4141Z" stroke={estilo} stroke-width="1.5" stroke-miterlimit="10"/>

@@ -1,5 +1,6 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { DividaAtiva, DividaAtivaProps } from './DividaAtiva';
+import { DividaAtiva } from './DividaAtiva';
+import { IconProps } from "../../../assets/InterfacePropsIcon";
 
 export default {
     title: 'Icon/Menu/DividaAtiva',
@@ -17,9 +18,9 @@ export default {
         }
       }
     
-} as Meta<DividaAtivaProps>
+} as Meta<IconProps>
 
-export const Default: StoryObj<DividaAtivaProps> = {
+export const Default: StoryObj<IconProps> = {
     args: {},
    argTypes: {}
 }

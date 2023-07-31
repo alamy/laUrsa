@@ -1,42 +1,15 @@
+import { IconProps } from "../../../assets/InterfacePropsIcon";
+import {SizeComponent, TypeComponent} from "../../../assets/TypeSizeComponent";
 
-export interface AwardProps {
-    type?: 'Primary' | 'Second';
-    size?: 'sm' | 'md' | 'lg' | 'xl';
-}
 
-export function Award({type = 'Primary', size = 'md'}: AwardProps ) {
+export function Award({size = 'md', type= "Primary"}: IconProps ) {
     let estilo = '';
-    let width;
-    let height;
+    let width:number | undefined;
+    let height:number | undefined;
 
-    switch(type) {
-        case 'Primary':
-            estilo = "#1474FF"
-            break;
-        case 'Second':
-            estilo = "#FFF"
-            break;
-    }
-
-    switch(size){
-        case 'sm':
-            width = '14';
-            height = '14';
-            break;
-        case 'md':
-            width = '19';
-            height = '19';
-            break;
-        case 'lg':
-            width = '24';
-            height = '24';
-            break;
-        case 'xl' :
-            width = '32';
-            height = '32';
-            break;    
-    }   
-
+    width = SizeComponent(size)
+    height = SizeComponent(size)
+    estilo = TypeComponent(type)
     return (
         <svg width={width} height={height} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M12 15C15.866 15 19 11.866 19 8C19 4.13401 15.866 1 12 1C8.13401 1 5 4.13401 5 8C5 11.866 8.13401 15 12 15Z" stroke={estilo} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>

@@ -1,5 +1,6 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { Award, AwardProps } from './Award';
+import { Award } from './Award';
+import { IconProps } from "../../../assets/InterfacePropsIcon";
 
 export default {
     title: 'Icon/Menu/Award',
@@ -17,9 +18,9 @@ export default {
         }
       }
     
-} as Meta<AwardProps>
+} as Meta<IconProps>
 
-export const Default: StoryObj<AwardProps> = {
+export const Default: StoryObj<IconProps> = {
     args: {},
    argTypes: {}
 }

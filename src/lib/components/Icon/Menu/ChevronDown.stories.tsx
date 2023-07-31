@@ -1,5 +1,6 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { ChevronDown, ChevronDownProps } from './ChevronDown';
+import { ChevronDown } from './ChevronDown';
+import { IconProps } from "../../../assets/InterfacePropsIcon";
 
 export default {
     title: 'Icon/Menu/ChevronDown',
@@ -17,9 +18,9 @@ export default {
         }
       }
     
-} as Meta<ChevronDownProps>
+} as Meta<IconProps>
 
-export const Default: StoryObj<ChevronDownProps> = {
+export const Default: StoryObj<IconProps> = {
     args: {},
    argTypes: {}
 }

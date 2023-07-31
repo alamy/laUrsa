@@ -1,5 +1,6 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { Archive, ArchiveProps } from './Archive';
+import { Archive } from './Archive';
+import { IconProps } from "../../../assets/InterfacePropsIcon";
 
 export default {
     title: 'Icon/Menu/Archive',
@@ -17,9 +18,9 @@ export default {
         }
       }
     
-} as Meta<ArchiveProps>
+} as Meta<IconProps>
 
-export const Default: StoryObj<ArchiveProps> = {
+export const Default: StoryObj<IconProps> = {
     args: {},
    argTypes: {}
 }
