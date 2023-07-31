@@ -16,7 +16,7 @@ export interface TableProps {
     Detalhar?:Function;
     visualizacao?: boolean;
     Status?:(i: any) => void;
-    QtdSub: number;
+    QtdSub?: number;
 }
 
 const edit = <Edit
@@ -34,6 +34,7 @@ size="md"
 type="Primary"
 />
 
+
 export const Table = ({
     header, 
     Obj, 
@@ -42,32 +43,32 @@ export const Table = ({
     Excluir,
     visualizacao,
     Detalhar,
-    Status  
+    Status,
 }: TableProps ) => {
-    
+ 
     let ObjHeader = header?.map(function(opt){
         return <th>{opt}</th>
     }) 
     let ObjBody = Object.values(Obj).map(function(opt){
+        let valorChecked;
         let objItem = Object.values(opt).map(function(Item:any){
             let Result
             if(typeof Item === 'object'){
                 console.log('aqui')
                    var Resultado = Object.values(Item).map(function(T:any){
-                    Result= T
+                    Result = T
                     return (<td> {Result} </td>)
                })
-            }else {
-                Result = Item
-                console.log('fora')
-                return (Result === 'S' || Result === 'N'? '' :  <td> {Result} </td>)
-         
+            }else { 
+                if(Item === opt.isAtivo){
+                    valorChecked = Item
+                }  
+                return (<td> {Item} </td>)
             }
             return Resultado
             
         })
-        let statusChek: any
-        opt.status === 'S'? statusChek = "checked" : statusChek = "";
+     
         let id:any = opt.id
         let name:any = opt.descricao
 
@@ -75,16 +76,17 @@ export const Table = ({
         <tr id={id} className={clsx(
             {
                 'dark': typeTable === 'Dark'
+                
             },
-        )}>
+        )}> 
         {objItem}
             {visualizacao?  <td>
                 <label className="switch">
-                        <input type="checkbox" id={id} value={opt.status} checked={statusChek} defaultChecked={statusChek} name={name} onClick={Status}/>
+                        <input type="checkbox" id={id} checked={valorChecked} name={name} onClick={Status} />
                         <span className="slider round"></span>
                 </label>
             </td> : ''}
-            <td className='controle-table' title={opt.status}>
+            <td className='controle-table' title={opt.isAtivo}>
                 <Button icone={'edite'} type='secondary' size='md' id={id} name={name} onClick={Editar}/>
                 <Button icone={'delete'} type='secondary' size='md' id={id} name={name} onClick={Excluir}/>
                 <Button icone={'look'} type='secondary' size='md' id={id} name={name} onClick={Detalhar}/>
@@ -123,4 +125,5 @@ export const Table = ({
     );
  
 }
+
 
