@@ -57,6 +57,7 @@ export const Table = ({
             if(typeof Item === 'object'){
                 console.log('aqui')
                    var Resultado = Object.values(Item).map(function(T:any){
+                    Resultado
                     Result = T
                     return (<td> {Result} </td>)
                })
