@@ -53,6 +53,7 @@ export const Table = ({
         let valorChecked;
         let objItem = Object.values(opt).map(function(Item:any){
             let Result
+            console.log(Item)
             if(typeof Item === 'object'){
                 console.log('aqui')
                    var Resultado = Object.values(Item).map(function(T:any){
@@ -62,11 +63,13 @@ export const Table = ({
             }else { 
                 if(Item === opt.isAtivo){
                     valorChecked = Item
+                    return null
+                }
+                else {
+                    return (<td> {Item} </td>)
                 }  
-                return (<td> {Item} </td>)
+               
             }
-            return Resultado
-            
         })
      
         let id:any = opt.id
@@ -95,7 +98,7 @@ export const Table = ({
             
         </tr>)
      })
-     
+     console.log(ObjBody)
     return (
     <>
         <table key="1" className={clsx(
