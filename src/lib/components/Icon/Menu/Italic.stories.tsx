@@ -1,5 +1,6 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { Italic, ItalicProps } from './Italic';
+import { Italic } from './Italic';
+import { IconProps } from "../../../assets/InterfacePropsIcon";
 
 export default {
     title: 'Icon/Menu/Italic',
@@ -17,9 +18,9 @@ export default {
         }
       }
     
-} as Meta<ItalicProps>
+} as Meta<IconProps>
 
-export const Default: StoryObj<ItalicProps> = {
+export const Default: StoryObj<IconProps> = {
     args: {},
    argTypes: {}
 }

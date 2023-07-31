@@ -1,5 +1,6 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { Bold, BoldProps } from './Bold';
+import { Bold } from './Bold';
+import { IconProps } from "../../../assets/InterfacePropsIcon";
 
 export default {
     title: 'Icon/Menu/Bold',
@@ -17,9 +18,9 @@ export default {
         }
       }
     
-} as Meta<BoldProps>
+} as Meta<IconProps>
 
-export const Default: StoryObj<BoldProps> = {
+export const Default: StoryObj<IconProps> = {
     args: {},
    argTypes: {}
 }

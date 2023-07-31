@@ -1,5 +1,6 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { Briefcase, BriefcaseProps } from './Briefcase';
+import { Briefcase } from './Briefcase';
+import { IconProps } from "../../../assets/InterfacePropsIcon";
 
 export default {
     title: 'Icon/Menu/Briefcase',
@@ -17,9 +18,9 @@ export default {
         }
       }
     
-} as Meta<BriefcaseProps>
+} as Meta<IconProps>
 
-export const Default: StoryObj<BriefcaseProps> = {
+export const Default: StoryObj<IconProps> = {
     args: {},
    argTypes: {}
 }

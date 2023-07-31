@@ -1,5 +1,6 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { Instagram, InstagramProps } from './Instagram';
+import { Instagram } from './Instagram';
+import { IconProps } from "../../../assets/InterfacePropsIcon";
 
 export default {
     title: 'Icon/Menu/Instagram',
@@ -17,9 +18,9 @@ export default {
         }
       }
     
-} as Meta<InstagramProps>
+} as Meta<IconProps>
 
-export const Default: StoryObj<InstagramProps> = {
+export const Default: StoryObj<IconProps> = {
     args: {},
    argTypes: {}
 }

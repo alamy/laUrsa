@@ -1,5 +1,6 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { ControleDebito, ControleDebitoProps } from './ControleDebito';
+import { ControleDebito } from './ControleDebito';
+import { IconProps } from "../../../assets/InterfacePropsIcon";
 
 export default {
     title: 'Icon/Menu/ControleDebito',
@@ -17,9 +18,9 @@ export default {
         }
       }
     
-} as Meta<ControleDebitoProps>
+} as Meta<IconProps>
 
-export const Default: StoryObj<ControleDebitoProps> = {
+export const Default: StoryObj<IconProps> = {
     args: {},
    argTypes: {}
 }

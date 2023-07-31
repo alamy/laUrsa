@@ -1,5 +1,6 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { Lancamento, LancamentoProps } from './Lancamento';
+import { Lancamento } from './Lancamento';
+import { IconProps } from "../../../assets/InterfacePropsIcon";
 
 export default {
     title: 'Icon/Menu/Lancamento',
@@ -17,9 +18,9 @@ export default {
         }
       }
     
-} as Meta<LancamentoProps>
+} as Meta<IconProps>
 
-export const Default: StoryObj<LancamentoProps> = {
+export const Default: StoryObj<IconProps> = {
     args: {},
    argTypes: {}
 }
