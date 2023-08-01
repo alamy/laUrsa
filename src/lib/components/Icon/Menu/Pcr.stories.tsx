@@ -2,6 +2,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import { Pcr } from './Pcr';
 import { IconProps } from "../../../assets/InterfacePropsIcon";
 
+
 export default {
     title: 'Icon/Menu/Pcr',
     component: Pcr,

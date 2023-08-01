@@ -2,6 +2,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import { Repeat } from './Repeat';
 import { IconProps } from "../../../assets/InterfacePropsIcon";
 
+
 export default {
     title: 'Icon/Menu/Repeat',
     component: Repeat,

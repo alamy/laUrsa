@@ -2,6 +2,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import { Send } from './Send';
 import { IconProps } from "../../../assets/InterfacePropsIcon";
 
+
 export default {
     title: 'Icon/Menu/Send',
     component: Send,

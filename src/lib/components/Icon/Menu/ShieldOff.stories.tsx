@@ -2,6 +2,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import { ShieldOff } from './ShieldOff';
 import { IconProps } from "../../../assets/InterfacePropsIcon";
 
+
 export default {
     title: 'Icon/Menu/ShieldOff',
     component: ShieldOff,

@@ -2,6 +2,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import { Scissor } from './Scissor';
 import { IconProps } from "../../../assets/InterfacePropsIcon";
 
+
 export default {
     title: 'Icon/Menu/Scissor',
     component: Scissor,

@@ -1,7 +1,6 @@
 import { IconProps } from "../../../assets/InterfacePropsIcon";
 import {SizeComponent, TypeComponent} from "../../../assets/TypeSizeComponent";
 
-
 export function Server({size = 'md', type= "Primary"}: IconProps ) {
     let estilo = '';
     let width:number | undefined;

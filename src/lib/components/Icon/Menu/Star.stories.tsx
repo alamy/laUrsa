@@ -2,6 +2,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import { Star } from './Star';
 import { IconProps } from "../../../assets/InterfacePropsIcon";
 
+
 export default {
     title: 'Icon/Menu/Star',
     component: Star,

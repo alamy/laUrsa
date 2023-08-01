@@ -2,6 +2,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import { ShoppingBag } from './ShoppingBag';
 import { IconProps } from "../../../assets/InterfacePropsIcon";
 
+
 export default {
     title: 'Icon/Menu/ShoppingBag',
     component: ShoppingBag,

@@ -2,6 +2,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import { Loader } from './Loader';
 import { IconProps } from "../../../assets/InterfacePropsIcon";
 
+
 export default {
     title: 'Icon/Menu/Loader',
     component: Loader,

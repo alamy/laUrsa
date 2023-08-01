@@ -2,6 +2,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import { Lock } from './Lock';
 import { IconProps } from "../../../assets/InterfacePropsIcon";
 
+
 export default {
     title: 'Icon/Menu/Lock',
     component: Lock,

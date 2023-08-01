@@ -2,6 +2,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import { Logout } from './Logout';
 import { IconProps } from "../../../assets/InterfacePropsIcon";
 
+
 export default {
     title: 'Icon/Menu/Logout',
     component: Logout,

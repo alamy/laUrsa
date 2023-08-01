@@ -2,6 +2,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import { Sliders } from './Sliders';
 import { IconProps } from "../../../assets/InterfacePropsIcon";
 
+
 export default {
     title: 'Icon/Menu/Sliders',
     component: Sliders,

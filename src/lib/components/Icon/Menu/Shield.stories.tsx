@@ -2,6 +2,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import { Shield } from './Shield';
 import { IconProps } from "../../../assets/InterfacePropsIcon";
 
+
 export default {
     title: 'Icon/Menu/Shield',
     component: Shield,

@@ -2,6 +2,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import { Rss } from './Rss';
 import { IconProps } from "../../../assets/InterfacePropsIcon";
 
+
 export default {
     title: 'Icon/Menu/Rss',
     component: Rss,

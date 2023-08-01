@@ -2,6 +2,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import { SkipBack } from './SkipBack';
 import { IconProps } from "../../../assets/InterfacePropsIcon";
 
+
 export default {
     title: 'Icon/Menu/SkipBack',
     component: SkipBack,

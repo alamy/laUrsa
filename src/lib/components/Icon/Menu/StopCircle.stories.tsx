@@ -2,6 +2,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import { StopCircle } from './StopCircle';
 import { IconProps } from "../../../assets/InterfacePropsIcon";
 
+
 export default {
     title: 'Icon/Menu/StopCircle',
     component: StopCircle,

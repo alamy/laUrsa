@@ -2,6 +2,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import { Slash } from './Slash';
 import { IconProps } from "../../../assets/InterfacePropsIcon";
 
+
 export default {
     title: 'Icon/Menu/Slash',
     component: Slash,

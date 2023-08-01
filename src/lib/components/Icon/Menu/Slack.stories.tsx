@@ -2,6 +2,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import { Slack } from './Slack';
 import { IconProps } from "../../../assets/InterfacePropsIcon";
 
+
 export default {
     title: 'Icon/Menu/Slack',
     component: Slack,

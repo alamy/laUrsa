@@ -2,6 +2,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import { RotateRight } from './RotateRight';
 import { IconProps } from "../../../assets/InterfacePropsIcon";
 
+
 export default {
     title: 'Icon/Menu/RotateRight',
     component: RotateRight,

@@ -10,6 +10,7 @@ export function List({size = 'md', type= "Primary"}: IconProps ) {
     width = SizeComponent(size)
     height = SizeComponent(size)
     estilo = TypeComponent(type)
+    
 
     return (
         <svg width={width} height={height} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">

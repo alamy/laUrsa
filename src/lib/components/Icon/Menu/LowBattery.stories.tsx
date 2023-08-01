@@ -2,6 +2,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import { LowBattery } from './LowBattery';
 import { IconProps } from "../../../assets/InterfacePropsIcon";
 
+
 export default {
     title: 'Icon/Menu/LowBattery',
     component: LowBattery,

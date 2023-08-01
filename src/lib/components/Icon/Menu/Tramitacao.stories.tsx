@@ -2,6 +2,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import { Tramitacao } from './Tramitacao';
 import { IconProps } from "../../../assets/InterfacePropsIcon";
 
+
 export default {
     title: 'Icon/Menu/Tramitacao',
     component: Tramitacao,

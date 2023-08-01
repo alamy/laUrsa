@@ -2,6 +2,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import { Smile } from './Smile';
 import { IconProps } from "../../../assets/InterfacePropsIcon";
 
+
 export default {
     title: 'Icon/Menu/Smile',
     component: Smile,

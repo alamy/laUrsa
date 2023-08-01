@@ -2,6 +2,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import { Pin } from './Pin';
 import { IconProps } from "../../../assets/InterfacePropsIcon";
 
+
 export default {
     title: 'Icon/Menu/Pin',
     component: Pin,

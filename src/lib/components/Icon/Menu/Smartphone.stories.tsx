@@ -2,6 +2,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import { Smartphone } from './Smartphone';
 import { IconProps } from "../../../assets/InterfacePropsIcon";
 
+
 export default {
     title: 'Icon/Menu/Smartphone',
     component: Smartphone,

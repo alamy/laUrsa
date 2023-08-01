@@ -2,6 +2,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import { Square } from './Square';
 import { IconProps } from "../../../assets/InterfacePropsIcon";
 
+
 export default {
     title: 'Icon/Menu/Square',
     component: Square,

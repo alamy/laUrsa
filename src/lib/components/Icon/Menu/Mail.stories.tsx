@@ -2,6 +2,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import { Mail } from './Mail';
 import { IconProps } from "../../../assets/InterfacePropsIcon";
 
+
 export default {
     title: 'Icon/Menu/Mail',
     component: Mail,

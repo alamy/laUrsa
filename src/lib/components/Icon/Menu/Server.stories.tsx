@@ -2,6 +2,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import { Server } from './Server';
 import { IconProps } from "../../../assets/InterfacePropsIcon";
 
+
 export default {
     title: 'Icon/Menu/Server',
     component: Server,

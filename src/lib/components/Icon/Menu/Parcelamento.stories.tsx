@@ -2,6 +2,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import { Parcelamento } from './Parcelamento';
 import { IconProps } from "../../../assets/InterfacePropsIcon";
 
+
 export default {
     title: 'Icon/Menu/Parcelamento',
     component: Parcelamento,

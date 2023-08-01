@@ -2,6 +2,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import { Sidebar } from './Sidebar';
 import { IconProps } from "../../../assets/InterfacePropsIcon";
 
+
 export default {
     title: 'Icon/Menu/Sidebar',
     component: Sidebar,

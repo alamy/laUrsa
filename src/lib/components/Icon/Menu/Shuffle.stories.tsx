@@ -2,6 +2,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import { Shuffle } from './Shuffle';
 import { IconProps } from "../../../assets/InterfacePropsIcon";
 
+
 export default {
     title: 'Icon/Menu/Shuffle',
     component: Shuffle,

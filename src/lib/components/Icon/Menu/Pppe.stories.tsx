@@ -2,6 +2,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import { Pppe } from './Pppe';
 import { IconProps } from "../../../assets/InterfacePropsIcon";
 
+
 export default {
     title: 'Icon/Menu/Pppe',
     component: Pppe,

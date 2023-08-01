@@ -2,6 +2,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import { MapIcon } from './MapIcon';
 import { IconProps } from "../../../assets/InterfacePropsIcon";
 
+
 export default {
     title: 'Icon/Menu/MapIcon',
     component: MapIcon,

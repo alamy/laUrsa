@@ -2,6 +2,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import { Maximize2 } from './Maximize2';
 import { IconProps } from "../../../assets/InterfacePropsIcon";
 
+
 export default {
     title: 'Icon/Menu/Maximize2',
     component: Maximize2,

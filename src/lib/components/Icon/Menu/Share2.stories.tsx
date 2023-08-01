@@ -2,6 +2,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import { Share2 } from './Share2';
 import { IconProps } from "../../../assets/InterfacePropsIcon";
 
+
 export default {
     title: 'Icon/Menu/Share2',
     component: Share2,
