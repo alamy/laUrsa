@@ -1,6 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { Slack } from './Slack';
-import { IconProps } from "../../../assets/InterfacePropsIcon";
+import { Slack, SlackProps } from './Slack';
 
 export default {
     title: 'Icon/Menu/Slack',
@@ -18,9 +17,9 @@ export default {
         }
       }
     
-} as Meta<IconProps>
+} as Meta<SlackProps>
 
-export const Default: StoryObj<IconProps> = {
+export const Default: StoryObj<SlackProps> = {
     args: {},
    argTypes: {}
 }

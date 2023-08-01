@@ -1,6 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { Scissor } from './Scissor';
-import { IconProps } from "../../../assets/InterfacePropsIcon";
+import { Scissor, ScissorProps } from './Scissor';
 
 export default {
     title: 'Icon/Menu/Scissor',
@@ -18,9 +17,9 @@ export default {
         }
       }
     
-} as Meta<IconProps>
+} as Meta<ScissorProps>
 
-export const Default: StoryObj<IconProps> = {
+export const Default: StoryObj<ScissorProps> = {
     args: {},
    argTypes: {}
 }

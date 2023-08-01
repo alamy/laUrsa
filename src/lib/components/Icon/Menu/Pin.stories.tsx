@@ -1,6 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { Pin } from './Pin';
-import { IconProps } from "../../../assets/InterfacePropsIcon";
+import { Pin, PinProps } from './Pin';
 
 export default {
     title: 'Icon/Menu/Pin',
@@ -18,9 +17,9 @@ export default {
         }
       }
     
-} as Meta<IconProps>
+} as Meta<PinProps>
 
-export const Default: StoryObj<IconProps> = {
+export const Default: StoryObj<PinProps> = {
     args: {},
    argTypes: {}
 }

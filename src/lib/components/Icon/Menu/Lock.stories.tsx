@@ -1,6 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { Lock } from './Lock';
-import { IconProps } from "../../../assets/InterfacePropsIcon";
+import { Lock, LockProps } from './Lock';
 
 export default {
     title: 'Icon/Menu/Lock',
@@ -18,9 +17,9 @@ export default {
         }
       }
     
-} as Meta<IconProps>
+} as Meta<LockProps>
 
-export const Default: StoryObj<IconProps> = {
+export const Default: StoryObj<LockProps> = {
     args: {},
    argTypes: {}
 }

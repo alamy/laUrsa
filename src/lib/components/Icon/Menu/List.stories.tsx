@@ -1,6 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { List } from './List';
-import { IconProps } from "../../../assets/InterfacePropsIcon";
+import { List, ListProps } from './List';
 
 export default {
     title: 'Icon/Menu/List',
@@ -18,9 +17,9 @@ export default {
         }
       }
     
-} as Meta<IconProps>
+} as Meta<ListProps>
 
-export const Default: StoryObj<IconProps> = {
+export const Default: StoryObj<ListProps> = {
     args: {},
    argTypes: {}
 }

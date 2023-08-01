@@ -1,6 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { Parcelamento } from './Parcelamento';
-import { IconProps } from "../../../assets/InterfacePropsIcon";
+import { Parcelamento, ParcelamentoProps } from './Parcelamento';
 
 export default {
     title: 'Icon/Menu/Parcelamento',
@@ -18,9 +17,9 @@ export default {
         }
       }
     
-} as Meta<IconProps>
+} as Meta<ParcelamentoProps>
 
-export const Default: StoryObj<IconProps> = {
+export const Default: StoryObj<ParcelamentoProps> = {
     args: {},
    argTypes: {}
 }

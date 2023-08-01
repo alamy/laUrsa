@@ -1,6 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { Rewind } from './Rewind';
-import { IconProps } from "../../../assets/InterfacePropsIcon";
+import { Rewind, RewindProps } from './Rewind';
 
 export default {
     title: 'Icon/Menu/Rewind',
@@ -18,9 +17,9 @@ export default {
         }
       }
     
-} as Meta<IconProps>
+} as Meta<RewindProps>
 
-export const Default: StoryObj<IconProps> = {
+export const Default: StoryObj<RewindProps> = {
     args: {},
    argTypes: {}
 }

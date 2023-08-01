@@ -1,6 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { UpRight } from './UpRight';
-import { IconProps } from "../../../assets/InterfacePropsIcon";
+import { UpRight, UpRightProps } from './UpRight';
 
 export default {
     title: 'Icon/Menu/UpRight',
@@ -18,9 +17,9 @@ export default {
         }
       }
     
-} as Meta<IconProps>
+} as Meta<UpRightProps>
 
-export const Default: StoryObj<IconProps> = {
+export const Default: StoryObj<UpRightProps> = {
     args: {},
    argTypes: {}
 }

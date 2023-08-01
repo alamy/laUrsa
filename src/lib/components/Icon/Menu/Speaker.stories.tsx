@@ -1,6 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { Speaker } from './Speaker';
-import { IconProps } from "../../../assets/InterfacePropsIcon";
+import { Speaker, SpeakerProps } from './Speaker';
 
 export default {
     title: 'Icon/Menu/Speaker',
@@ -18,9 +17,9 @@ export default {
         }
       }
     
-} as Meta<IconProps>
+} as Meta<SpeakerProps>
 
-export const Default: StoryObj<IconProps> = {
+export const Default: StoryObj<SpeakerProps> = {
     args: {},
    argTypes: {}
 }

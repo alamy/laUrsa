@@ -1,6 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { ShoppingBag } from './ShoppingBag';
-import { IconProps } from "../../../assets/InterfacePropsIcon";
+import { ShoppingBag, ShoppingBagProps } from './ShoppingBag';
 
 export default {
     title: 'Icon/Menu/ShoppingBag',
@@ -18,9 +17,9 @@ export default {
         }
       }
     
-} as Meta<IconProps>
+} as Meta<ShoppingBagProps>
 
-export const Default: StoryObj<IconProps> = {
+export const Default: StoryObj<ShoppingBagProps> = {
     args: {},
    argTypes: {}
 }

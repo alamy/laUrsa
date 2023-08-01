@@ -1,10 +1,9 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { Sipr } from './Sipr';
-import { IconProps } from "../../../assets/InterfacePropsIcon";
+import { Sirp, SirpProps } from './Sipr';
 
 export default {
-    title: 'Icon/Menu/Sipr',
-    component: Sipr,
+    title: 'Icon/Menu/Sirp',
+    component: Sirp,
     args: {
     },
     argTypes: {
@@ -18,9 +17,9 @@ export default {
         }
       }
     
-} as Meta<IconProps>
+} as Meta<SirpProps>
 
-export const Default: StoryObj<IconProps> = {
+export const Default: StoryObj<SirpProps> = {
     args: {},
    argTypes: {}
 }

@@ -1,15 +1,42 @@
-import { IconProps } from "../../../assets/InterfacePropsIcon";
-import {SizeComponent, TypeComponent} from "../../../assets/TypeSizeComponent";
+import React from "react";
 
+export interface TramitacaoProps {
+    type?: 'Primary' | 'Second';
+    size?: 'sm' | 'md' | 'lg' | 'xl';
+}
 
-export function Tramitacao({size = 'md', type= "Primary"}: IconProps ) {
+export function Tramitacao({type = 'Primary', size = 'md'}: TramitacaoProps ) {
     let estilo = '';
-    let width:number | undefined;
-    let height:number | undefined;
+    let width;
+    let height;
 
-    width = SizeComponent(size)
-    height = SizeComponent(size)
-    estilo = TypeComponent(type)
+    switch(type) {
+        case 'Primary':
+            estilo = "#1474FF"
+            break;
+        case 'Second':
+            estilo = "#FFF"
+            break;
+    }
+
+    switch(size){
+        case 'sm':
+            width = '14';
+            height = '14';
+            break;
+        case 'md':
+            width = '19';
+            height = '19';
+            break;
+        case 'lg':
+            width = '24';
+            height = '24';
+            break;
+        case 'xl' :
+            width = '32';
+            height = '32';
+            break;    
+    }   
 
     return (
         <svg width={width} height={height} viewBox="0 0 24 28" fill="none" xmlns="http://www.w3.org/2000/svg">

@@ -1,6 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { Square } from './Square';
-import { IconProps } from "../../../assets/InterfacePropsIcon";
+import { Square, SquareProps } from './Square';
 
 export default {
     title: 'Icon/Menu/Square',
@@ -18,9 +17,9 @@ export default {
         }
       }
     
-} as Meta<IconProps>
+} as Meta<SquareProps>
 
-export const Default: StoryObj<IconProps> = {
+export const Default: StoryObj<SquareProps> = {
     args: {},
    argTypes: {}
 }

@@ -1,6 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { Save } from './Save';
-import { IconProps } from "../../../assets/InterfacePropsIcon";
+import { Save, SaveProps } from './Save';
 
 export default {
     title: 'Icon/Menu/Save',
@@ -18,9 +17,9 @@ export default {
         }
       }
     
-} as Meta<IconProps>
+} as Meta<SaveProps>
 
-export const Default: StoryObj<IconProps> = {
+export const Default: StoryObj<SaveProps> = {
     args: {},
    argTypes: {}
 }

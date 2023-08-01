@@ -1,6 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { Rss } from './Rss';
-import { IconProps } from "../../../assets/InterfacePropsIcon";
+import { Rss, RssProps } from './Rss';
 
 export default {
     title: 'Icon/Menu/Rss',
@@ -18,9 +17,9 @@ export default {
         }
       }
     
-} as Meta<IconProps>
+} as Meta<RssProps>
 
-export const Default: StoryObj<IconProps> = {
+export const Default: StoryObj<RssProps> = {
     args: {},
    argTypes: {}
 }

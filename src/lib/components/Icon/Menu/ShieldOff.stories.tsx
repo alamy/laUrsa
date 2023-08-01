@@ -1,6 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { ShieldOff } from './ShieldOff';
-import { IconProps } from "../../../assets/InterfacePropsIcon";
+import { ShieldOff, ShieldOffProps } from './ShieldOff';
 
 export default {
     title: 'Icon/Menu/ShieldOff',
@@ -18,9 +17,9 @@ export default {
         }
       }
     
-} as Meta<IconProps>
+} as Meta<ShieldOffProps>
 
-export const Default: StoryObj<IconProps> = {
+export const Default: StoryObj<ShieldOffProps> = {
     args: {},
    argTypes: {}
 }
