@@ -25,7 +25,7 @@ export function Header(
 {
   const [flag, setFlag] = useState(false)
     let data =  Date()
-    let dia = new Date(data).getDate()
+    let dia = (new Date(data).getDate()<10?'0':'') + new Date(data).getDate()
     let mes = (new Date(data).getMonth()<10?'0':'') + new Date(data).getMonth()
     let ano = new Date(data).getFullYear()
 

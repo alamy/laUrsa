@@ -7,7 +7,8 @@ export default {
     args: {
         text: 'Label',
         disable: false,
-        size: 'md'
+        size: 'md',
+        name: 'name'
     },
     argTypes: {
         size:{

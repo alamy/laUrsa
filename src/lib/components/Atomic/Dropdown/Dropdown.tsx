@@ -22,35 +22,38 @@ export function Dropdown({disable, size = 'md', value, text, id, error, Option, 
    if(error){
     estilo = " red border dropdown"
     label = "colorRed"
+   }else if(disable){
+    estilo = 'gray'
+    label = 'color-gray'
    } else {
     estilo = "border dropdown"
     label = ""
    }
    let ArrayOpition = Object.values(Option)?.map(function(opt){
-    return <option value={opt.vallue}>{opt.label}</option>
+    return <option value={opt.value}>{opt.label}</option>
+    
    })
     return (
         <>
-        <p className='labelDropDown'>
-            <label className={clsx(label, 'label')} htmlFor={text}>{text}</label>
-        </p>
-
-        <select id={id} disabled={disable} value={value} name='text' className={clsx(
-            'dropdown',
-                'px-4',
-                'border-solid',
-                'rounded',
-                '-mt-8',
-                'bg-[#fff]',
-                'w-[344px]', {
-                    'h-[48px]': size === 'md',
-                    'h-[56px]': size === 'lg',
-                },
-                estilo
-            )}  { ...props}>
-                <option value={""}>Selecione</option>
-            {ArrayOpition}
-        </select>
+        <div>
+            <label className={clsx(label, 'label' , 'labelDropDown')} htmlFor={text}>{text}</label>
+            <select id={id} disabled={disable} value={value} name='text' className={clsx(
+                'dropdown',
+                    'px-4',
+                    'border-solid',
+                    'rounded',
+                    '-mt-8',
+                    'bg-[#fff]',
+                    'w-[344px]', {
+                        'h-[48px]': size === 'md',
+                        'h-[56px]': size === 'lg',
+                    },
+                    estilo
+                )}  { ...props}>
+                    <option value={""}>Selecione</option>
+                {ArrayOpition}
+            </select>
+        </div>
             </>
     );
  

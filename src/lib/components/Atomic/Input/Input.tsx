@@ -13,14 +13,7 @@ export interface InputProps {
 }
 
 export function Input({disable, size = 'md', text, error, value, type, ...props}: InputProps ) {
-    let [state, setState] = useState( { value: ""} )
-   function handleChange(event: { target: { value: string; }; }) {
-    setState({ value: event.target.value.replace(/[^\d\s-/]/g, "") });
-      }
 
-     function handleNull(event: { target: { value: string; }; }) {
-        setState({ value: event.target.value });
-     }
     let estilo
     let label
    if(error){
@@ -35,23 +28,23 @@ export function Input({disable, size = 'md', text, error, value, type, ...props}
    }
     return (
         <>
-        <p className='labelInput'>
-            <label className={clsx(label)} htmlFor={text}>{text}</label>
-        </p>
-        <input type={type}  disabled={disable}  className={clsx(
-                'inputText',
-                'px-4',
-                'mt-0',
-               'rounded',
-               'border',
-               {
-                    'h-[48px]': size === 'md',
-                    'h-[86px]': size === 'lg',
-                },
-                estilo
-            )} id={text}  {...props} value={value} />
+        <div>
+            <label className={clsx(label, 'labelInput')} htmlFor={text}>{text}</label>
+            <input type={type}  disabled={disable}  className={clsx(
+                    'inputText',
+                    'px-4',
+                    'mt-0',
+                'rounded',
+                'border',
+                {
+                        'h-[48px]': size === 'md',
+                        'h-[86px]': size === 'lg',
+                    },
+                    estilo
+                )} id={text}  {...props} value={value} />
+        </div>
             </>
-
+    
            
     );
  

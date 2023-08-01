@@ -11,18 +11,21 @@
     margin-top: 0px;
     height: 48px; 
     display: inline-block;
+    margin-top: -10px;
   }
 
   .labelDropDown { 
-    display: block;
     z-index: 999;
     width: 100%;
+    padding: 0 10px;
     margin-top: 0px;
     background-color: #fff;
     font-family: 'DM Sans', sans-serif;
     font-style: normal;
     font-weight: 500;
+    margin-left:10px;
     font-size: 0.7em;
+    position: relative;
   }
 
   .dropdown:focus{

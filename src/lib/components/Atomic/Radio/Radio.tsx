@@ -2,11 +2,14 @@ import { clsx } from "clsx";
 import "./Radio.scss";
 export interface RadioProps {
   text: string;
+  name: string;
   disable?: boolean;
   size?: "sm" | "md" | "lg";
+  onChange?: Function | any;
+  value?: string
 }
 
-export function Radio({ disable, text, size }: RadioProps) {
+export function Radio({ disable, text, size, name, value , ...props}: RadioProps) {
   let label;
   let checked;
   if (disable) {
@@ -27,10 +30,12 @@ export function Radio({ disable, text, size }: RadioProps) {
         {text}
         <input
           type="radio"
-          name={text}
+          name={name}
           id={text}
+          value={value}
           disabled={disable}
           className={clsx("radio")}
+          {...props}
         />
         <span
           className={clsx("checkmark", checked, {
