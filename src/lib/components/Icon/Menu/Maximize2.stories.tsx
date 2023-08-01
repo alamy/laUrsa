@@ -1,5 +1,6 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { Maximize2, Maximize2Props } from './Maximize2';
+import { Maximize2 } from './Maximize2';
+import { IconProps } from "../../../assets/InterfacePropsIcon";
 
 export default {
     title: 'Icon/Menu/Maximize2',
@@ -17,9 +18,9 @@ export default {
         }
       }
     
-} as Meta<Maximize2Props>
+} as Meta<IconProps>
 
-export const Default: StoryObj<Maximize2Props> = {
+export const Default: StoryObj<IconProps> = {
     args: {},
    argTypes: {}
 }

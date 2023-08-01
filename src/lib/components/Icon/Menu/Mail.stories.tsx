@@ -1,5 +1,6 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { Mail, MailProps } from './Mail';
+import { Mail } from './Mail';
+import { IconProps } from "../../../assets/InterfacePropsIcon";
 
 export default {
     title: 'Icon/Menu/Mail',
@@ -17,9 +18,9 @@ export default {
         }
       }
     
-} as Meta<MailProps>
+} as Meta<IconProps>
 
-export const Default: StoryObj<MailProps> = {
+export const Default: StoryObj<IconProps> = {
     args: {},
    argTypes: {}
 }

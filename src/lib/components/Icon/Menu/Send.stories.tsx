@@ -1,5 +1,6 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { Send, SendProps } from './Send';
+import { Send } from './Send';
+import { IconProps } from "../../../assets/InterfacePropsIcon";
 
 export default {
     title: 'Icon/Menu/Send',
@@ -17,9 +18,9 @@ export default {
         }
       }
     
-} as Meta<SendProps>
+} as Meta<IconProps>
 
-export const Default: StoryObj<SendProps> = {
+export const Default: StoryObj<IconProps> = {
     args: {},
    argTypes: {}
 }

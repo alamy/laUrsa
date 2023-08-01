@@ -1,5 +1,6 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { Star, StarProps } from './Star';
+import { Star } from './Star';
+import { IconProps } from "../../../assets/InterfacePropsIcon";
 
 export default {
     title: 'Icon/Menu/Star',
@@ -17,9 +18,9 @@ export default {
         }
       }
     
-} as Meta<StarProps>
+} as Meta<IconProps>
 
-export const Default: StoryObj<StarProps> = {
+export const Default: StoryObj<IconProps> = {
     args: {},
    argTypes: {}
 }

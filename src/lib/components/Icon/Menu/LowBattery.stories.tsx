@@ -1,5 +1,6 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { LowBattery, LowBatteryProps } from './LowBattery';
+import { LowBattery } from './LowBattery';
+import { IconProps } from "../../../assets/InterfacePropsIcon";
 
 export default {
     title: 'Icon/Menu/LowBattery',
@@ -17,9 +18,9 @@ export default {
         }
       }
     
-} as Meta<LowBatteryProps>
+} as Meta<IconProps>
 
-export const Default: StoryObj<LowBatteryProps> = {
+export const Default: StoryObj<IconProps> = {
     args: {},
    argTypes: {}
 }

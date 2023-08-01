@@ -1,5 +1,6 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { Slash, SlashProps } from './Slash';
+import { Slash } from './Slash';
+import { IconProps } from "../../../assets/InterfacePropsIcon";
 
 export default {
     title: 'Icon/Menu/Slash',
@@ -17,9 +18,9 @@ export default {
         }
       }
     
-} as Meta<SlashProps>
+} as Meta<IconProps>
 
-export const Default: StoryObj<SlashProps> = {
+export const Default: StoryObj<IconProps> = {
     args: {},
    argTypes: {}
 }

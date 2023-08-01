@@ -1,5 +1,6 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { Shield, ShieldProps } from './Shield';
+import { Shield } from './Shield';
+import { IconProps } from "../../../assets/InterfacePropsIcon";
 
 export default {
     title: 'Icon/Menu/Shield',
@@ -17,9 +18,9 @@ export default {
         }
       }
     
-} as Meta<ShieldProps>
+} as Meta<IconProps>
 
-export const Default: StoryObj<ShieldProps> = {
+export const Default: StoryObj<IconProps> = {
     args: {},
    argTypes: {}
 }

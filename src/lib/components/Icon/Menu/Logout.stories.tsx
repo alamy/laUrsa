@@ -1,5 +1,6 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { Logout, LogoutProps } from './Logout';
+import { Logout } from './Logout';
+import { IconProps } from "../../../assets/InterfacePropsIcon";
 
 export default {
     title: 'Icon/Menu/Logout',
@@ -17,9 +18,9 @@ export default {
         }
       }
     
-} as Meta<LogoutProps>
+} as Meta<IconProps>
 
-export const Default: StoryObj<LogoutProps> = {
+export const Default: StoryObj<IconProps> = {
     args: {},
    argTypes: {}
 }

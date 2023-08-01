@@ -1,5 +1,6 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { StopCircle, StopCircleProps } from './StopCircle';
+import { StopCircle } from './StopCircle';
+import { IconProps } from "../../../assets/InterfacePropsIcon";
 
 export default {
     title: 'Icon/Menu/StopCircle',
@@ -17,9 +18,9 @@ export default {
         }
       }
     
-} as Meta<StopCircleProps>
+} as Meta<IconProps>
 
-export const Default: StoryObj<StopCircleProps> = {
+export const Default: StoryObj<IconProps> = {
     args: {},
    argTypes: {}
 }

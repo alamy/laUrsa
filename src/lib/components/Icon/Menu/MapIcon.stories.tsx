@@ -1,5 +1,6 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { MapIcon, MapIconProps } from './MapIcon';
+import { MapIcon } from './MapIcon';
+import { IconProps } from "../../../assets/InterfacePropsIcon";
 
 export default {
     title: 'Icon/Menu/MapIcon',
@@ -17,9 +18,9 @@ export default {
         }
       }
     
-} as Meta<MapIconProps>
+} as Meta<IconProps>
 
-export const Default: StoryObj<MapIconProps> = {
+export const Default: StoryObj<IconProps> = {
     args: {},
    argTypes: {}
 }

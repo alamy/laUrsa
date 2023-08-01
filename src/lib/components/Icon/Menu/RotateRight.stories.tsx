@@ -1,5 +1,6 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { RotateRight, RotateRightProps } from './RotateRight';
+import { RotateRight } from './RotateRight';
+import { IconProps } from "../../../assets/InterfacePropsIcon";
 
 export default {
     title: 'Icon/Menu/RotateRight',
@@ -17,9 +18,9 @@ export default {
         }
       }
     
-} as Meta<RotateRightProps>
+} as Meta<IconProps>
 
-export const Default: StoryObj<RotateRightProps> = {
+export const Default: StoryObj<IconProps> = {
     args: {},
    argTypes: {}
 }

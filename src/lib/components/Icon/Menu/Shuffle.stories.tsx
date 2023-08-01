@@ -1,5 +1,6 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { Shuffle, ShuffleProps } from './Shuffle';
+import { Shuffle } from './Shuffle';
+import { IconProps } from "../../../assets/InterfacePropsIcon";
 
 export default {
     title: 'Icon/Menu/Shuffle',
@@ -17,9 +18,9 @@ export default {
         }
       }
     
-} as Meta<ShuffleProps>
+} as Meta<IconProps>
 
-export const Default: StoryObj<ShuffleProps> = {
+export const Default: StoryObj<IconProps> = {
     args: {},
    argTypes: {}
 }

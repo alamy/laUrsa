@@ -1,5 +1,6 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { Repeat, RepeatProps } from './Repeat';
+import { Repeat } from './Repeat';
+import { IconProps } from "../../../assets/InterfacePropsIcon";
 
 export default {
     title: 'Icon/Menu/Repeat',
@@ -17,9 +18,9 @@ export default {
         }
       }
     
-} as Meta<RepeatProps>
+} as Meta<IconProps>
 
-export const Default: StoryObj<RepeatProps> = {
+export const Default: StoryObj<IconProps> = {
     args: {},
    argTypes: {}
 }

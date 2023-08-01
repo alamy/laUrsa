@@ -1,5 +1,6 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { Share, ShareProps } from './Share';
+import { Share } from './Share';
+import { IconProps } from "../../../assets/InterfacePropsIcon";
 
 export default {
     title: 'Icon/Menu/Share',
@@ -17,9 +18,9 @@ export default {
         }
       }
     
-} as Meta<ShareProps>
+} as Meta<IconProps>
 
-export const Default: StoryObj<ShareProps> = {
+export const Default: StoryObj<IconProps> = {
     args: {},
    argTypes: {}
 }

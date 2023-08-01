@@ -1,5 +1,6 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { Pppe, PppeProps } from './Pppe';
+import { Pppe } from './Pppe';
+import { IconProps } from "../../../assets/InterfacePropsIcon";
 
 export default {
     title: 'Icon/Menu/Pppe',
@@ -17,9 +18,9 @@ export default {
         }
       }
     
-} as Meta<PppeProps>
+} as Meta<IconProps>
 
-export const Default: StoryObj<PppeProps> = {
+export const Default: StoryObj<IconProps> = {
     args: {},
    argTypes: {}
 }

@@ -1,5 +1,6 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { Smile, SmileProps } from './Smile';
+import { Smile } from './Smile';
+import { IconProps } from "../../../assets/InterfacePropsIcon";
 
 export default {
     title: 'Icon/Menu/Smile',
@@ -17,9 +18,9 @@ export default {
         }
       }
     
-} as Meta<SmileProps>
+} as Meta<IconProps>
 
-export const Default: StoryObj<SmileProps> = {
+export const Default: StoryObj<IconProps> = {
     args: {},
    argTypes: {}
 }
