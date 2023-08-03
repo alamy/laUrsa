@@ -17,6 +17,8 @@ export interface TableProps {
     visualizacao?: boolean;
     Status?:(i: any) => void;
     QtdSub?: number;
+    FlagTrash?: boolean;
+
 }
 
 const edit = <Edit
@@ -44,6 +46,8 @@ export const Table = ({
     visualizacao,
     Detalhar,
     Status,
+    FlagTrash,
+
 }: TableProps ) => {
  
     let ObjHeader = header?.map(function(opt){
@@ -92,7 +96,8 @@ export const Table = ({
             </td> : ''}
             <td className='controle-table' title={opt.isAtivo}>
                 <Button icone={'edite'} type='secondary' size='md' id={id} name={name} onClick={Editar}/>
-                <Button icone={'delete'} type='secondary' size='md' id={id} name={name} onClick={Excluir}/>
+                {FlagTrash ? <Button icone={'delete'} type='secondary' size='md' id={id} name={name} onClick={Excluir}/> : ""}
+                {/* <Button icone={'delete'} type='secondary' size='md' id={id} name={name} onClick={Excluir}/> */}
                 <Button icone={'look'} type='secondary' size='md' id={id} name={name} onClick={Detalhar}/>
                
             </td>
