@@ -27,7 +27,7 @@ export function Radio({ disable, text, size, name, value , ...props}: RadioProps
           "container-font-sm": size === "sm",
         })}
       >
-        {text}
+        
         <input
           type="radio"
           name={name}
@@ -37,13 +37,8 @@ export function Radio({ disable, text, size, name, value , ...props}: RadioProps
           className={clsx("radio")}
           {...props}
         />
-        <span
-          className={clsx("checkmark", checked, {
-            "radio-grande": size === "lg",
-            "radio-medio": size === "md",
-            "radio-pequeno": size === "sm",
-          })}
-        ></span>
+        {" "}
+        {text}
       </label>
     </>
   );
