@@ -16,16 +16,27 @@
     float: right;
     border-left: 2px solid rgb(161, 161, 161);
 }
-
+.filter-input {
+    border: 1px solid #5a5a5a;
+    height: 50px;
+}
+.filter-input input[type=text]{
+     height: 48px;
+     width: 80%;
+}
 .filter-input input[type=text]:focus {
     outline: 0;
 }
 .box-check {
-    position: absolute;
+    border: 1px solid #5a5a5a;
+    position: relative;
     background: #fff;
     border-color: #bebebe;
+    padding: 10px 20px;
 }
 
 .box-check li {
     border-color: #bebebe;
+    margin-top: 10px;
+
 }
