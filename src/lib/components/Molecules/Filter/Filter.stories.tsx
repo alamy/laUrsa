@@ -2,19 +2,16 @@ import { Meta, StoryObj } from '@storybook/react';
 import { Filter, FiltertProps } from './Filter';
 
 export default {
-    title: 'Atmomic/Filter',
+    title: 'Molecules/Filter',
     component: Filter,
     args: {
         text: 'Label',
         size: 'md',
         disable: false,
-        error: false
+        error: false,
+        opcoes: ['todos' , 'exemplo1' , 'exemplo2']
     },
     argTypes: {
-        type: {
-          options: ['text', 'number', 'date'],
-          control: { type: 'radio' }
-        }
       }
 } as Meta<FiltertProps>
 

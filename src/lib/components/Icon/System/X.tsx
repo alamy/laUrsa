@@ -2,9 +2,10 @@
 export interface XProps {
     type?: 'Primary' | 'Second';
     size?: 'sm' | 'md' | 'lg' | 'xl';
+    value?: string
 }
 
-export function X({type = 'Primary', size = 'md'}: XProps ) {
+export function X({type = 'Primary', size = 'md', value}: XProps ) {
     let estilo = '';
     let width;
     let height;
@@ -38,7 +39,7 @@ export function X({type = 'Primary', size = 'md'}: XProps ) {
     }   
 
     return (
-        <svg width={width} height={height} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg width={width} height={height} viewBox="0 0 24 24" values={value} fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M18 6L6 18" stroke={estilo} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
         <path d="M6 6L18 18" stroke={estilo} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
         </svg>

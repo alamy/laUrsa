@@ -5,9 +5,10 @@ export interface CheckboxProps {
     text: string;
     disable?: boolean;
     size?:'sm' | 'md' | 'lg'  ; 
+    onClick?: Function | any
 }
 
-export function Checkbox({disable, text, size}: CheckboxProps ) {
+export function Checkbox({disable, text, size , ...props}: CheckboxProps ) {
     let label;
     if(disable){
         label = 'color-gray'
@@ -20,7 +21,7 @@ export function Checkbox({disable, text, size}: CheckboxProps ) {
             disabled={disable} 
             type="checkbox" 
             id={text}
-            className={clsx(
+            className={clsx('cursor-pointer',
                 {
                     'w-4': size === 'lg',
                     'w-3.5': size === 'md',
@@ -32,10 +33,10 @@ export function Checkbox({disable, text, size}: CheckboxProps ) {
                     'h-3': size === 'sm',
                 },                
 
-            )}/>
+                )} {...props}/>
         <label htmlFor={text} 
             className={clsx(
-                'ml-1',
+                'ml-1','cursor-pointer',
                 label,
                 {
                 'text-lg': size === 'lg',

@@ -1,0 +1,31 @@
+.red {
+    border-color: #DB4437
+}
+.gray {
+    border-color: #DBDBDB
+}
+.color-gray{
+    color: #a3a5a9
+}
+.color-red{
+    color: #DB4437;
+}
+.btnFilter{
+    margin-top: 4px;
+    height: 40px;
+    float: right;
+    border-left: 2px solid rgb(161, 161, 161);
+}
+
+.filter-input input[type=text]:focus {
+    outline: 0;
+}
+.box-check {
+    position: absolute;
+    background: #fff;
+    border-color: #bebebe;
+}
+
+.box-check li {
+    border-color: #bebebe;
+}

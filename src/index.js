@@ -119,6 +119,7 @@ import * as Table from '../src/lib/components/Molecules/Table/Table';
 import * as Alerta from '../src/lib/components/Molecules/Alerta/Alerta';
 import * as HeaderInter from '../src/lib/components/Molecules/HeaderInter/HeaderInter';
 import * as Paginacao from '../src/lib/components/Molecules/Paginacao/Paginacao';
+import * as Filter from '../src/lib/components/Molecules/Filter/Filter'
 // Organisms
 import * as Menu from '../src/lib/components/Organisms/Menu/Menu';
 //Template
@@ -140,7 +141,7 @@ Sidebar, SkipBack, SkipForward, Slack, Sliders, Smartphone, Smile, Speaker, Squa
 //Atomic 
 Avatar, Button, Checkbox, Dropdown, Input, Radio,Toogle,
 // Molecules    
-Table,Alerta,HeaderInter,Paginacao,
+Table,Alerta,HeaderInter,Paginacao,Filter,
 //Template
 Header, Menu, Dashboard };
 export * from '../src/lib/components/Icon/Logo';
@@ -262,6 +263,7 @@ export * from '../src/lib/components/Molecules/Table/Table';
 export * from '../src/lib/components/Molecules/Alerta/Alerta';
 export * from '../src/lib/components/Molecules/HeaderInter/HeaderInter';
 export * from '../src/lib/components/Molecules/Paginacao/Paginacao';
+export * from '../src/lib/components/Molecules/Filter/Filter';
 // Organism
 export * from '../src/lib/components/Organisms/Menu/Menu';
 //Template
