@@ -97,8 +97,7 @@ export const Table = ({
             <td className='controle-table' title={opt.isAtivo}>
                 <Button icone={'edite'} type='secondary' size='md' id={id} name={name} onClick={Editar}/>
                 {FlagTrash ? <Button icone={'delete'} type='secondary' size='md' id={id} name={name} onClick={Excluir}/> : ""}
-                {/* <Button icone={'delete'} type='secondary' size='md' id={id} name={name} onClick={Excluir}/> */}
-                <Button icone={'look'} type='secondary' size='md' id={id} name={name} onClick={Detalhar}/>
+                {/* <Button icone={'look'} type='secondary' size='md' id={id} name={name} onClick={Detalhar}/> */}
                
             </td>
             
