@@ -70,7 +70,7 @@ export function Filter({disable, size = 'md', text, error, opcoes,...props}: Fil
     return (
     <>
         <div className='rounded w-full border filter-input'>
-            <input type={'text'} disabled={disable}  className={clsx(
+            <input type={'text'} disabled={disable} placeholder="  Todos"  className={clsx(
                 'px-4',
                 'mt-0',
                 'w-11/12',
@@ -81,7 +81,6 @@ export function Filter({disable, size = 'md', text, error, opcoes,...props}: Fil
                 },
                     estilo
                 )} id={text} 
-                    placeholder={text} 
                     {...props} 
                    value={value}
                    onChange={(i:any) => setVallue(i.target.value)}
