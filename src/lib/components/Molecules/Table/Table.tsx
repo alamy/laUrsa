@@ -18,6 +18,7 @@ export interface TableProps {
     Status?:(i: any) => void;
     QtdSub?: number;
     FlagTrash?: boolean;
+    FlagVisible?: boolean;
 
 }
 
@@ -47,6 +48,7 @@ export const Table = ({
     Detalhar,
     Status,
     FlagTrash,
+    FlagVisible,
 
 }: TableProps ) => {
  
@@ -97,7 +99,7 @@ export const Table = ({
             <td className='controle-table' title={opt.isAtivo}>
                 <Button icone={'edite'} type='secondary' size='md' id={id} name={name} onClick={Editar}/>
                 {FlagTrash ? <Button icone={'delete'} type='secondary' size='md' id={id} name={name} onClick={Excluir}/> : ""}
-                {/* <Button icone={'look'} type='secondary' size='md' id={id} name={name} onClick={Detalhar}/> */}
+                {FlagVisible ? <Button icone={'look'} type='secondary' size='md' id={id} name={name} onClick={Detalhar}/> : ""}
                
             </td>
             
