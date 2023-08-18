@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { clsx } from 'clsx';
 import './Header.scss';
 import { Settings } from '../../Icon/System/Settings';
+import { X } from '../../Icon/System/X';
 
 export interface HeaderProps {
     linksExternos?: Object,
@@ -9,7 +10,8 @@ export interface HeaderProps {
     Configuracao?: (i: any) => void
     tamanho: boolean
     Size: () => void
-    menuSettings?: Object 
+    menuSettings?: Object
+    Closer: () => void 
 }
 
 export function Header(
@@ -19,7 +21,8 @@ export function Header(
     tamanho,
     subTitulo,
     Size,
-    menuSettings
+    menuSettings,
+    Closer
   }: HeaderProps) 
    
 {
@@ -82,10 +85,15 @@ export function Header(
       <div className='configuracao' onMouseOver={actionetiing} onMouseLeave={actionetiingFalse}>
            <Settings type='Primary' size='md'  />
       
-        {flag ? <div className='menu-box-settings'>
+         <div className={clsx({
+          'menu-box-settings': flag === true,
+          'men-box-settings-none': flag === false,
+          }
+          )}>
           {itemSettings}
-        </div> : ''}
         </div>
+        </div>
+        <div className='logout' title='Sair' onClick={Closer}><X type='Primary' size='md' /></div>
     </div>
        </>
     );

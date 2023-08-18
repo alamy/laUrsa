@@ -12,11 +12,13 @@ export interface DropdownProps {
     onChange?: Function | any;
     onBlur?: Function | any;
     onFocus?: Function | any;
-    onClick?: Function | any
+    onClick?: Function | any;
+    valueText?: String;
+    labelText?: any;
 
 }
 
-export function Dropdown({disable, size = 'md', value, text, id, error, Option, ...props}: DropdownProps ) {
+export function Dropdown({disable, size = 'md', value, text, id, error, Option,valueText,labelText, ...props}: DropdownProps ) {
     let estilo
     let label
    if(error){
@@ -30,8 +32,9 @@ export function Dropdown({disable, size = 'md', value, text, id, error, Option, 
     label = ""
    }
    let ArrayOpition = Object.values(Option)?.map(function(opt){
-    return <option value={opt.value}>{opt.label}</option>
-    
+       const valueT:any = valueText;
+       const labelT:any = labelText;
+        return <option value={opt[valueT]}>{opt[labelT]}</option>
    })
     return (
         <>

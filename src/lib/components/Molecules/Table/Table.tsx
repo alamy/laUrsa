@@ -59,9 +59,7 @@ export const Table = ({
         let valorChecked;
         let objItem = Object.values(opt).map(function(Item:any){
             let Result
-            console.log(Item)
-            if(typeof Item === 'object'){
-                console.log('aqui')
+            if(typeof Item === 'object' && Item !== null){
                    var Resultado = Object.values(Item).map(function(T:any){
                     Resultado
                     Result = T
