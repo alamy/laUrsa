@@ -21,6 +21,7 @@ export interface DashboardProps {
     Organograma:Function | any;
     Informacoes:Function | any;
     menuSettings?:Object
+    Closer?:Function | any;
     
 }
 
@@ -40,7 +41,8 @@ export function Dashboard(
         Logout,
         Organograma,
         Informacoes,
-        menuSettings
+        menuSettings,
+        Closer
     }: DashboardProps) {
   
     let [tamanho, setTamanho ] = useState(false)
@@ -73,7 +75,7 @@ export function Dashboard(
                 tamanho={tamanho}
                 Size={function (): void {
                     return setTamanho(!tamanho);
-                } } menuSettings={menuSettings} />  
+                } } menuSettings={menuSettings} Closer={Closer} />  
     
     <div onClick={clickSubmenu} className={clsx({
       'conteiner-small': tamanho === true,
