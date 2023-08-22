@@ -5,6 +5,7 @@ import { Button } from '../../Atomic/Button/Button';
 import { Trash } from '../../Icon/System/Trash';
 import { Edit } from '../../Icon/System/Edit';
 import { Eye } from '../../Icon/System/Eye';
+import { Tooltip } from 'react-tooltip';
 
 export interface TableProps {
     typeTable: 'Default' | 'HeaderDark' | 'Dark';
@@ -89,16 +90,20 @@ export const Table = ({
         )}> 
         {objItem}
             {visualizacao?  <td>
-                <label className="switch">
+                <label  data-tooltip-id="tooltip" 
+                        data-tooltip-content="ATIVOOOOOOOO"  
+                        className="switch">
                         <input type="checkbox" id={id} checked={valorChecked} name={name} onClick={Status} />
                         <span className="slider round"></span>
                 </label>
+                <Tooltip id="tooltip" />
             </td> : ''}
             <td className='controle-table' title={opt.isAtivo}>
-                <Button icone={'edite'} type='secondary' size='md' id={id} name={name} onClick={Editar}/>
-                {FlagTrash ? <Button icone={'delete'} type='secondary' size='md' id={id} name={name} onClick={Excluir}/> : ""}
-                {FlagVisible ? <Button icone={'look'} type='secondary' size='md' id={id} name={name} onClick={Detalhar}/> : ""}
-               
+                
+                    <Button data-tooltip-content="TEXTO DE EDIT" icone={'edite'} type='secondary' size='md' id={id} name={name} onClick={Editar}/>
+                    {FlagTrash ? <Button icone={'delete'} type='secondary' size='md' id={id} name={name} onClick={Excluir}/> : ""}
+                    {FlagVisible ? <Button icone={'look'} type='secondary' size='md' id={id} name={name} onClick={Detalhar}/> : ""}
+  
             </td>
             
         </tr>)
