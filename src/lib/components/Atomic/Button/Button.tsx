@@ -49,7 +49,6 @@ export function Button({disable = false, text, type = 'primary',name, size = 'md
     <div>
         <button 
         data-tooltip-id="tooltip" 
-        data-tooltip-content="TEXTO DE TESTE" 
             id={id} name={name}
             className={clsx(
                 'buttonLaUrsa',
