@@ -96,7 +96,7 @@ export const Table = ({
                         <input type="checkbox" id={id} checked={valorChecked} name={name} onClick={Status} />
                         <span className="slider round"></span>
                 </label>
-                <Tooltip id="tooltip" />
+                
             </td> : ''}
             <td className='controle-table' title={opt.isAtivo}>
                 
