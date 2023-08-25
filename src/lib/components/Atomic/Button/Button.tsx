@@ -1,6 +1,6 @@
 import { clsx } from 'clsx';
 import './Button.scss'
-import { Tooltip } from 'react-tooltip'
+
 
 export interface ButtonProps {
     text?: string | any;
@@ -47,8 +47,7 @@ export function Button({disable = false, text, type = 'primary',name, size = 'md
 
     return (
     <div>
-        <button 
-        data-tooltip-id="tooltip" 
+        <button  
             id={id} name={name}
             className={clsx(
                 'buttonLaUrsa',
@@ -63,7 +62,6 @@ export function Button({disable = false, text, type = 'primary',name, size = 'md
         >
             {text}
         </button>
-         <Tooltip id="tooltip" />
     </div>
     );
 }

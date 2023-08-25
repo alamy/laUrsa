@@ -5,7 +5,6 @@ import { Button } from '../../Atomic/Button/Button';
 import { Trash } from '../../Icon/System/Trash';
 import { Edit } from '../../Icon/System/Edit';
 import { Eye } from '../../Icon/System/Eye';
-import { Tooltip } from 'react-tooltip';
 
 export interface TableProps {
     typeTable: 'Default' | 'HeaderDark' | 'Dark';
