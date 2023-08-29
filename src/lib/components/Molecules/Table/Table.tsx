@@ -19,7 +19,7 @@ export interface TableProps {
     QtdSub?: number;
     FlagTrash?: boolean;
     FlagVisible?: boolean;
-
+    FlagEdit?: boolean;
 }
 
 const edit = <Edit
@@ -49,11 +49,13 @@ export const Table = ({
     Status,
     FlagTrash,
     FlagVisible,
+    FlagEdit =  true,
+    
 
 }: TableProps ) => {
  
     let ObjHeader = header?.map(function(opt){
-        return <th>{opt}</th>
+        return <th className='th'>{opt}</th>
     }) 
     let ObjBody = Object.values(Obj).map(function(opt){
         let valorChecked;
@@ -63,7 +65,7 @@ export const Table = ({
                    var Resultado = Object.values(Item).map(function(T:any){
                     Resultado
                     Result = T
-                    return (<td> {Result} </td>)
+                    return (<td className='td'> {Result} </td>)
                })
             }else { 
                 if(Item === opt.isAtivo){
@@ -71,7 +73,7 @@ export const Table = ({
                     return null
                 }
                 else {
-                    return (<td> {Item} </td>)
+                    return (<td className='td'> {Item} </td>)
                 }  
                
             }
@@ -85,35 +87,39 @@ export const Table = ({
             {
                 'dark': typeTable === 'Dark'
                 
-            },
-        )}> 
+            },'tr'
+        ) }> 
         {objItem}
-            {visualizacao?  <td>
+            {visualizacao?  <td className='td'>
                 <label  title="Flag de deleção lógica. Ao ser desmarcada a flag no item, este deixará de ser considerado ativamente, mas ainda estará presente no sistema, sem ser deletado fisicamente."
                         className="switch">
-                        <input type="checkbox" id={id} checked={valorChecked} name={name} onClick={Status} />
+                        <input className='slider-input' type="checkbox" id={id} checked={valorChecked} name={name} onClick={Status} />
                         <span className="slider round"></span>
                 </label>
                 
             </td> : ''}
-            <td  className='controle-table' title={opt.isAtivo}>
-                <td className='edit-button' title='Botão de edição. Ao clicar neste botão será possível editar a Descrição do item em questão.'>
-                    <Button icone={'edite'} type='secondary' size='md' id={id} name={name} onClick={Editar}/>
-                </td>
+            <td  className='controle-table td' title={opt.isAtivo}>
+                <div  title='Botão de edição. Ao clicar neste botão será possível editar a Descrição do item em questão.'>
+                   {FlagEdit ? <Button icone={'edite'} type='secondary' size='md' id={id} name={name} onClick={Editar}/> : ""}
+                </div>
+                <div title='Botão de excluir. Ao clicar neste botão será possível excluir a Descrição do item em questão.'>
                     {FlagTrash ? <Button icone={'delete'} type='secondary' size='md' id={id} name={name} onClick={Excluir}/> : ""}
+                </div>
+                <div title='Botão de visualização. Ao clicar neste botão será possível visualizar o item em questão.'>
                     {FlagVisible ? <Button icone={'look'} type='secondary' size='md' id={id} name={name} onClick={Detalhar}/> : ""}
+                </div>   
   
             </td>
             
         </tr>)
      })
-     console.log(ObjBody)
+
     return (
     <>
         <table key="1" className={clsx(
                 {
                 'dark': typeTable === 'Dark'
-                },
+                },'table'
             )}>
             <thead>
             <tr className={clsx(
@@ -121,10 +127,10 @@ export const Table = ({
                 'white': typeTable === 'Default',
                 'darkHeader': typeTable === 'HeaderDark',
                 'dark': typeTable === 'Dark'
-                },
+                },'tr'
             )}>
                 {ObjHeader}
-            </tr >
+            </tr>
             </thead>
             
             <tbody>

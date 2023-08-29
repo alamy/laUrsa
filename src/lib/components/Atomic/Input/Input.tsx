@@ -10,6 +10,8 @@ export interface InputProps {
     type: 'text' | 'number' | 'date';
     onChange?: Function | any;
     value?: string
+    min?:  string | number | undefined
+    max?:  string | number | undefined
 }
 
 export function Input({disable, size = 'md', text, error, value, type, ...props}: InputProps ) {
@@ -30,6 +32,21 @@ export function Input({disable, size = 'md', text, error, value, type, ...props}
         <>
         <div>
             <label className={clsx(label, 'labelInput')} htmlFor={text}>{text}</label>
+            {type === 'date' ? 
+            
+            <input type={type}  disabled={disable}  className={clsx(
+                    'inputText',
+                    'px-4',
+                    'mt-0',
+                'rounded',
+                'border',
+                {
+                        'h-[48px]': size === 'md',
+                        'h-[86px]': size === 'lg',
+                    },
+                    estilo
+                )} id={text}  {...props} value={value} min={props.min} max={props.max} /> : 
+
             <input type={type}  disabled={disable}  className={clsx(
                     'inputText',
                     'px-4',
@@ -42,6 +59,7 @@ export function Input({disable, size = 'md', text, error, value, type, ...props}
                     },
                     estilo
                 )} id={text}  {...props} value={value} />
+            }
         </div>
             </>
     
