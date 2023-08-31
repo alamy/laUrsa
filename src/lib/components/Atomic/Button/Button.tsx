@@ -55,6 +55,7 @@ export function Button({disable = false, text, type = 'primary',name, size = 'md
                     'h-[48px]': size === 'md',
                     'h-[56px]': size === 'lg',
                 },
+                {'largura': !icone} ,
                 estilo,
                 icone
             )}

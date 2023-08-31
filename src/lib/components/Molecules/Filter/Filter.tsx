@@ -11,6 +11,7 @@ export interface FiltertProps {
     disable?: boolean;
     onChange?: Function | any;
     opcoes: Object
+
 }
 
 export function Filter({disable, size = 'md', text, error, opcoes,...props}: FiltertProps ) {
@@ -113,15 +114,13 @@ export function Filter({disable, size = 'md', text, error, opcoes,...props}: Fil
         </div> 
         : ''}
         <div className='mt-2'>
-            <Tag  Objeto={tag} onClick={function (i: any): void {
-                const listar = i.target.value
-                var indice = tag.indexOf(listar);
-
-                while(indice >= 0){
-                    tag.splice(indice, 1);
-                    indice = tag.indexOf(indice);
+            <Tag  Objeto={tag} onClick={function (i: any): void {               
+                
+                // while(indice >= 0){
+                //     tag.splice(indice, 1);
+                //     indice = tag.indexOf(indice);
                    
-                }
+                // }
                 setTag((prevTag: any) => [...prevTag])
               
             } }  />

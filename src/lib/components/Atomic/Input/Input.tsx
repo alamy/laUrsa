@@ -3,21 +3,32 @@ import './input.scss'
 import { useState } from 'react';
 
 export interface InputProps {
-    text: string;
-    size?: 'md' | 'lg';
-    error?: boolean;
-    disable?: boolean;
-    type: 'text' | 'number' | 'date';
-    onChange?: Function | any;
+    text: string
+    size?: 'md' | 'lg'
+    error?: boolean
+    disable?: boolean
+    type: 'text' | 'number' | 'date'
+    onChange?: Function | any
     value?: string
     min?:  string | number | undefined
     max?:  string | number | undefined
+    moeda?: boolean
+    maxLength?: number
+    placeholder?: string
+    onBlur?: Function | any
+    
 }
 
 export function Input({disable, size = 'md', text, error, value, type, ...props}: InputProps ) {
 
     let estilo
     let label
+    let moeda
+
+    if(props.moeda){
+        moeda = 'moeda'
+    }
+
    if(error){
     estilo = "red"
     label = " color-red"
@@ -57,8 +68,9 @@ export function Input({disable, size = 'md', text, error, value, type, ...props}
                         'h-[48px]': size === 'md',
                         'h-[86px]': size === 'lg',
                     },
-                    estilo
-                )} id={text}  {...props} value={value} />
+                    estilo,
+                    moeda
+                )} id={text} onBlur={props.onBlur}  {...props} value={value} maxLength={props.maxLength} placeholder={props.placeholder}/>
             }
         </div>
             </>

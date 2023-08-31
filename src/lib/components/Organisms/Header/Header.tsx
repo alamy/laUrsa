@@ -48,11 +48,11 @@ export function Header(
       }) : null
 
       const actionetiing = () => {
-        setFlag(true)
+        setFlag(!flag)
       }
-      const actionetiingFalse = () => {
-        setFlag(false)
-      }
+      // const actionetiingFalse = () => {
+      //   setFlag(false)
+      // }
     return(
         <>
           <div className={clsx({
@@ -82,7 +82,7 @@ export function Header(
       <i>{subTitulo}</i> - <b>  {dia} / {mes} / {ano} - {hora} : {minutos}</b>
       </div> 
 
-      <div className='configuracao' onMouseOver={actionetiing} onMouseLeave={actionetiingFalse}>
+      <div className='configuracao' onClick={actionetiing}>
            <Settings type='Primary' size='md'  />
       
          <div className={clsx({
