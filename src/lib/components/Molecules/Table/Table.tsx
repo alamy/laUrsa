@@ -90,17 +90,17 @@ export const Table = ({
             },'tr'
         ) }> 
         {objItem}
-            {visualizacao?  <td className='td'>
+            {visualizacao ?  <td className='td'>
                 <label  title="Flag de deleção lógica. Ao ser desmarcada a flag no item, este deixará de ser considerado ativamente, mas ainda estará presente no sistema, sem ser deletado fisicamente."
                         className="switch">
                         <input className='slider-input' type="checkbox" id={id} checked={valorChecked} name={name} onClick={Status} />
                         <span className="slider round"></span>
                 </label>
                 
-            </td> : ''}
+            </td> : ""}
             <td  className='controle-table td' title={opt.isAtivo}>
                 <div  title='Botão de edição. Ao clicar neste botão será possível editar a Descrição do item em questão.'>
-                   {FlagEdit ? <Button icone={'edite'} type='secondary' size='md' id={id} name={name} onClick={Editar}/> : ""}
+                   {FlagEdit && valorChecked ? <Button icone={'edite'} type='secondary' size='md' id={id} name={name} onClick={Editar}/> : ""}
                 </div>
                 <div title='Botão de excluir. Ao clicar neste botão será possível excluir a Descrição do item em questão.'>
                     {FlagTrash ? <Button icone={'delete'} type='secondary' size='md' id={id} name={name} onClick={Excluir}/> : ""}
