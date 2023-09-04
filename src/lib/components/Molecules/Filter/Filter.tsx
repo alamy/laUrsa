@@ -90,7 +90,7 @@ export function Filter({disable, size = 'md', text, error, opcoes,...props}: Fil
                         setVallue('')}}
                     />
 
-            <button className='btnFilter w-1/12' onClick={caixa}>
+            <button  className='btnFilter w-1/12' onClick={caixa}>
                 <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M28 29V24" stroke="#4F97FF" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                 <path d="M25 24H31" stroke="#4F97FF" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>

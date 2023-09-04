@@ -6,6 +6,7 @@ export interface RadioProps {
   disable?: boolean;
   size?: "sm" | "md" | "lg";
   onChange?: Function | any;
+  onClick?: Function | any;
   value?: string
 }
 
