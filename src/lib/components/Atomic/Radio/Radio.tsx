@@ -27,6 +27,7 @@ export function Radio({ disable, text, size, name, value , ...props}: RadioProps
           "container-font-md": size === "md",
           "container-font-sm": size === "sm",
         })}
+        onClick={props.onClick}
       >
         
         <input
@@ -37,6 +38,7 @@ export function Radio({ disable, text, size, name, value , ...props}: RadioProps
           disabled={disable}
           className={clsx("radio")}
           {...props}
+          onClick={props.onClick}
         />
         {" "}
         {text}
