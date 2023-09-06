@@ -59,6 +59,7 @@ export function Button({disable = false, text, type = 'primary',name, size = 'md
                 estilo,
                 icone
             )}
+            disable={disable}
             {...props}
         >
             {text}
