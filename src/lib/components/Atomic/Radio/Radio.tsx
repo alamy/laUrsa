@@ -7,17 +7,18 @@ export interface RadioProps {
   size?: "sm" | "md" | "lg";
   onChange?: Function | any;
   onClick?: Function | any;
-  value?: string
+  value?: string;
+  checked?: boolean
 }
 
-export function Radio({ disable, text, size, name, value , ...props}: RadioProps) {
+export function Radio({ disable, text, size, name, value ,checked , ...props}: RadioProps) {
   let label;
-  let checked;
+  let check;
   if (disable) {
-    (label = "color-gray"), (checked = "checkmark-false");
+    (label = "color-gray"), (check = "checkmark-false");
   } else {
     label = "color";
-    checked = "checkmark-true";
+    check = "checkmark-true";
   }
   return (
     <>
@@ -35,6 +36,7 @@ export function Radio({ disable, text, size, name, value , ...props}: RadioProps
           name={name}
           id={text}
           value={value}
+          checked={checked}
           disabled={disable}
           className={clsx("radio")}
           {...props}
