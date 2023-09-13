@@ -28,15 +28,43 @@
     outline: 0;
 }
 .box-check {
-    border: 1px solid #5a5a5a;
+    padding: 0px 20px;
     position: relative;
     background: #fff;
     border-color: #bebebe;
-    padding: 10px 20px;
+    overflow-y: auto;
+    width: 100%;
 }
-
+.all-height{
+    max-height: 20vh;
+  
+    border: 1px solid #5a5a5a;
+    transition: 1.0s;
+}
+.out-height {
+    max-height: 0vh;
+    transition: 1.0s;
+}
 .box-check li {
     border-color: #bebebe;
     margin-top: 10px;
 
+}
+
+.file-input-laursa {
+    display:block;
+    width: 50%;
+    margin: 5px 0 20px 0;
+    padding: 8px 0px;
+    border-radius: 0.3rem;
+    text-align: center;
+    background: #1474FF;
+    color: #fff;
+    font-size: 1.2em;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+input[type="file"]{
+    display: none;
 }
