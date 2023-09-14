@@ -87,6 +87,8 @@ export function Input({ disable, size = 'md', text, error, value, type, ...props
                             {...props} 
                             value={value} 
                             maxLength={props.maxLength} 
+                            min={props.min} 
+                            max={props.max}
                             placeholder={props.placeholder}
                             onKeyDown={props.onKeyDown} />
                         </>

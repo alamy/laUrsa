@@ -23,20 +23,18 @@
     position: relative;
     display: inline-block;
     height: 66px;
-    top: -19px
 }
 .link_big {
-    width: 40%;
+    width: 30vw;
 }
 .link_small {
-    width: 45%;
+    width: 35vw;
 }
 .link_externos {
     display: inline-block;
     margin-left: 20px;
     position: relative;
     height: 66px;
-    top: -27px;
     padding-top: 20px;
 }
 .link_externos li:first-child {
@@ -57,59 +55,76 @@
     margin-left: 2%;
     padding-top: 25px;
 }
-.data {
-    color: #1474FF;
-    margin-right: 0%;
-    
-}
-.data-small {
-    color: #1474FF;
-}
 .box-data {
-    display: inline-block;
-    position: relative;
-    top:-27px;
     height: 66px;
     padding-top: 20px;
+    color: #3465f8;
+    width: 100%;
+    text-align: right;
 }
 .menu-box-settings{
+    width: 13%;
+    height: 100%;
     position: absolute;
-    width: 210px;
-    height:auto;
-    color: #3465f8;
-    background-color: #d1e4ff;
-    right: 4%;
-    margin-right: 0%;
+    margin-left: 87%;
+    color: #fff;
+    background-color: #898B8F;
     margin-top: 0px;
-    padding: 10px;
-    box-shadow: 4px 4px 10px #797979;   
+    padding: 0 0px; 
+    transition: 0.3s;
+    opacity: 1;
+    h1 {
+        font-weight: bold;
+        text-align: center;
+        padding-bottom: 5px;
+        border-bottom: 1px solid #fff;
+        margin: 13px 0 0 0;
+    }
     p {
         cursor: pointer;
-        margin: 10px 0px;
+        margin: 0px 0px;
+        padding: 12px 0px;
     }
     p:hover {
-        border-bottom: 1px solid #3465f8
+        background-color: #F4F4F4;
+        color: #0F57BF;
     }
 }
-@media only screen and (min-width: 1500px) {
-    .menu-box-settings{
-        right: 6%;
+.menu-box-settings-none {
+    width: 13%;
+    height: 0%;
+    margin-left: 87%;
+    transition: 0.3s;
+    position: absolute;
+    h1 {
+        font-size: 0px;
     }
-}
-.men-box-settings-none {
-   
-    height:0px;
+    p{
+        font-size: 0px;
+    }
 
 }
-.men-box-settings-none p {
-    display: none;
-}
 .logout{
-    display: inline-block;
-      width: 30px;
+
+    width: 30px;
     height: 66px;
     margin-left: 2%;
     padding-top: 25px;
+    margin-right: 2%;
     cursor: pointer;
 }
 
+.teste div {
+    width: auto;
+    border: 1px solid red;
+    display: inline-block;
+}
+
+
+.sub-menu-header {
+    li {
+        display: block;
+        text-align: center;
+        padding: 0 0px;
+    }
+}
