@@ -9,28 +9,32 @@ export interface HeaderInterProps {
     onBlur?: Function | any;
     onFocus?: Function | any;
     value?: string
+    visibleSearch?: boolean
 }
 
-export function HeaderInter({texto, titulo,value, ...props} :HeaderInterProps) {
+export function HeaderInter({texto, titulo,value, visibleSearch = true, ...props} :HeaderInterProps) {
    
     return (<>
         <div className={clsx('header-inter')} >
              <h2>{titulo}</h2>
         
-              <div className="pesquisar">
-                  <input
-                  className='input-pesquisar'
-                      type="text"
-                      placeholder="Pesquisa..."
-                      value={value}
-                      {...props}
-                  />
-                 
-                        <Search
-                        size="md"
-                        type="Primary"
-                        />
-              </div>
+        {visibleSearch? 
+        <div className="pesquisar">
+        <input
+        className='input-pesquisar'
+            type="text"
+            placeholder="Pesquisa..."
+            value={value}
+            {...props}
+        />
+       
+              <Search
+              size="md"
+              type="Primary"
+              />
+    </div>
+     : null}
+              
         </div>
         <span className='span-search'>{texto}</span>
         </>

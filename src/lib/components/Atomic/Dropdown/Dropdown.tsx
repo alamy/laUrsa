@@ -15,6 +15,7 @@ export interface DropdownProps {
     onClick?: Function | any;
     valueText?: String;
     labelText?: any;
+    about?: any
 
 }
 
@@ -34,13 +35,13 @@ export function Dropdown({disable, size = 'md', value, text, id, error, Option,v
    let ArrayOpition = Object.values(Option)?.map(function(opt){
        const valueT:any = valueText;
        const labelT:any = labelText;
-        return <option value={opt[valueT]}>{opt[labelT]}</option>
+        return <option value={opt[valueT]} about={opt[labelT]}>{opt[labelT]}</option>
    })
     return (
         <>
         <div>
             <label className={clsx(label, 'label' , 'labelDropDown')} htmlFor={text}>{text}</label>
-            <select id={id} disabled={disable} value={value} name='text' className={clsx(
+            <select id={id} disabled={disable} value={value} about={props.about} name={'text'} className={clsx(
                 'dropdown',
                     'px-4',
                     'border-solid',
