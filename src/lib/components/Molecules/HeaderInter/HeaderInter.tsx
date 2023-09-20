@@ -19,7 +19,6 @@ export function HeaderInter({texto, titulo,value, visibleSearch = true, ...props
              <h2>{titulo}</h2>
 
              <div className="pesquisar">
-                <p>teste</p>
                   <input
                   className='input-pesquisar'
                       type="text"
