@@ -17,7 +17,22 @@ export function HeaderInter({texto, titulo,value, visibleSearch = true, ...props
     return (<>
         <div className={clsx('header-inter')} >
              <h2>{titulo}</h2>
-              
+
+             <div className="pesquisar">
+                <p>teste</p>
+                  <input
+                  className='input-pesquisar'
+                      type="text"
+                      placeholder="Pesquisa..."
+                      value={value}
+                      {...props}
+                  />
+                 
+                        <Search
+                        size="md"
+                        type="Primary"
+                        />
+              </div>
         </div>
         </>
     )
