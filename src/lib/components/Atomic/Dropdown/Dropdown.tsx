@@ -16,10 +16,22 @@ export interface DropdownProps {
     valueText?: String;
     labelText?: any;
     about?: any
+    Default?: string
 
 }
 
-export function Dropdown({disable, size = 'md', value, text, id, error, Option,valueText,labelText, ...props}: DropdownProps ) {
+export function Dropdown({
+                            disable, 
+                            size = 'md', 
+                            value, 
+                            text, 
+                            id, 
+                            error, 
+                            Option,
+                            valueText,
+                            labelText,
+                            Default,
+                             ...props}: DropdownProps ) {
     let estilo
     let label
    if(error){
@@ -54,7 +66,7 @@ export function Dropdown({disable, size = 'md', value, text, id, error, Option,v
                     },
                     estilo
                 )}  { ...props}>
-                    <option value={""}>Selecione</option>
+                    {!Default? <option value={""}>Selecione</option> : <option value={Default}>{Default}</option> }
                 {ArrayOpition}
             </select>
         </div>

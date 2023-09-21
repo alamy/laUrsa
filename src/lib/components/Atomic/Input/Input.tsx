@@ -65,7 +65,7 @@ export function Input({ disable, size = 'md', text, error, value, type, ...props
                     type === 'file' ?
                         <>
                             <label htmlFor={props.id} className='file-input-laursa'>{text}</label>
-                            <input type={type} id={props.id}/>
+                            <input type={type} id={props.id} {...props} value={value}/>
 
                         </>  :
                         <>
