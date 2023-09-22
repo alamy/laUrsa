@@ -5,7 +5,7 @@ import './Button.scss'
 export interface ButtonProps {
     text?: string | any;
     type?: 'primary' | 'secondary';
-    size?: 'md' | 'lg';
+    size?: 'sm' | 'md' | 'lg';
     icone?: 'edite' | 'delete' | 'look';
     disable?: boolean;
     id?: string;
@@ -54,6 +54,11 @@ export function Button({disable = false, text, type = 'primary',name, size = 'md
                  {
                     'h-[48px]': size === 'md',
                     'h-[56px]': size === 'lg',
+                },
+                {
+                    'sm-bt': size === 'md',
+                    'md-bt': size === 'md',
+                    'lg-bt': size === 'lg',
                 },
                 {'largura': !icone} ,
                 estilo,

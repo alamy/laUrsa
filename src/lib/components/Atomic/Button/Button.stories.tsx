@@ -7,7 +7,7 @@ export default {
     args: {
         text: 'Teste Buttom',
         type: 'primary',
-        size: 'md',
+        size: 'sm',
         disable: false
     }
 } as Meta<ButtonProps>

@@ -18,10 +18,20 @@ export interface InputProps {
     onBlur?: Function | any
     id?: String | any
     onKeyDown?: Function | any
+    multiple?: boolean
 
 }
 
-export function Input({ disable, size = 'md', text, error, value, type, ...props }: InputProps) {
+export function Input({ 
+                        disable, 
+                        size = 'md', 
+                        text, 
+                        error, 
+                        value, 
+                        type,
+                        multiple, 
+                        ...props 
+                    }: InputProps) {
 
     let estilo
     let label
@@ -65,7 +75,12 @@ export function Input({ disable, size = 'md', text, error, value, type, ...props
                     type === 'file' ?
                         <>
                             <label htmlFor={props.id} className='file-input-laursa'>{text}</label>
-                            <input type={type} id={props.id} {...props} value={value}/>
+                            <input 
+                                type={type} 
+                                id={props.id} 
+                                {...props} 
+                                value={value}
+                                multiple={multiple}/>
 
                         </>  :
                         <>
