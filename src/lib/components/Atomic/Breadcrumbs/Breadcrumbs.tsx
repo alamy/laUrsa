@@ -7,7 +7,6 @@ export interface BreadcrumbsProps {
 }
 
 export function Breadcrumbs({label, Atual}: BreadcrumbsProps) {
-    console.log(label.length)
     let texto = label.map(function(i){
         console.log()  
         return <><p className='prev'>{i}</p> <i className='prev'> / </i> </>
