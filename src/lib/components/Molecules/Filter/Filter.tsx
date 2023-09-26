@@ -22,8 +22,9 @@ export function Filter({disable, size = 'md', text, error, opcoes,...props}: Fil
     const [tag , setTag]:any = useState([])
     const [value, setValue] = useState(String)
     const [change, setChange] = useState(false)
+    const [opt, setOpt] = useState(opcoes)
     const flagArray:any = []
-    let apcaoSearch: any
+    let opcaoSearch: any
     const caixa = () => {
         setBoxCheck(!boxCheck)
     }
@@ -42,7 +43,7 @@ export function Filter({disable, size = 'md', text, error, opcoes,...props}: Fil
 
 
    let apcao = 
-    Object.values(opcoes).map(function(i:any){
+    Object.values(opt).map(function(i:any){
         const valueT:any = props.valueText;
        const labelT:any = props.labelText;
         return <li className='border-b pl-9 pr-9 pt-2 pb-2 border-gray-700'>
@@ -85,8 +86,17 @@ export function Filter({disable, size = 'md', text, error, opcoes,...props}: Fil
 //         </li> )
 //     })
    const Search = (i:any) => {
+    const valueT:any = props.valueText;
     setValue(i)
     setBoxCheck(true)
+    console.log(i)
+
+    opcaoSearch =Object.values(opcoes).filter(function(el){
+        console.log(el.descricao)
+        return el[valueT].toLowerCase().indexOf(i.toLowerCase()) > -1
+    })
+    setOpt(opcaoSearch)
+    console.log(opcaoSearch)
     
    }
 
@@ -110,8 +120,11 @@ export function Filter({disable, size = 'md', text, error, opcoes,...props}: Fil
                     Search(i.target.value)
                    } }
                     onBlur={function(i:any){ 
-                        InserirInput(i.target.value); 
-                        setValue('')}}
+                      //  InserirInput(i.target.value); 
+                       setValue('')
+                       setOpt(opcoes)
+                    }
+                    }
                     />
 
             <button  className='btnFilter w-1/12' onClick={caixa}>
