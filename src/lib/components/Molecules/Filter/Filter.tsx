@@ -1,6 +1,6 @@
 import { clsx } from 'clsx';
 import './Filter.scss'
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { Checkbox } from '../../Atomic/Checkbox/Checkbox';
 import { Tag } from '../../Atomic/Tag/Tag';
 
@@ -13,15 +13,16 @@ export interface FiltertProps {
     opcoes: Object;
     valueText?: String;
     labelText?: any;
+    arrayResult?: {}| any
 
 }
 
-export function Filter({disable, size = 'md', text, error, opcoes,...props}: FiltertProps ) {
+export function Filter({disable, size = 'md', text, error, opcoes, ...props}: FiltertProps ) {
 
     const [boxCheck, setBoxCheck] = useState(false)
     const [tag , setTag]:any = useState([])
+    const [valueTag , setValueTag]:any = useState([])
     const [value, setValue] = useState(String)
-    const [change, setChange] = useState(false)
     const [opt, setOpt] = useState(opcoes)
     const flagArray:any = []
     let opcaoSearch: any
@@ -45,12 +46,13 @@ export function Filter({disable, size = 'md', text, error, opcoes,...props}: Fil
    let apcao = 
     Object.values(opt).map(function(i:any){
         const valueT:any = props.valueText;
-       const labelT:any = props.labelText;
+        const labelT:any = props.labelText;
         return <li className='border-b pl-9 pr-9 pt-2 pb-2 border-gray-700'>
             <Checkbox text={i[valueT]} size='lg' onClick={function(t:any) {
-                console.log(t.target.checked);
                 if(t.target.checked === true) {
                     setTag((prevTag: any) => [...prevTag, i[valueT]])
+                    setValueTag((prevTag: any) => [...prevTag, " - " + i[valueT] ])
+                    props.arrayResult(valueTag)
                 }else {
                     const listar = i[valueT]
                     var indice = tag.indexOf(listar);
@@ -61,30 +63,15 @@ export function Filter({disable, size = 'md', text, error, opcoes,...props}: Fil
                         console.log(indice)
                     }
                     setTag((prevTag: any) => [...prevTag])
+                    setValueTag((prevTag: any) => [...prevTag])
+                    props.arrayResult(valueTag)
+                    
                 }
                 
                 }} />
             </li>
        })
 
-   const InserirInput = (i:any) => {
-    if(!!i){
-    setValue(i)
-   // setTag((prevTag: any) => [...prevTag, i])
-    }else {
-        return null
-    }   
-   }
-//    apcaoSearch = Object.values(opcoes).filter(
-//     function(item) {
-//         const texto = item.toLowerCase().indexOf(value.toLowerCase()) > -1
-//         return (
-//         <li className='border-b pl-9 pr-9 pt-2 pb-2 border-gray-700'> 
-  
-
-//         <p>teste</p>
-//         </li> )
-//     })
    const Search = (i:any) => {
     const valueT:any = props.valueText;
     setValue(i)
@@ -120,9 +107,9 @@ export function Filter({disable, size = 'md', text, error, opcoes,...props}: Fil
                     Search(i.target.value)
                    } }
                     onBlur={function(i:any){ 
-                      //  InserirInput(i.target.value); 
                        setValue('')
                        setOpt(opcoes)
+                      
                     }
                     }
                     />
