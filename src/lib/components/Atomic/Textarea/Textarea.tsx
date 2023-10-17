@@ -6,9 +6,10 @@ export interface TextareaProps {
     size?: 'md' | 'lg';
     error?: boolean;
     disable?: boolean;
+    value?: string;
 }
 
-export function Textarea({disable, size = 'md', text, error}: TextareaProps ) {
+export function Textarea({disable, size = 'md', text, error, value}: TextareaProps ) {
     let estilo
     let label
     if(error){
@@ -25,7 +26,7 @@ export function Textarea({disable, size = 'md', text, error}: TextareaProps ) {
         <>
          <div>
         <label className={clsx(label, 'labelInput')} htmlFor={text}>{text}</label>
-        <textarea disabled={disable}  className={clsx(
+        <textarea disabled={disable} className={clsx(
                 'textArea',
                 'px-4',
                 'border',
@@ -36,7 +37,7 @@ export function Textarea({disable, size = 'md', text, error}: TextareaProps ) {
                     'h-[96px]': size === 'lg',
                 },
                 estilo )} id={text}>
-
+                    {value}
                 </textarea>
                 </div>
             </>
