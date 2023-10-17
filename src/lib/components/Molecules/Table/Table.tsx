@@ -20,6 +20,7 @@ export interface TableProps {
     FlagTrash?: boolean;
     FlagVisible?: boolean;
     FlagEdit?: boolean;
+    btnEditar?: boolean
 }
 
 const edit = <Edit
@@ -50,6 +51,7 @@ export const Table = ({
     FlagTrash,
     FlagVisible,
     FlagEdit =  true,
+    btnEditar,
     
 
 }: TableProps ) => {
@@ -100,7 +102,7 @@ export const Table = ({
             </td> : ""}
             <td  className='controle-table td' title={opt.isAtivo}>
                 <div  title='Botão de edição. Ao clicar neste botão será possível editar a Descrição do item em questão.'>
-                   {FlagEdit && valorChecked ? <Button icone={'edite'} type='secondary' size='md' id={id} name={name} onClick={Editar}/> : ""}
+                   {(FlagEdit && valorChecked) || btnEditar ? <Button icone={'edite'} type='secondary' size='md' id={id} name={name} onClick={Editar}/> : ""}
                 </div>
                 <div title='Botão de excluir. Ao clicar neste botão será possível excluir a Descrição do item em questão.'>
                     {FlagTrash ? <Button icone={'delete'} type='secondary' size='md' id={id} name={name} onClick={Excluir}/> : ""}
