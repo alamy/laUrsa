@@ -1,0 +1,15 @@
+.textArea {
+    border:1px solid #5f6164;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border-radius: 0.25rem;
+    width: 100%;
+    min-height: 68px; 
+    margin-top: -10px;
+    position: relative;
+    
+  }
+
+  .textArea:focus{
+    border: 1px solid rgba(7, 114, 255, 0.933);
+  }

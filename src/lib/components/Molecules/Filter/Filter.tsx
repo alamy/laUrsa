@@ -14,7 +14,6 @@ export interface FiltertProps {
     valueText?: String;
     labelText?: any;
     arrayResult?: {}| any
-
 }
 
 export function Filter({disable, size = 'md', text, error, opcoes, ...props}: FiltertProps ) {

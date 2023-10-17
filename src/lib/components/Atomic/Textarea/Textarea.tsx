@@ -1,15 +1,14 @@
 import { clsx } from 'clsx';
-
+import './Textarea.scss'
 
 export interface TextareaProps {
     text: string;
     size?: 'md' | 'lg';
     error?: boolean;
-    type: 'text' | 'number';
     disable?: boolean;
 }
 
-export function Textarea({disable, size = 'md', text, error, type}: TextareaProps ) {
+export function Textarea({disable, size = 'md', text, error}: TextareaProps ) {
     let estilo
     let label
     if(error){
@@ -24,10 +23,10 @@ export function Textarea({disable, size = 'md', text, error, type}: TextareaProp
        }
     return (
         <>
-       <p className='labelInput'>
-            <label className={clsx(label, 'label')} htmlFor={text}>{text}</label>
-        </p>
+         <div>
+        <label className={clsx(label, 'labelInput')} htmlFor={text}>{text}</label>
         <textarea disabled={disable}  className={clsx(
+                'textArea',
                 'px-4',
                 'border',
                 '-mt-3',
@@ -39,6 +38,7 @@ export function Textarea({disable, size = 'md', text, error, type}: TextareaProp
                 estilo )} id={text}>
 
                 </textarea>
+                </div>
             </>
 
            

@@ -13,7 +13,7 @@ export interface DropdownProps {
     onBlur?: Function | any;
     onFocus?: Function | any;
     onClick?: Function | any;
-    valueText?: String;
+    valueText?: String | boolean;
     labelText?: any;
     about?: any
     Default?: string
@@ -53,7 +53,7 @@ export function Dropdown({
         <>
         <div>
             <label className={clsx(label, 'label' , 'labelDropDown')} htmlFor={text}>{text}</label>
-            <select id={id} disabled={disable} value={value} about={props.about} name={'text'} className={clsx(
+            <select id={id} disabled={disable} value={value} name={'text'} className={clsx(
                 'dropdown',
                     'px-4',
                     'border-solid',

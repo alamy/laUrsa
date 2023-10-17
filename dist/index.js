@@ -111,6 +111,7 @@ import * as Button from '../src/lib/components/Atomic/Button/Button';
 import * as Checkbox from '../src/lib/components/Atomic/Checkbox/Checkbox';
 import * as Dropdown from '../src/lib/components/Atomic/Dropdown/Dropdown';
 import * as Input from '../src/lib/components/Atomic/Input/Input';
+import * as Textarea from '../src/lib/components/Atomic/Textarea/Textarea';
 import * as Radio from '../src/lib/components/Atomic/Radio/Radio';
 import * as Toogle from '../src/lib/components/Atomic/Toogle/Toogle';
 import * as Tag from '../src/lib/components/Atomic/Tag/Tag';
@@ -141,7 +142,7 @@ Lancamento, Layers, Layout, LifeBuoy, Link, Link2, Linkedin, List, Loader, Lock,
 Pin, Repeat, Rewind, RotateLeft, RotateRight, Save, Scissor, Send, Server, Share, Share2, Shield, ShieldOff, ShoppingBag, Shuffle,
 Sidebar, SkipBack, SkipForward, Slack, Sliders, Smartphone, Smile, Speaker, Square, Star, StopCircle, UpRight,
 //Atomic 
-Avatar, Button, Checkbox, Dropdown, Input, Radio,Toogle,Tag,Breadcrumbs,
+Avatar, Button, Checkbox, Dropdown, Input, Radio,Toogle,Tag,Breadcrumbs,Textarea,
 // Molecules    
 Table,Alerta,HeaderInter,Paginacao,Filter,
 //Template
@@ -258,6 +259,7 @@ export * from '../src/lib/components/Atomic/Button/Button';
 export * from '../src/lib/components/Atomic/Checkbox/Checkbox';
 export * from '../src/lib/components/Atomic/Dropdown/Dropdown';
 export * from '../src/lib/components/Atomic/Input/Input';
+export * from '../src/lib/components/Atomic/Textarea/Textarea';
 export * from '../src/lib/components/Atomic/Radio/Radio';
 export * from '../src/lib/components/Atomic/Toogle/Toogle';
 export * from '../src/lib/components/Atomic/Tag/Tag';
