@@ -7,9 +7,10 @@ export interface TextareaProps {
     error?: boolean;
     disable?: boolean;
     value?: string;
+    onChange: Function | any;
 }
 
-export function Textarea({disable, size = 'md', text, error, value}: TextareaProps ) {
+export function Textarea({disable, size = 'md', text, error, value, ...props}: TextareaProps ) {
     let estilo
     let label
     if(error){
@@ -36,7 +37,7 @@ export function Textarea({disable, size = 'md', text, error, value}: TextareaPro
                     'h-[68px]': size === 'md',
                     'h-[96px]': size === 'lg',
                 },
-                estilo )} id={text}>
+                estilo )} id={text} {...props}>
                     {value}
                 </textarea>
                 </div>
