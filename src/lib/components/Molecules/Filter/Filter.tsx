@@ -44,10 +44,11 @@ export function Filter({disable, size = 'md', text, error, opcoes, ...props}: Fi
 
    let apcao = 
     Object.values(opt).map(function(i:any){
+        console.log(i)
         const valueT:any = props.valueText;
         const labelT:any = props.labelText;
         return <li className='border-b pl-9 pr-9 pt-2 pb-2 border-gray-700'>
-            <Checkbox value={i[valueT]} text={i[valueT]} size='lg' onClick={function(t:any) {
+            <Checkbox value={i[valueT]} text={i[labelT]} size='lg' onClick={function(t:any) {
                 if(t.target.checked === true) {
                     setTag((prevTag: any) => [...prevTag, i[valueT]])
                     setValueTag((prevTag: any) => [...prevTag, " - " + i[valueT] ])

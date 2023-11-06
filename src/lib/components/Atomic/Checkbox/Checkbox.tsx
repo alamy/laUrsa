@@ -48,7 +48,7 @@ export function Checkbox({disable, text, size, checked, value, ...props}: Checkb
                 'text-xs': size === 'sm',
                 }
             )}>
-              {" "}  {text}
+              {" "}  {text  }
         </label>
     </>  
     );
