@@ -44,7 +44,6 @@ export function Filter({ disable, size = 'md', text, error, opcoes, arrayResult 
 
     let apcao =
         Object.values(opt).map(function (i: any) {
-            console.log(i)
             const valueT: any = props.valueText;
             const labelT: any = props.labelText;
             return <li className='border-b pl-9 pr-9 pt-2 pb-2 border-gray-700'>
@@ -54,20 +53,22 @@ export function Filter({ disable, size = 'md', text, error, opcoes, arrayResult 
                         setValueTag((prevTag: any) => [...prevTag, i[labelT]])
                         arrayResult(valueTag)
                     } else {
-                        const listar = i[labelT]
-                        var indice = tag.indexOf(listar);
-                        console.log(listar)
-                        while (indice >= 0) {
-                            tag.splice(indice, 1);
-                            indice = tag.indexOf(indice);
-                            console.log(indice)
-                        }
-                        setTag((prevTag: any) => [...prevTag])
-                        setValueTag((prevTag: any) => [...prevTag])
-                        arrayResult(valueTag)
+                        console.log('aqui')
+                         const listar = i[labelT]
+                         var indice = tag.indexOf(listar);
+
+                         while (indice >= 0) {
+                             tag.splice(indice, 1);
+                             indice = tag.indexOf(indice);
+              
+                         }
+                        
+                         setTag((prevTag: any) => [...prevTag])
+                         setValueTag(tag)
+                
 
                     }
-
+                    console.log(arrayResult)
                 }} />
             </li>
         })
