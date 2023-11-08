@@ -25,9 +25,10 @@ export function Header(
     Closer
   }: HeaderProps) {
   const [flag, setFlag] = useState(false)
-  let data = Date()
+  let data = new Date()
+    let mesNumber = data.getMonth()+1
   let dia = (new Date(data).getDate() < 10 ? '0' : '') + new Date(data).getDate()
-  let mes = (new Date(data).getMonth() < 10 ? '0' : '') + new Date(data).getMonth()
+  let mes = (mesNumber < 10 ? '0' : '') + mesNumber
   let ano = new Date(data).getFullYear()
 
   let hora = new Date(data).getHours()
@@ -55,6 +56,8 @@ export function Header(
   // const actionetiingFalse = () => {
   //   setFlag(false)
   // }
+  console.log(data)
+  console.log(mes )
   return (
     <>
       <div className={clsx({
