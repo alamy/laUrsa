@@ -1,6 +1,6 @@
 import { clsx } from 'clsx';
 import './Filter.scss'
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Checkbox } from '../../Atomic/Checkbox/Checkbox';
 import { Tag } from '../../Atomic/Tag/Tag';
 
@@ -16,16 +16,17 @@ export interface FiltertProps {
     arrayResult?: {} | any
 }
 
-export function Filter({ disable, size = 'md', text, error, opcoes, arrayResult , ...props }: FiltertProps) {
-
+export function Filter({ disable, size = 'md', text, error, opcoes, arrayResult, ...props }: FiltertProps) {
     const [boxCheck, setBoxCheck] = useState(false)
     const [tag, setTag]: any = useState([])
     const [valueTag, setValueTag]: any = useState([])
     const [value, setValue] = useState(String)
     const [opt, setOpt] = useState(opcoes)
-    const flagArray: any = []
+
     let opcaoSearch: any
     const caixa = () => {
+        console.log(opcoes)
+        console.log(boxCheck)
         setBoxCheck(!boxCheck)
     }
     let estilo
@@ -42,36 +43,42 @@ export function Filter({ disable, size = 'md', text, error, opcoes, arrayResult 
     }
 
 
-    let apcao =
-        Object.values(opt).map(function (i: any) {
-            const valueT: any = props.valueText;
-            const labelT: any = props.labelText;
-            return <li className='border-b pl-9 pr-9 pt-2 pb-2 border-gray-700'>
-                <Checkbox value={i[valueT]} text={i[labelT]} size='lg' onClick={function (t: any) {
-                    if (t.target.checked === true) {
-                        setTag((prevTag: any) => [...prevTag, i[labelT]])
-                        setValueTag((prevTag: any) => [...prevTag, i[labelT]])
-                        arrayResult(valueTag)
-                    } else {
-                        console.log('aqui')
-                         const listar = i[labelT]
-                         var indice = tag.indexOf(listar);
+    const apcao = Object.values(opcoes).map(function (i: any) {
+        const valueT: any = props.valueText;
+        const labelT: any = props.labelText;
+        return <li className='border-b pl-9 pr-9 pt-2 pb-2 border-gray-700'>
+            <Checkbox value={i[valueT]} text={i[labelT]} size='lg' onClick={function (t: any) {
+                if (t.target.checked === true) {
 
-                         while (indice >= 0) {
-                             tag.splice(indice, 1);
-                             indice = tag.indexOf(indice);
-              
-                         }
-                        
-                         setTag((prevTag: any) => [...prevTag])
-                         setValueTag(tag)
-                
+                    console.log('kkk')
+                    setTag((prevTag: any) => [...prevTag, i[labelT]])
+                    setValueTag((prevTag: any) => [...prevTag, i[labelT]])
+                    AddArrayCheck()
+                    // arrayResult(tag)
+                } else {
+                    console.log('aqui')
+                    const listar = i[labelT]
+                    var indice = tag.indexOf(listar);
 
+                    while (indice >= 0) {
+                        tag.splice(indice, 1);
+                        indice = tag.indexOf(indice);
                     }
-                    console.log(arrayResult)
-                }} />
-            </li>
-        })
+                    setTag((prevTag: any) => [...prevTag])
+                    AddArrayCheck()
+                    // setValueTag(tag)
+
+
+                }
+            }} />
+        </li>
+    })
+
+    const AddArrayCheck = () => {
+        arrayResult(tag)
+    }
+
+    useEffect(()=>(AddArrayCheck()),[AddArrayCheck])
 
     const Search = (i: any) => {
         const valueT: any = props.valueText;
@@ -88,20 +95,23 @@ export function Filter({ disable, size = 'md', text, error, opcoes, arrayResult 
 
     }
 
+
+
+
     return (
         <>
-          {text ?
-                    <label
-                        className={clsx(label, 'labelInput')}
-                        htmlFor={text}>
-                        {text}
-                    </label>
-                    : ''}
-            <div className={clsx('rounded', 
-                            'w-full ',
-                            'border', 
-                            'filter-input')}>
-              
+            {text ?
+                <label
+                    className={clsx(label, 'labelInput')}
+                    htmlFor={text}>
+                    {text}
+                </label>
+                : ''}
+            <div className={clsx('rounded',
+                'w-full ',
+                'border',
+                'filter-input')}>
+
 
                 <input
                     type={'text'}
@@ -125,9 +135,9 @@ export function Filter({ disable, size = 'md', text, error, opcoes, arrayResult 
                         Search(i.target.value)
                     }}
                     onBlur={function (i: any) {
-                            setValue('')
-                            setOpt(opcoes)
-                        }
+                        setValue('')
+                        setOpt(opcoes)
+                    }
                     }
                 />
 
@@ -155,7 +165,6 @@ export function Filter({ disable, size = 'md', text, error, opcoes, arrayResult 
 
                 <ul className='pb-0 pt-0'>
                     {apcao}
-
                 </ul>
             </div>
 
