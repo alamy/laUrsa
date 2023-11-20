@@ -25,8 +25,6 @@ export function Filter({ disable, size = 'md', text, error, opcoes, arrayResult,
 
     let opcaoSearch: any
     const caixa = () => {
-        console.log(opcoes)
-        console.log(boxCheck)
         setBoxCheck(!boxCheck)
     }
     let estilo
@@ -52,7 +50,7 @@ export function Filter({ disable, size = 'md', text, error, opcoes, arrayResult,
 
                     console.log('kkk')
                     setTag((prevTag: any) => [...prevTag, i[labelT]])
-                    setValueTag((prevTag: any) => [...prevTag, i[labelT]])
+                    setValueTag((prevTag: any) => [...prevTag, i[valueT]])
                     AddArrayCheck()
                     // arrayResult(tag)
                 } else {
@@ -65,6 +63,7 @@ export function Filter({ disable, size = 'md', text, error, opcoes, arrayResult,
                         indice = tag.indexOf(indice);
                     }
                     setTag((prevTag: any) => [...prevTag])
+                    setValueTag((prevTag: any) => [...prevTag])
                     AddArrayCheck()
                     // setValueTag(tag)
 
@@ -75,7 +74,7 @@ export function Filter({ disable, size = 'md', text, error, opcoes, arrayResult,
     })
 
     const AddArrayCheck = () => {
-        arrayResult(tag)
+        arrayResult(valueTag)
     }
 
     useEffect(()=>(AddArrayCheck()),[AddArrayCheck])

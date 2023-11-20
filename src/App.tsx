@@ -12,6 +12,7 @@ import { Parcelamento } from './lib/components/Icon/Menu/Parcelamento';
 import { Tramitacao } from './lib/components/Icon/Menu/Tramitacao';
 import { Search } from './lib/components/Icon/System/Search';
 import { Alerta } from './lib/components/Molecules/Alerta/Alerta';
+import { Filter } from './lib/components/Molecules/Filter/Filter';
 import { Modal } from './lib/components/Molecules/Modal/Modal';
 import { Paginacao } from './lib/components/Molecules/Paginacao/Paginacao';
 import { Table } from './lib/components/Molecules/Table/Table';
@@ -32,10 +33,19 @@ function App() {
           Duis gravida urna sed est viverra egestas. Sed placerat fermentum dui. Sed aliquet convallis gravida. Suspendisse potenti. Nunc eu tincidunt ante, id ultrices lectus. In hac habitasse platea dictumst. Sed ornare nisi libero, id blandit massa consequat eleifend.
          
 
-        <Table typeTable={'Default'} header={['id', 'descricao', 'Teste', 'algum' , 'teste' , 'status', 'ação']} Obj={{
+        <Table typeTable={'Default'} 
+        header={['id', 'descricao', 'Teste', 'algum' , 'teste' , 'status', 'ação']} Obj={{
         1: ["1",
-          "Mercantil",
-          'Descricao',
+          "2",
+          '3',
+           [
+             'teste', 
+             'teste 2'
+           ]
+        ],
+        2: ["4",
+          "9",
+          '10',
            [
              'teste', 
              'teste 2'
@@ -43,7 +53,10 @@ function App() {
         ]
       }} Editar={(i: any) => {
         console.log(i);
-      } } visualizacao={true} QtdSub={0} />
+      } } visualizacao={true} 
+        FlagVisible={true}
+        Detalhar={(i:any) => {console.log(i)}}
+      QtdSub={0} />
           
 
           <Input text={''} type={'number'} />
@@ -57,6 +70,8 @@ function App() {
         throw new Error('Function not implemented.');
       } }/>
 <Toggle text={''} />
+      
+
       
           </>
 

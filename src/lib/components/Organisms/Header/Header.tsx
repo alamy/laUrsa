@@ -56,8 +56,6 @@ export function Header(
   // const actionetiingFalse = () => {
   //   setFlag(false)
   // }
-  console.log(data)
-  console.log(mes )
   return (
     <>
       <div className={clsx({
