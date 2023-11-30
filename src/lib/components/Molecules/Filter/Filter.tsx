@@ -11,12 +11,13 @@ export interface FiltertProps {
     disable?: boolean;
     onChange?: Function | any;
     opcoes: Object;
-    valueText?: String;
+    valueText?: String | {} ;
     labelText?: any;
-    arrayResult?: {} | any
+    arrayResult?: {} | any;
+    valueArray?: boolean
 }
 
-export function Filter({ disable, size = 'md', text, error, opcoes, arrayResult, ...props }: FiltertProps) {
+export function Filter({ disable, size = 'md', text, error, opcoes, arrayResult, valueArray ,...props }: FiltertProps) {
     const [boxCheck, setBoxCheck] = useState(false)
     const [tag, setTag]: any = useState([])
     const [valueTag, setValueTag]: any = useState([])
@@ -46,24 +47,27 @@ export function Filter({ disable, size = 'md', text, error, opcoes, arrayResult,
         const labelT: any = props.labelText;
         return <li className='border-b pl-9 pr-9 pt-2 pb-2 border-gray-700'>
             <Checkbox value={i[valueT]} text={i[labelT]} size='lg' onClick={function (t: any) {
+                console.log(i)
                 if (t.target.checked === true) {
 
                     console.log('kkk')
                     setTag((prevTag: any) => [...prevTag, i[labelT]])
-                    setValueTag((prevTag: any) => [...prevTag, i[valueT]])
+                    valueArray ? setValueTag((prevTag: any) => [...prevTag, i]) : setValueTag((prevTag: any) => [...prevTag, i[valueT]]) 
                     AddArrayCheck()
                     // arrayResult(tag)
                 } else {
                     console.log('aqui')
                     const listar = i[labelT]
                     var indice = tag.indexOf(listar);
+                    console.log('estou no indice ' + indice)
 
                     while (indice >= 0) {
                         tag.splice(indice, 1);
-                        indice = tag.indexOf(indice);
+                        valueTag.splice(indice, 1)
+                        indice = tag.splice(indice);
                     }
                     setTag((prevTag: any) => [...prevTag])
-                    setValueTag((prevTag: any) => [...prevTag])
+                   
                     AddArrayCheck()
                     // setValueTag(tag)
 
@@ -83,14 +87,13 @@ export function Filter({ disable, size = 'md', text, error, opcoes, arrayResult,
         const valueT: any = props.valueText;
         setValue(i)
         setBoxCheck(true)
-        console.log(i)
 
         opcaoSearch = Object.values(opcoes).filter(function (el) {
             console.log(el.descricao)
             return el[valueT].toLowerCase().indexOf(i.toLowerCase()) > -1
         })
         setOpt(opcaoSearch)
-        console.log(opcaoSearch)
+
 
     }
 
@@ -175,10 +178,12 @@ export function Filter({ disable, size = 'md', text, error, opcoes, arrayResult,
 
                     while (indice >= 0) {
                         tag.splice(indice, 1);
+                        console.log('estou no indice ' + indice)
+                        valueTag.splice(indice, 1)
                         indice = tag.indexOf(indice);
 
                     }
-                    setTag((prevTag: any) => [...prevTag])
+                    // setTag((prevTag: any) => [...prevTag])
 
                 }} />
             </div>

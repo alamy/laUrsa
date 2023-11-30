@@ -9,7 +9,7 @@ export interface InputProps {
     disable?: boolean
     type: 'text' | 'number' | 'date' | 'file'
     onChange?: Function | any
-    value?: string
+    value?: string  | number | undefined
     min?: string | number | undefined
     max?: string | number | undefined
     moeda?: boolean
@@ -19,6 +19,7 @@ export interface InputProps {
     id?: String | any
     onKeyDown?: Function | any
     multiple?: boolean
+    mensagemError?: String
 
 }
 
@@ -27,9 +28,10 @@ export function Input({
                         size = 'md', 
                         text, 
                         error, 
-                        value, 
+                            value, 
                         type,
                         multiple, 
+                        mensagemError,
                         ...props 
                     }: InputProps) {
 
@@ -106,6 +108,7 @@ export function Input({
                             max={props.max}
                             placeholder={props.placeholder}
                             onKeyDown={props.onKeyDown} />
+                            <i className='color-red error-text'>{error? mensagemError: null}</i>
                         </>
                 }
             </div>

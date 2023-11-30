@@ -2,17 +2,17 @@ import { clsx } from "clsx";
 import "./Range.scss";
 import { useRef, useState } from "react";
 export interface RangeProps {
-  text: string;
-  name: string;
   disable?: boolean;
   size?: "sm" | "md" | "lg";
   onChange?: Function | any;
-  value?: string
+  value?: string;
+  minimoValue: number;
+  maximoValue: number;
 }
 
-export function Range({ disable, text, size, name, value , ...props}: RangeProps) {
-  const [max, setMax] = useState(999999999)
-  const [min, setMin] = useState(0)
+export function Range({ disable, minimoValue, maximoValue}: RangeProps) {
+  const [max, setMax] = useState(maximoValue)
+  const [min, setMin] = useState(minimoValue)
   let label;
   let checked;
   if (disable) {
