@@ -11,13 +11,13 @@ export interface FiltertProps {
     disable?: boolean;
     onChange?: Function | any;
     opcoes: Object;
-    valueText?: String | {} ;
+    valueText?: String | {};
     labelText?: any;
     arrayResult?: {} | any;
     valueArray?: boolean
 }
 
-export function Filter({ disable, size = 'md', text, error, opcoes, arrayResult, valueArray ,...props }: FiltertProps) {
+export function Filter({ disable, size = 'md', text, error, opcoes, arrayResult, valueArray, ...props }: FiltertProps) {
     const [boxCheck, setBoxCheck] = useState(false)
     const [tag, setTag]: any = useState([])
     const [valueTag, setValueTag]: any = useState([])
@@ -45,44 +45,43 @@ export function Filter({ disable, size = 'md', text, error, opcoes, arrayResult,
     const apcao = Object.values(opcoes).map(function (i: any) {
         const valueT: any = props.valueText;
         const labelT: any = props.labelText;
+        const obj: any = i
         return <li className='border-b pl-9 pr-9 pt-2 pb-2 border-gray-700'>
-            <Checkbox value={i[valueT]} text={i[labelT]} size='lg' onClick={function (t: any) {
-                console.log(i)
-                if (t.target.checked === true) {
-
-                    console.log('kkk')
-                    setTag((prevTag: any) => [...prevTag, i[labelT]])
-                    valueArray ? setValueTag((prevTag: any) => [...prevTag, i]) : setValueTag((prevTag: any) => [...prevTag, i[valueT]]) 
-                    AddArrayCheck()
-                    // arrayResult(tag)
-                } else {
-                    console.log('aqui')
-                    const listar = i[labelT]
-                    var indice = tag.indexOf(listar);
-                    console.log('estou no indice ' + indice)
-
-                    while (indice >= 0) {
-                        tag.splice(indice, 1);
-                        valueTag.splice(indice, 1)
-                        indice = tag.splice(indice);
-                    }
-                    setTag((prevTag: any) => [...prevTag])
-                   
-                    AddArrayCheck()
-                    // setValueTag(tag)
-
-
-                }
-            }} />
+            <Checkbox value={i[valueT]} text={i[labelT]} size='lg' onClick={(a: any) => Adicionado(a, i[labelT], i[valueT], obj)} />
         </li>
     })
+    function Adicionado(t: any, label: any, value: any, obj: any) {
 
-    const AddArrayCheck = () => {
-        arrayResult(valueTag)
+        if (t.target.checked === true) {
+            setTag((prevTag: any) => [...prevTag, label])
+            valueArray ? setValueTag((prevTag: any) => [...prevTag, obj]) : setValueTag((prevTag: any) => [...prevTag, value])
+
+        } else {
+            const listar = label
+            var indice = tag.indexOf(listar);
+
+            while (indice >= 0) {
+                tag.splice(indice, 1);
+                valueTag.splice(indice, 1)
+                indice = tag.indexOf(indice);
+            }
+            setValueTag((preValueTag: any) => [...preValueTag])
+            setTag((prevTag: any) => [...prevTag])
+
+        }
+        AddArrayCheck(valueTag)
+
+
     }
 
-    useEffect(()=>(AddArrayCheck()),[AddArrayCheck])
+    const AddArrayCheck = async (a: any) => {
+        await arrayResult(a)
+    }
 
+    useEffect(() => {
+        AddArrayCheck(valueTag)
+
+    }, [valueTag])
     const Search = (i: any) => {
         const valueT: any = props.valueText;
         setValue(i)
@@ -96,9 +95,6 @@ export function Filter({ disable, size = 'md', text, error, opcoes, arrayResult,
 
 
     }
-
-
-
 
     return (
         <>
@@ -165,7 +161,7 @@ export function Filter({ disable, size = 'md', text, error, opcoes, arrayResult,
                 },
                 'box-check border-l border-r rounded right-4 absolute')}>
 
-                <ul className='pb-0 pt-0'>
+                <ul className='pb-0 pt-0' key={2}>
                     {apcao}
                 </ul>
             </div>
@@ -183,7 +179,8 @@ export function Filter({ disable, size = 'md', text, error, opcoes, arrayResult,
                         indice = tag.indexOf(indice);
 
                     }
-                    // setTag((prevTag: any) => [...prevTag])
+                    setTag((prevTag: any) => [...prevTag])
+                    setValueTag((prevTag: any) => [...prevTag])
 
                 }} />
             </div>
