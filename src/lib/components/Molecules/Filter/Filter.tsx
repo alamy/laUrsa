@@ -42,7 +42,7 @@ export function Filter({ disable, size = 'md', text, error, opcoes, arrayResult,
     }
 
 
-    const apcao = Object.values(opcoes).map(function (i: any) {
+    const apcao = Object.values(opt).map(function (i: any) {
         const valueT: any = props.valueText;
         const labelT: any = props.labelText;
         const obj: any = i
@@ -50,6 +50,7 @@ export function Filter({ disable, size = 'md', text, error, opcoes, arrayResult,
             <Checkbox value={i[valueT]} text={i[labelT]} size='lg' onClick={(a: any) => Adicionado(a, i[labelT], i[valueT], obj)} />
         </li>
     })
+
     function Adicionado(t: any, label: any, value: any, obj: any) {
 
         if (t.target.checked === true) {
@@ -82,15 +83,19 @@ export function Filter({ disable, size = 'md', text, error, opcoes, arrayResult,
         AddArrayCheck(valueTag)
 
     }, [valueTag])
-    const Search = (i: any) => {
-        const valueT: any = props.valueText;
+
+
+    const Search = (i: any) => { 
+        const valueT: any = props.labelText;
         setValue(i)
         setBoxCheck(true)
-
+        
         opcaoSearch = Object.values(opcoes).filter(function (el) {
-            console.log(el.descricao)
+            console.log( el[valueT])
             return el[valueT].toLowerCase().indexOf(i.toLowerCase()) > -1
         })
+
+        console.log(opcaoSearch)
         setOpt(opcaoSearch)
 
 
