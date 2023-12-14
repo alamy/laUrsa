@@ -27,6 +27,7 @@ export function Filter({ disable, size = 'md', text, error, opcoes, arrayResult,
     let opcaoSearch: any
     const caixa = () => {
         setBoxCheck(!boxCheck)
+        setOpt(opcoes)
     }
     let estilo
     let label
@@ -81,6 +82,7 @@ export function Filter({ disable, size = 'md', text, error, opcoes, arrayResult,
 
     useEffect(() => {
         AddArrayCheck(valueTag)
+        setOpt(opcoes)
 
     }, [valueTag])
 
