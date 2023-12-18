@@ -101,7 +101,7 @@ export function Header(
               className='logout'
               title='Sair'
               onClick={Closer}>
-              <X type='Primary' size='md' />
+            <p> Sair</p>
             </div>
            
       </div>

@@ -72,7 +72,7 @@ function App() {
 <Toggle text={''} />
       
 
-      
+      <Button type='cancel' name='teste' text={'teste'}  size='md' />
           </>
 
 

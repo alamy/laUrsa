@@ -4,71 +4,76 @@ import './Button.scss'
 
 export interface ButtonProps {
     text?: string | any;
-    type?: 'primary' | 'secondary';
+    type?: 'primary' | 'secondary' | 'cancel';
     size?: 'sm' | 'md' | 'lg';
     icone?: 'edite' | 'delete' | 'look';
     disable?: boolean;
     id?: string;
     onClick?: Function | any;
     name?: string
-   
+
 }
 
-export function Button({disable = false, text, type = 'primary',name, size = 'md',id, icone,  ...props}: ButtonProps ) {
+export function Button({ disable = false, text, type = 'primary', name, size = 'md', id, icone, ...props }: ButtonProps) {
     let estilo = '';
 
-    switch(type) {
+    switch (type) {
         case 'primary':
-            estilo = disable ? 
-                        'primary-defalt' : 
-                        'primary';
+            estilo = disable ?
+                'primary-defalt' :
+                'primary';
             break;
         case 'secondary':
-            estilo = disable ? 
-                        'secondary-default' :
-                        'secondary';
+            estilo = disable ?
+                'secondary-default' :
+                'secondary';
+            break;
+        case 'cancel':
+            estilo = disable ?
+                'cancel-default' :
+                'cancel';
             break;
     }
 
-    switch(icone) {
+    switch (icone) {
         case 'edite':
             icone = 'edite'
             break;
-        case 'delete' :
+        case 'delete':
             icone = 'delete'
             break;
-        case 'look' :
+        case 'look':
             icone = 'look'
-            break;    
-        default : ''
+            break;
+        default: ''
     }
 
 
 
     return (
-    <div>
-        <button  
-            id={id} name={name}
-            className={clsx(
-                'buttonLaUrsa',
-                 {
-                    'h-[48px]': size === 'md',
-                    'h-[56px]': size === 'lg',
-                },
-                {
-                    'sm-bt': size === 'md',
-                    'md-bt': size === 'md',
-                    'lg-bt': size === 'lg',
-                },
-                {'largura': !icone} ,
-                estilo,
-                icone
-            )}
-            disabled={disable}
-            {...props}
-        >
-            {text}
-        </button>
-    </div>
+        <div>
+            <button
+                id={id} name={name}
+                className={clsx(
+                    'buttonLaUrsa',
+                    {
+                        'h-[48px]': size === 'md',
+                        'h-[56px]': size === 'lg',
+                    },
+                    {
+                        'sm-bt': size === 'md',
+                        'md-bt': size === 'md',
+                        'lg-bt': size === 'lg',
+                    },
+                    { 'largura': !icone },
+                    estilo,
+                    icone
+                )}
+                disabled={disable}
+                {...props}
+            >
+                {text}
+            </button>
+        </div>
     );
 }
