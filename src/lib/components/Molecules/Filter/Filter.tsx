@@ -97,7 +97,6 @@ export function Filter({ disable, size = 'md', text, error, opcoes, arrayResult,
             return el[valueT].toLowerCase().indexOf(i.toLowerCase()) > -1
         })
 
-        console.log(opcaoSearch)
         setOpt(opcaoSearch)
 
 
