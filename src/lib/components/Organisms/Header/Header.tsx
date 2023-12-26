@@ -3,6 +3,7 @@ import { clsx } from 'clsx';
 import './Header.scss';
 import { Settings } from '../../Icon/System/Settings';
 import { X } from '../../Icon/System/X';
+import { Logout } from '../../Icon/Menu/Logout';
 
 export interface HeaderProps {
   linksExternos?: Object,
@@ -86,14 +87,14 @@ export function Header(
   
           <div className='box-data grid grid-rows-3 grid-flow-col gap-3'>
             <div>
-              <i>{subTitulo}</i> - <b>  {dia} / {mes} / {ano} - {hora} : {minutos}</b>
+              {subTitulo} -  {dia} / {mes} / {ano} - {hora} : {minutos}
             </div>
 
             
             
           </div>
           <div className='configuracao' onMouseMove={actionetiing} onMouseOut={actionetiingFalse}>
-              <Settings type='Primary' size='md' />
+              <Settings type='Primary' size='sm' />
           </div>
           
        
@@ -101,7 +102,11 @@ export function Header(
               className='logout'
               title='Sair'
               onClick={Closer}>
-            <p> Sair</p>
+            <p> 
+<Logout
+  size="sm"
+  type="Primary"
+/></p>
             </div>
            
       </div>

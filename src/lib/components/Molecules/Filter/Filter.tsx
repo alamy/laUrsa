@@ -23,6 +23,7 @@ export function Filter({ disable, size = 'md', text, error, opcoes, arrayResult,
     const [valueTag, setValueTag]: any = useState([])
     const [value, setValue] = useState(String)
     const [opt, setOpt] = useState(opcoes)
+    const [todos, setTodos] = useState("Todos")
 
     let opcaoSearch: any
     const caixa = () => {
@@ -72,7 +73,7 @@ export function Filter({ disable, size = 'md', text, error, opcoes, arrayResult,
 
         }
         AddArrayCheck(valueTag)
-
+        setTodos('')
 
     }
 
@@ -102,6 +103,7 @@ export function Filter({ disable, size = 'md', text, error, opcoes, arrayResult,
 
     }
 
+        console.log(valueTag)
     return (
         <>
             {text ?
@@ -120,9 +122,8 @@ export function Filter({ disable, size = 'md', text, error, opcoes, arrayResult,
                 <input
                     type={'text'}
                     disabled={disable}
-                    placeholder="Todos"
+                    placeholder={todos }
                     className={clsx(
-
                         'px-4',
                         'mt-0',
                         'w-11/12',
