@@ -86,7 +86,7 @@ export const Table = ({
                 else {
                     if(notId === true){
                         if(opt['id'] === Item) {
-                            return null
+                            return ''
                         }else {
                             return (<td className='td'> {Item} </td>)
                         }
