@@ -34,23 +34,12 @@ function App() {
          
 
         <Table typeTable={'Default'} 
+        notId={true}
         header={['id', 'descricao', 'Teste', 'algum' , 'teste' , 'status', 'ação']} Obj={{
-        1: ["1",
-          "2",
-          '3',
-           [
-             'teste', 
-             'teste 2'
-           ]
-        ],
-        2: ["4",
-          "9",
-          '10',
-           [
-             'teste', 
-             'teste 2'
-           ]
-        ]
+         0:{ estagioCobranca : "ADMINISTRATIVO",
+          id: "1%2C1%2C1%2C1"},
+          1:{ estagioCobranca : "ADMINISTRATIVO",
+          id: "1%2C1%2C1%2C1"},
       }} Editar={(i: any) => {
         console.log(i);
       } } visualizacao={true} 

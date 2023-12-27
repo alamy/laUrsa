@@ -21,6 +21,7 @@ export interface TableProps {
     FlagVisible?: boolean;
     FlagEdit?: boolean;
     btnEditar?: boolean
+    notId?: boolean
 }
 
 const edit = <Edit
@@ -52,6 +53,7 @@ export const Table = ({
     FlagVisible,
     FlagEdit =  true,
     btnEditar,
+    notId = false,
     
 
 }: TableProps ) => {
@@ -63,8 +65,15 @@ export const Table = ({
         let valorChecked;
         let objItem = Object.values(opt).map(function(Item:any){
             let Result
+           
+       
+       
             if(typeof Item === 'object' && Item !== null){
                    var Resultado = Object.values(Item).map(function(T:any){
+         
+                    if(T === 'id'){
+                  
+                    }
                     Resultado
                     Result = T
                     return (<td className='td'> {Result} </td>)
@@ -75,10 +84,21 @@ export const Table = ({
                     return null
                 }
                 else {
-                    return (<td className='td'> {Item} </td>)
+                    if(notId === true){
+                        if(opt['id'] === Item) {
+                            return null
+                        }else {
+                            return (<td className='td'> {Item} </td>)
+                        }
+                      
+                    } else {
+                        return (<td className='td'> {Item} </td>)
+                    }
+                   
                 }  
                
-            }
+            
+        }
         })
      
         let id:any = opt.id
