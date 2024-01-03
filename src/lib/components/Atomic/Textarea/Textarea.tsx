@@ -26,14 +26,14 @@ export function Textarea({disable, size = 'md', text, error, value, ...props}: T
     return (
         <>
          <div>
-        <label className={clsx(label, 'labelInput')} htmlFor={text}>{text}</label>
+        <label className={clsx(label, 'labelText ')} htmlFor={text}>{text}</label>
         <textarea disabled={disable} className={clsx(
                 'textArea',
                 'px-4',
                 'border',
                 '-mt-3',
                'rounded',
-                'w-[344px]', {
+             {
                     'h-[68px]': size === 'md',
                     'h-[96px]': size === 'lg',
                 },

@@ -2,6 +2,7 @@
 import { Button } from './lib/components/Atomic/Button/Button';
 import { Dropdown } from './lib/components/Atomic/Dropdown/Dropdown';
 import { Input } from './lib/components/Atomic/Input/Input';
+import { Textarea } from './lib/components/Atomic/Textarea/Textarea';
 import { Toggle } from './lib/components/Atomic/Toggle/Toggle';
 import { Cobranca } from './lib/components/Icon/Menu/Cobranca';
 import { Contestacao } from './lib/components/Icon/Menu/Contestacao';
@@ -44,14 +45,16 @@ function App() {
         console.log(i);
       } } visualizacao={true} 
         FlagVisible={true}
+      
+        btnEditar={true}
         Detalhar={(i:any) => {console.log(i)}}
       QtdSub={0} />
           
-
-          <Input text={''} type={'number'} />
-
-         <Button onClick={nav} />
-
+          <div className='w-3/12'>
+              <Textarea text='adasd' onChange={(e:any) => { console.log(e.target.value)}}   />
+ 
+          </div>
+            
 
          <br/>
 
