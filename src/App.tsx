@@ -52,7 +52,6 @@ function App() {
           
           <div className='w-3/12'>
               <Textarea text='adasd' onChange={(e:any) => { console.log(e.target.value)}}   />
- 
           </div>
             
 
