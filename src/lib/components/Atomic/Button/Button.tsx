@@ -61,7 +61,7 @@ export function Button({ disable = false, text, type = 'primary', name, size = '
                         'h-[56px]': size === 'lg',
                     },
                     {
-                        'sm-bt': size === 'md',
+                        'sm-bt': size === 'sm',
                         'md-bt': size === 'md',
                         'lg-bt': size === 'lg',
                     },
