@@ -5,6 +5,9 @@ import * as EyeNot from '../src/lib/components/Icon/System/EyeNot';
 import * as Mic from '../src/lib/components/Icon/System/Mic';
 import * as Search from '../src/lib/components/Icon/System/Search';
 import * as X from '../src/lib/components/Icon/System/X';
+import * as X from '../src/lib/components/Icon/System/Hourglass';
+import * as X from '../src/lib/components/Icon/System/Percent';
+import * as X from '../src/lib/components/Icon/System/Print';
 
 // Icon Trilha
 import * as Aprender from '../src/lib/components/Icon/Trilha/Aprender';
@@ -131,7 +134,7 @@ import * as Header from '../src/lib/components/Templates/Dashboard/Dashboard';
 
 export { Logo,
 // Icon System
-Eye, EyeNot, Mic, Search, X,
+Eye, EyeNot, Mic, Search, X, Hourglass, Percent, Print,
 // Icon Trilha
 Aprender, Defeciencia, Curtir, Empresario, Idoso, Lgbt, Mulher, Servidor, Turista,
 //Menu
@@ -153,7 +156,10 @@ export * from '../src/lib/components/Icon/System/Eye';
 export * from '../src/lib/components/Icon/System/EyeNot';
 export * from '../src/lib/components/Icon/System/Mic';
 export * from '../src/lib/components/Icon/System/Search';
-export * from '../src/lib/components/Icon/System/Search';
+export * from '../src/lib/components/Icon/System/X';
+export * from '../src/lib/components/Icon/System/Hourglass';
+export * from '../src/lib/components/Icon/System/Percent';
+export * from '../src/lib/components/Icon/System/Print';
 // Icon Trilha
 export * from '../src/lib/components/Icon/Trilha/Aprender';
 export * from '../src/lib/components/Icon/Trilha/Defeciencia';
