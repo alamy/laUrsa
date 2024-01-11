@@ -65,7 +65,6 @@ export function Header(
         'header-small': tamanho === true,
         'header-big': tamanho === false
       }, 'headers flex')}>
-        <pre>{JSON.stringify(settingsVisivel, null, 2) }</pre>
       
         <div>
           
