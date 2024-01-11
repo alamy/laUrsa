@@ -22,6 +22,7 @@ export interface DashboardProps {
     Informacoes:Function | any;
     menuSettings?:Object
     Closer?:Function | any;
+    settingsVisivel?: boolean;
     
 }
 
@@ -42,6 +43,7 @@ export function Dashboard(
         Organograma,
         Informacoes,
         menuSettings,
+        settingsVisivel = true,
         Closer
     }: DashboardProps) {
   
@@ -73,6 +75,7 @@ export function Dashboard(
                 subTitulo={subTitulo}
                 Configuracao={Configuracao}
                 tamanho={tamanho}
+                settingsVisivel={settingsVisivel}
                 Size={function (): void {
                     return setTamanho(!tamanho);
                 } } menuSettings={menuSettings} Closer={Closer} />  
