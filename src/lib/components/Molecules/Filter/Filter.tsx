@@ -14,16 +14,18 @@ export interface FiltertProps {
     valueText?: String | {};
     labelText?: any;
     arrayResult?: {} | any;
-    valueArray?: boolean
+    valueArray?: boolean;
+    valueActive?:Object
 }
 
-export function Filter({ disable, size = 'md', text, error, opcoes, arrayResult, valueArray, ...props }: FiltertProps) {
+export function Filter({ disable, size = 'md', text, error, opcoes, arrayResult, valueArray, valueActive , ...props }: FiltertProps) {
     const [boxCheck, setBoxCheck] = useState(false)
     const [tag, setTag]: any = useState([])
     const [valueTag, setValueTag]: any = useState([])
     const [value, setValue] = useState(String)
     const [opt, setOpt] = useState(opcoes)
     const [todos, setTodos] = useState("Todos")
+
 
     let opcaoSearch: any
     const caixa = () => {
@@ -54,7 +56,7 @@ export function Filter({ disable, size = 'md', text, error, opcoes, arrayResult,
     })
 
     function Adicionado(t: any, label: any, value: any, obj: any) {
-
+        console.log(obj)
         if (t.target.checked === true) {
             setTag((prevTag: any) => [...prevTag, label])
             valueArray ? setValueTag((prevTag: any) => [...prevTag, obj]) : setValueTag((prevTag: any) => [...prevTag, value])
@@ -77,15 +79,26 @@ export function Filter({ disable, size = 'md', text, error, opcoes, arrayResult,
 
     }
 
-    const AddArrayCheck = async (a: any) => {
-        await arrayResult(a)
+    function AdicionandoEditando(item:any) {
+        console.log('------')
+        console.log(item)
+        console.log('------')
+
     }
 
+    const AddArrayCheck = async (a: any) => {
+  
+        await arrayResult(a)
+    }
+    console.log( valueActive)
     useEffect(() => {
+        AdicionandoEditando(valueActive)
+        setTag(valueActive)
         AddArrayCheck(valueTag)
         setOpt(opcoes)
+        console.log(valueActive)
 
-    }, [valueTag])
+    }, [valueTag, valueActive])
 
 
     const Search = (i: any) => { 
@@ -103,7 +116,6 @@ export function Filter({ disable, size = 'md', text, error, opcoes, arrayResult,
 
     }
 
-        console.log(valueTag)
     return (
         <>
             {text ?

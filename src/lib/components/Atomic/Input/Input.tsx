@@ -20,6 +20,7 @@ export interface InputProps {
     onKeyDown?: Function | any
     multiple?: boolean
     mensagemError?: String
+    onClick?: Function | any
 
 }
 
@@ -28,7 +29,7 @@ export function Input({
                         size = 'md', 
                         text, 
                         error, 
-                            value, 
+                        value, 
                         type,
                         multiple, 
                         mensagemError,
@@ -70,7 +71,11 @@ export function Input({
                             'h-[86px]': size === 'lg',
                         },
                         estilo
-                    )} id={text}  {...props} value={value} min={props.min} max={props.max} />
+                    )} id={text}  
+                    {...props} 
+                    value={value} 
+                    min={props.min} 
+                    max={props.max} />
 
                 </> :
 
