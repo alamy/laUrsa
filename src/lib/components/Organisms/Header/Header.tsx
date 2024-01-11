@@ -12,7 +12,8 @@ export interface HeaderProps {
   tamanho: boolean
   Size: () => void
   menuSettings?: Object
-  Closer: () => void
+  Closer: () => void,
+  settingsVisivel?: boolean;
 }
 
 export function Header(
@@ -22,6 +23,7 @@ export function Header(
     tamanho,
     subTitulo,
     Size,
+    settingsVisivel = true,
     menuSettings,
     Closer
   }: HeaderProps) {
@@ -63,16 +65,20 @@ export function Header(
         'header-small': tamanho === true,
         'header-big': tamanho === false
       }, 'headers flex')}>
-
+        <pre>{JSON.stringify(settingsVisivel, null, 2) }</pre>
+      
         <div>
-          <button name="menu" onClick={Size} className="hamburguer">
-            <svg width="21" height="25" viewBox="0 0 21 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M2.58002 18.4999H17.933" stroke="#1474FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-              <path d="M2.58002 12.4999H17.933" stroke="#1474FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-              <path d="M2.58002 6.49994H17.933" stroke="#1474FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-            </svg>
-          </button>
-        </div>
+          
+            <button name="menu" onClick={Size} className="hamburguer">
+              <svg width="21" height="25" viewBox="0 0 21 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2.58002 18.4999H17.933" stroke="#1474FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M2.58002 12.4999H17.933" stroke="#1474FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M2.58002 6.49994H17.933" stroke="#1474FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </button>
+          
+          </div>
+      
 
         <div>
           <ul className={clsx({
@@ -93,9 +99,11 @@ export function Header(
             
             
           </div>
-          <div className='configuracao' onMouseMove={actionetiing} onMouseOut={actionetiingFalse}>
-              <Settings type='Primary' size='sm' />
-          </div>
+          {settingsVisivel === true &&
+            <div className='configuracao' onMouseMove={actionetiing} onMouseOut={actionetiingFalse}>
+                <Settings type='Primary' size='sm' />
+            </div>
+          }
           
        
         <div
