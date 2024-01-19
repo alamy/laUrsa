@@ -15,10 +15,10 @@ export interface FiltertProps {
     labelText?: any;
     arrayResult?: {} | any;
     valueArray?: boolean;
-    valueActive?:Object
+
 }
 
-export function Filter({ disable, size = 'md', text, error, opcoes, arrayResult, valueArray, valueActive , ...props }: FiltertProps) {
+export function Filter({ disable, size = 'md', text, error, opcoes, arrayResult, valueArray , ...props }: FiltertProps) {
     const [boxCheck, setBoxCheck] = useState(false)
     const [tag, setTag]: any = useState([])
     const [valueTag, setValueTag]: any = useState([])
@@ -79,26 +79,25 @@ export function Filter({ disable, size = 'md', text, error, opcoes, arrayResult,
 
     }
 
-    function AdicionandoEditando(item:any) {
-        console.log('------')
-        console.log(item)
-        console.log('------')
+    // function AdicionandoEditando(item:any) {
+    //     console.log('------')
+    //     console.log(item)
+    //     console.log('------')
 
-    }
+    // }
 
     const AddArrayCheck = async (a: any) => {
   
         await arrayResult(a)
     }
-    console.log( valueActive)
+   
     useEffect(() => {
-        AdicionandoEditando(valueActive)
-        setTag(valueActive)
+        // AdicionandoEditando(valueActive)
+   
         AddArrayCheck(valueTag)
         setOpt(opcoes)
-        console.log(valueActive)
-
-    }, [valueTag, valueActive])
+    
+    }, [valueTag])
 
 
     const Search = (i: any) => { 
