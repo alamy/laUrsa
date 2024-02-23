@@ -35,13 +35,18 @@ function App() {
          
 
         <Table typeTable={'Default'} 
-        notId={true}
+        notId={false}
         header={['id', 'descricao', 'Teste', 'algum' , 'teste' , 'status', 'ação']} Obj={{
-         0:{ estagioCobranca : "ADMINISTRATIVO",
-          id: "1%2C1%2C1%2C1"},
+         0:{
+          id: "1%2C1%2C1%2C1", 
+          estagioCobranca : "ADMINISTRATIVO"
+         },
           1:{ estagioCobranca : "ADMINISTRATIVO",
           id: "1%2C1%2C1%2C1"},
-      }} Editar={(i: any) => {
+
+      }} 
+        value='teste'
+      Editar={(i: any) => {
         console.log(i);
       } } visualizacao={true} 
         FlagVisible={true}
@@ -62,7 +67,7 @@ function App() {
       } }/>
 <Toggle text={''} />
       
-
+<Alerta texto={'asdadsasda asdadkjlshfdlafhl jhfdlaskjfhdlsakdfj haldfhsldkfjh sldjhfasldfjh lsakjdfhsalfdjsahd ldfjhsaldfkjsah aldjfhsaldfjkhsad lajdfhsaldfjkhsadf fjahsfdlkjashfdlkjh asdlfhsalfdjsahdlf hlasdfjhlsajdfh lahldfjsahdl fjsahddasd'} Close={() => console.log('aqui')} tipo='danger' titulo={'teste 2323'} />
       <Button type='cancel' name='teste' text={'teste'}  size='md' />
           </>
 

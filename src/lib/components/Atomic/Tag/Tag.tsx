@@ -1,6 +1,5 @@
-import { clsx } from "clsx";
+
 import "./Tag.scss";
-import { X } from "../../Icon/System/X";
 export interface TagProps {
   disable?: boolean;
   size?: "sm" | "md" | "lg";

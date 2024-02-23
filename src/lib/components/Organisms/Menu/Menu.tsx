@@ -65,6 +65,9 @@ export function Menu(
       let menuLateral
       menu ? 
       menuLateral = Object.values(menu)?.map(function(item){
+        const [flagSub, setFlagSub] = useState(false)
+
+      
         let [submenuLi, setSubmenuLi ] = useState(false)
         let [left, setLeft ] = useState(false)
         let btnSub = () => {
@@ -98,10 +101,15 @@ export function Menu(
             )
         })
           return  (
-          <><li className='li-menu' onClick={btnSub} title={item.texto}> 
+           
+       
+           item?.submenu.length ? 
+           <>
+          <li className='li-menu' onClick={btnSub} title={item.texto}> 
                   <div className={clsx(
                     {'menu-icon': tamanho === true,
                     'menu-icon-small': tamanho === false})}>{item.imagem}</div>
+
                   {
                     tamanho ? 
                       <>
@@ -119,15 +127,41 @@ export function Menu(
                       : 
                     null
                   }  </li>
+
+
+
                    {
                       submenuLi && tamanho ? 
                         <div className='sub-menu'>
                             {itemSubMenu}
                         </div> : null 
                   }      
-                 
-                            
-                </> )}) : null
+                  </> 
+                  : 
+                  
+                  <li className='li-menu' id={item.to} onClick={Navegacao} title={item.texto}> 
+                  <div  
+                  
+                  className={clsx(
+                    {'menu-icon': tamanho === true,
+                    'menu-icon-small': tamanho === false})}>{item.imagem}</div>
+
+                  {
+                    tamanho ? 
+                      <>
+                      <div className='icon-right'>
+                    
+                      </div>
+                      <p>{item.texto}</p>
+                      
+                     </>
+                      : 
+                    null
+                  }  </li>
+              
+                
+                
+                )}) : null
 
     return(
     <>  
