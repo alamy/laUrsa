@@ -13,8 +13,8 @@
 }
 .li-menu p {
     width: 83%;
-    margin-left: 22%;
-    padding-top: 4px ;
+    margin-left: 20%;
+    padding-top: 1px ;
     vertical-align: middle;
    
     
@@ -51,16 +51,20 @@
 .nav { 
 
     svg {
-    margin:10px 0 0 0;
     display: inline-block;
 } 
+.icon-menu {
 
+    margin-top: 5px ;
+    top: 50%;
+    display: inline-block
+}
 }
 
 
 .icon-right {
     float: right;
-    margin-top:3px;
+    margin-top:11px;
 }
 .nav-small { svg {
     text-align: center;

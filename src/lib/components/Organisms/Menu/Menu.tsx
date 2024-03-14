@@ -108,7 +108,9 @@ export function Menu(
           <li className='li-menu' onClick={btnSub} title={item.texto}> 
                   <div className={clsx(
                     {'menu-icon': tamanho === true,
-                    'menu-icon-small': tamanho === false})}>{item.imagem}</div>
+                    'menu-icon-small': tamanho === false},
+                    'icon-menu'
+                    )}>{item.imagem}</div>
 
                   {
                     tamanho ? 
